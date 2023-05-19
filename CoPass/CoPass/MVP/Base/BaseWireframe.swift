@@ -1,0 +1,33 @@
+//
+//  BaseWireframe.swift
+//  CoPass
+//
+//  Created by Oktay Tanrıkulu on 19.05.2023.
+//
+
+import UIKit
+
+class BaseWireframe {
+    
+    weak var view: UIViewController!
+    
+    func forward(_ vc: UIViewController, with type: TransitionType, animated: Bool = true) {
+        switch type {
+        case .push:
+            guard let navController = view.navigationController else { return }
+            navController.pushViewController(view, animated: animated)
+        case .present(let from):
+            vc.modalPresentationStyle = .fullScreen
+            from.present(vc, animated: animated)
+        case .modal(let from):
+            vc.modalPresentationStyle = .overFullScreen
+            from.present(vc, animated: animated)
+        case .root(let window):
+            window.rootViewController = vc
+        }
+    }
+    
+    func backward(handler: (() -> Void)? = nil, animated: Bool) {
+        view.dismiss(animated: animated, completion: handler)
+    }
+}

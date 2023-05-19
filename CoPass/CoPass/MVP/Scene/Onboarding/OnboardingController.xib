@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnboardingController" customModule="CoPass" customModuleProvider="target">
+            <connections>
+                <outlet property="getStartedButton" destination="IWd-2A-MWS" id="w1f-9q-Xlf"/>
+                <outlet property="view" destination="iN0-l3-epB" id="dec-hO-Ndc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="78" translatesAutoresizingMaskIntoConstraints="NO" id="fWW-x8-bEq">
+                    <rect key="frame" x="38" y="83" width="317" height="711"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="bmy-nP-xqM">
+                            <rect key="frame" x="0.0" y="0.0" width="317" height="589"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="chy-gZ-yiI">
+                                    <rect key="frame" x="0.0" y="0.0" width="317" height="354.66666666666669"/>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="ONE-90-OUS">
+                                    <rect key="frame" x="0.0" y="402.66666666666669" width="317" height="186.33333333333331"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="aBw-1S-QHj">
+                                            <rect key="frame" x="1" y="0.0" width="315.33333333333331" height="102.33333333333333"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manage Your Passwords Securely" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5at-oI-8bt">
+                                                    <rect key="frame" x="0.0" y="0.0" width="315.33333333333331" height="52.666666666666664"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                    <color key="textColor" name="coText"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Store your passwords securely and access them easily from your mobile device" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2l-9g-i8x">
+                                                    <rect key="frame" x="0.0" y="68.666666666666686" width="315.33333333333331" height="33.666666666666657"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" name="coText"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWd-2A-MWS" customClass="CoButton" customModule="CoPass" customModuleProvider="target">
+                                            <rect key="frame" x="46.666666666666686" y="134.33333333333331" width="224" height="52"/>
+                                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="52" id="asc-Mv-8ha"/>
+                                                <constraint firstAttribute="width" constant="224" id="m5j-Rs-2tn"/>
+                                            </constraints>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Get Started">
+                                                <color key="titleColor" name="coText"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ebe-dE-LQH">
+                            <rect key="frame" x="0.0" y="667" width="317" height="44"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mQU-sR-jsk">
+                                    <rect key="frame" x="57" y="0.0" width="203" height="44"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I have already account!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hs9-Eb-5WR">
+                                            <rect key="frame" x="0.0" y="13.666666666666629" width="152.66666666666666" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                            <color key="textColor" name="coText"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOX-oU-jPX">
+                                            <rect key="frame" x="159" y="0.0" width="44" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="TDo-fi-JbV"/>
+                                                <constraint firstAttribute="width" constant="44" id="vLb-62-I01"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Login">
+                                                <color key="titleColor" name="coPurple"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="203" id="D3l-b5-FKi"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="mQU-sR-jsk" firstAttribute="centerX" secondItem="Ebe-dE-LQH" secondAttribute="centerX" id="Bwi-xB-n5W"/>
+                                <constraint firstAttribute="bottom" secondItem="mQU-sR-jsk" secondAttribute="bottom" id="bXs-Yp-4Tk"/>
+                                <constraint firstAttribute="height" constant="44" id="jhc-Qz-BH3"/>
+                                <constraint firstItem="mQU-sR-jsk" firstAttribute="top" secondItem="Ebe-dE-LQH" secondAttribute="top" id="oSv-9x-Fl6"/>
+                                <constraint firstItem="mQU-sR-jsk" firstAttribute="centerY" secondItem="Ebe-dE-LQH" secondAttribute="centerY" id="uab-nT-XCN"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fWW-x8-bEq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="38" id="0MG-ni-j4z"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fWW-x8-bEq" secondAttribute="bottom" constant="24" id="QRT-tX-4Ri"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fWW-x8-bEq" secondAttribute="trailing" constant="38" id="RvV-9C-P9D"/>
+                <constraint firstItem="fWW-x8-bEq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="24" id="cIq-IR-EOT"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="onboarding" width="318" height="382"/>
+        <namedColor name="coPurple">
+            <color red="0.42352941176470588" green="0.38823529411764707" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="coText">
+            <color red="0.18431372549019609" green="0.1803921568627451" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
