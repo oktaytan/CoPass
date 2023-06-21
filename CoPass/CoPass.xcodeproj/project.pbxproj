@@ -21,16 +21,32 @@
 		668CE25B2A18084400D6E7DF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE25A2A18084400D6E7DF /* BaseViewController.swift */; };
 		668CE25D2A180B3900D6E7DF /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE25C2A180B3900D6E7DF /* Presenter.swift */; };
 		668CE25F2A180B5800D6E7DF /* NavigationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE25E2A180B5800D6E7DF /* NavigationPresenter.swift */; };
-		668CE2612A180BB100D6E7DF /* BaseCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE2602A180BB100D6E7DF /* BaseCustomView.swift */; };
+		668CE2612A180BB100D6E7DF /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE2602A180BB100D6E7DF /* BaseView.swift */; };
 		668CE2642A180C2A00D6E7DF /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE2632A180C2A00D6E7DF /* UIView+Ext.swift */; };
 		668CE2682A180EF100D6E7DF /* OnboardingUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE2672A180EF100D6E7DF /* OnboardingUI.swift */; };
 		668CE26A2A180F2C00D6E7DF /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE2692A180F2C00D6E7DF /* OnboardingPresenter.swift */; };
 		668CE26C2A180FA500D6E7DF /* OnboardingWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE26B2A180FA500D6E7DF /* OnboardingWireframe.swift */; };
-		668CE26E2A18104C00D6E7DF /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE26D2A18104C00D6E7DF /* OnboardingController.swift */; };
+		668CE26E2A18104C00D6E7DF /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE26D2A18104C00D6E7DF /* OnboardingVC.swift */; };
 		668CE2702A18119C00D6E7DF /* NSObject+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE26F2A18119C00D6E7DF /* NSObject+Ext.swift */; };
-		668CE2722A18121D00D6E7DF /* OnboardingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668CE2712A18121D00D6E7DF /* OnboardingController.xib */; };
+		668CE2722A18121D00D6E7DF /* OnboardingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668CE2712A18121D00D6E7DF /* OnboardingVC.xib */; };
 		668CE2762A181D3100D6E7DF /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE2752A181D3100D6E7DF /* UIColor+Ext.swift */; };
 		668CE2782A18394500D6E7DF /* CoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE2772A18394500D6E7DF /* CoButton.swift */; };
+		66EB525C2A437F9D00866CD8 /* CoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EB525B2A437F9D00866CD8 /* CoTextField.swift */; };
+		66EB525E2A43B4A500866CD8 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EB525D2A43B4A500866CD8 /* UIViewController+Ext.swift */; };
+		66F9AEB22A1BE90700EAFD58 /* RegisterUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9AEB12A1BE90700EAFD58 /* RegisterUI.swift */; };
+		66F9AEB42A1BE92200EAFD58 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9AEB32A1BE92200EAFD58 /* RegisterPresenter.swift */; };
+		66F9AEB62A1BE99400EAFD58 /* RegisterWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9AEB52A1BE99400EAFD58 /* RegisterWireframe.swift */; };
+		66F9AEB82A1BEA8800EAFD58 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9AEB72A1BEA8800EAFD58 /* RegisterVC.swift */; };
+		66F9AEBA2A1BEAF700EAFD58 /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66F9AEB92A1BEAF700EAFD58 /* RegisterVC.xib */; };
+		66F9AEBD2A1BEF5700EAFD58 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9AEBC2A1BEF5700EAFD58 /* LoginVC.swift */; };
+		66F9AEBF2A1BEF6E00EAFD58 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66F9AEBE2A1BEF6E00EAFD58 /* LoginVC.xib */; };
+		66F9AEC12A1BEF7F00EAFD58 /* LoginUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9AEC02A1BEF7F00EAFD58 /* LoginUI.swift */; };
+		66F9AEC32A1BEF9800EAFD58 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9AEC22A1BEF9800EAFD58 /* LoginPresenter.swift */; };
+		66F9AEC52A1BEFA200EAFD58 /* LoginWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9AEC42A1BEFA200EAFD58 /* LoginWireframe.swift */; };
+		66F9AEC92A1BF64F00EAFD58 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66F9AECB2A1BF64F00EAFD58 /* Localizable.strings */; };
+		66F9AECE2A1BFA7B00EAFD58 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9AECD2A1BFA7B00EAFD58 /* Localization.swift */; };
+		66F9AED02A1BFB0300EAFD58 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9AECF2A1BFB0300EAFD58 /* Language.swift */; };
+		66F9AED22A1BFB2E00EAFD58 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9AED12A1BFB2E00EAFD58 /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,16 +66,34 @@
 		668CE25A2A18084400D6E7DF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		668CE25C2A180B3900D6E7DF /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		668CE25E2A180B5800D6E7DF /* NavigationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPresenter.swift; sourceTree = "<group>"; };
-		668CE2602A180BB100D6E7DF /* BaseCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCustomView.swift; sourceTree = "<group>"; };
+		668CE2602A180BB100D6E7DF /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		668CE2632A180C2A00D6E7DF /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		668CE2672A180EF100D6E7DF /* OnboardingUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUI.swift; sourceTree = "<group>"; };
 		668CE2692A180F2C00D6E7DF /* OnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
 		668CE26B2A180FA500D6E7DF /* OnboardingWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingWireframe.swift; sourceTree = "<group>"; };
-		668CE26D2A18104C00D6E7DF /* OnboardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
+		668CE26D2A18104C00D6E7DF /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		668CE26F2A18119C00D6E7DF /* NSObject+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Ext.swift"; sourceTree = "<group>"; };
-		668CE2712A18121D00D6E7DF /* OnboardingController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingController.xib; sourceTree = "<group>"; };
+		668CE2712A18121D00D6E7DF /* OnboardingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingVC.xib; sourceTree = "<group>"; };
 		668CE2752A181D3100D6E7DF /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		668CE2772A18394500D6E7DF /* CoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoButton.swift; sourceTree = "<group>"; };
+		66EB525B2A437F9D00866CD8 /* CoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoTextField.swift; sourceTree = "<group>"; };
+		66EB525D2A43B4A500866CD8 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		66F9AEB12A1BE90700EAFD58 /* RegisterUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUI.swift; sourceTree = "<group>"; };
+		66F9AEB32A1BE92200EAFD58 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		66F9AEB52A1BE99400EAFD58 /* RegisterWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWireframe.swift; sourceTree = "<group>"; };
+		66F9AEB72A1BEA8800EAFD58 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		66F9AEB92A1BEAF700EAFD58 /* RegisterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
+		66F9AEBC2A1BEF5700EAFD58 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		66F9AEBE2A1BEF6E00EAFD58 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		66F9AEC02A1BEF7F00EAFD58 /* LoginUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUI.swift; sourceTree = "<group>"; };
+		66F9AEC22A1BEF9800EAFD58 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		66F9AEC42A1BEFA200EAFD58 /* LoginWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWireframe.swift; sourceTree = "<group>"; };
+		66F9AEC62A1BF60900EAFD58 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		66F9AECA2A1BF64F00EAFD58 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		66F9AECC2A1BF65300EAFD58 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		66F9AECD2A1BFA7B00EAFD58 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		66F9AECF2A1BFB0300EAFD58 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		66F9AED12A1BFB2E00EAFD58 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,10 +162,10 @@
 		668CE2482A1802B700D6E7DF /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				668CE2492A1802C200D6E7DF /* BaseWireframe.swift */,
 				668CE2562A1807A000D6E7DF /* BaseUI.swift */,
+				668CE2602A180BB100D6E7DF /* BaseView.swift */,
 				668CE25A2A18084400D6E7DF /* BaseViewController.swift */,
-				668CE2602A180BB100D6E7DF /* BaseCustomView.swift */,
+				668CE2492A1802C200D6E7DF /* BaseWireframe.swift */,
 				668CE2582A1807E500D6E7DF /* LoadingUI.swift */,
 				668CE25C2A180B3900D6E7DF /* Presenter.swift */,
 				668CE25E2A180B5800D6E7DF /* NavigationPresenter.swift */,
@@ -143,6 +177,9 @@
 			isa = PBXGroup;
 			children = (
 				668CE2622A180C1E00D6E7DF /* Extensions */,
+				66F9AECD2A1BFA7B00EAFD58 /* Localization.swift */,
+				66F9AECF2A1BFB0300EAFD58 /* Language.swift */,
+				66F9AED12A1BFB2E00EAFD58 /* AppConstants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -152,6 +189,7 @@
 			children = (
 				668CE2392A1800CD00D6E7DF /* Assets.xcassets */,
 				668CE23B2A1800CD00D6E7DF /* LaunchScreen.storyboard */,
+				66F9AECB2A1BF64F00EAFD58 /* Localizable.strings */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -176,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				668CE2772A18394500D6E7DF /* CoButton.swift */,
+				66EB525B2A437F9D00866CD8 /* CoTextField.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -192,6 +231,7 @@
 			children = (
 				668CE26F2A18119C00D6E7DF /* NSObject+Ext.swift */,
 				668CE2632A180C2A00D6E7DF /* UIView+Ext.swift */,
+				66EB525D2A43B4A500866CD8 /* UIViewController+Ext.swift */,
 				668CE2752A181D3100D6E7DF /* UIColor+Ext.swift */,
 			);
 			path = Extensions;
@@ -200,6 +240,8 @@
 		668CE2652A180EB300D6E7DF /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				66F9AEBB2A1BEF3A00EAFD58 /* Login */,
+				66F9AEB02A1BE8F800EAFD58 /* Register */,
 				668CE2662A180EDF00D6E7DF /* Onboarding */,
 			);
 			path = Scene;
@@ -211,10 +253,34 @@
 				668CE2672A180EF100D6E7DF /* OnboardingUI.swift */,
 				668CE2692A180F2C00D6E7DF /* OnboardingPresenter.swift */,
 				668CE26B2A180FA500D6E7DF /* OnboardingWireframe.swift */,
-				668CE26D2A18104C00D6E7DF /* OnboardingController.swift */,
-				668CE2712A18121D00D6E7DF /* OnboardingController.xib */,
+				668CE26D2A18104C00D6E7DF /* OnboardingVC.swift */,
+				668CE2712A18121D00D6E7DF /* OnboardingVC.xib */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		66F9AEB02A1BE8F800EAFD58 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				66F9AEB12A1BE90700EAFD58 /* RegisterUI.swift */,
+				66F9AEB32A1BE92200EAFD58 /* RegisterPresenter.swift */,
+				66F9AEB52A1BE99400EAFD58 /* RegisterWireframe.swift */,
+				66F9AEB72A1BEA8800EAFD58 /* RegisterVC.swift */,
+				66F9AEB92A1BEAF700EAFD58 /* RegisterVC.xib */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		66F9AEBB2A1BEF3A00EAFD58 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				66F9AEC02A1BEF7F00EAFD58 /* LoginUI.swift */,
+				66F9AEC22A1BEF9800EAFD58 /* LoginPresenter.swift */,
+				66F9AEC42A1BEFA200EAFD58 /* LoginWireframe.swift */,
+				66F9AEBC2A1BEF5700EAFD58 /* LoginVC.swift */,
+				66F9AEBE2A1BEF6E00EAFD58 /* LoginVC.xib */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +325,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = 668CE2212A1800CC00D6E7DF;
 			productRefGroup = 668CE22B2A1800CC00D6E7DF /* Products */;
@@ -275,8 +342,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66F9AEBF2A1BEF6E00EAFD58 /* LoginVC.xib in Resources */,
+				66F9AEC92A1BF64F00EAFD58 /* Localizable.strings in Resources */,
 				668CE23D2A1800CD00D6E7DF /* LaunchScreen.storyboard in Resources */,
-				668CE2722A18121D00D6E7DF /* OnboardingController.xib in Resources */,
+				66F9AEBA2A1BEAF700EAFD58 /* RegisterVC.xib in Resources */,
+				668CE2722A18121D00D6E7DF /* OnboardingVC.xib in Resources */,
 				668CE23A2A1800CD00D6E7DF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +359,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				668CE2572A1807A000D6E7DF /* BaseUI.swift in Sources */,
+				66F9AEB62A1BE99400EAFD58 /* RegisterWireframe.swift in Sources */,
+				66EB525E2A43B4A500866CD8 /* UIViewController+Ext.swift in Sources */,
 				668CE2472A18027C00D6E7DF /* AppWireframe.swift in Sources */,
+				66F9AEC52A1BEFA200EAFD58 /* LoginWireframe.swift in Sources */,
 				668CE2782A18394500D6E7DF /* CoButton.swift in Sources */,
 				668CE2382A1800CC00D6E7DF /* CoPass.xcdatamodeld in Sources */,
 				668CE24C2A18032500D6E7DF /* TransitionType.swift in Sources */,
@@ -297,15 +370,25 @@
 				668CE25B2A18084400D6E7DF /* BaseViewController.swift in Sources */,
 				668CE26C2A180FA500D6E7DF /* OnboardingWireframe.swift in Sources */,
 				668CE24A2A1802C200D6E7DF /* BaseWireframe.swift in Sources */,
-				668CE26E2A18104C00D6E7DF /* OnboardingController.swift in Sources */,
+				66F9AED22A1BFB2E00EAFD58 /* AppConstants.swift in Sources */,
+				668CE26E2A18104C00D6E7DF /* OnboardingVC.swift in Sources */,
 				668CE22E2A1800CC00D6E7DF /* AppDelegate.swift in Sources */,
 				668CE2682A180EF100D6E7DF /* OnboardingUI.swift in Sources */,
+				66EB525C2A437F9D00866CD8 /* CoTextField.swift in Sources */,
+				66F9AEB22A1BE90700EAFD58 /* RegisterUI.swift in Sources */,
 				668CE2642A180C2A00D6E7DF /* UIView+Ext.swift in Sources */,
+				66F9AEB82A1BEA8800EAFD58 /* RegisterVC.swift in Sources */,
+				66F9AEC32A1BEF9800EAFD58 /* LoginPresenter.swift in Sources */,
 				668CE25F2A180B5800D6E7DF /* NavigationPresenter.swift in Sources */,
 				668CE2512A18059E00D6E7DF /* Router.swift in Sources */,
 				668CE2302A1800CC00D6E7DF /* SceneDelegate.swift in Sources */,
+				66F9AEB42A1BE92200EAFD58 /* RegisterPresenter.swift in Sources */,
+				66F9AED02A1BFB0300EAFD58 /* Language.swift in Sources */,
 				668CE25D2A180B3900D6E7DF /* Presenter.swift in Sources */,
-				668CE2612A180BB100D6E7DF /* BaseCustomView.swift in Sources */,
+				66F9AEC12A1BEF7F00EAFD58 /* LoginUI.swift in Sources */,
+				668CE2612A180BB100D6E7DF /* BaseView.swift in Sources */,
+				66F9AEBD2A1BEF5700EAFD58 /* LoginVC.swift in Sources */,
+				66F9AECE2A1BFA7B00EAFD58 /* Localization.swift in Sources */,
 				668CE2762A181D3100D6E7DF /* UIColor+Ext.swift in Sources */,
 				668CE26A2A180F2C00D6E7DF /* OnboardingPresenter.swift in Sources */,
 				668CE2702A18119C00D6E7DF /* NSObject+Ext.swift in Sources */,
@@ -319,8 +402,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				668CE23C2A1800CD00D6E7DF /* Base */,
+				66F9AEC62A1BF60900EAFD58 /* tr */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		66F9AECB2A1BF64F00EAFD58 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66F9AECA2A1BF64F00EAFD58 /* en */,
+				66F9AECC2A1BF65300EAFD58 /* tr */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -330,6 +423,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -390,6 +484,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

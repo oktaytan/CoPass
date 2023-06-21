@@ -37,4 +37,11 @@ extension UIColor {
         return UIColor(named: "coText")!
     }
     
+    static var coBg: UIColor {
+        return UIColor(named: "coBg")!
+    }
+    
+    static var coTextGray: UIColor {
+        return UIColor(named: "coTextGray")!
+    }
 }

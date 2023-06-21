@@ -43,7 +43,7 @@ final class CoButton: UIButton {
         titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
         setTitleColor(type.titleColor, for: .normal)
         backgroundColor = type.bgColor
-        cornerRadius = 10
+        cornerRadius = AppConstants.appUIRadius
     }
     
 }

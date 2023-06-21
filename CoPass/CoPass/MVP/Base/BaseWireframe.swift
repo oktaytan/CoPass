@@ -15,7 +15,7 @@ class BaseWireframe {
         switch type {
         case .push:
             guard let navController = view.navigationController else { return }
-            navController.pushViewController(view, animated: animated)
+            navController.pushViewController(vc, animated: animated)
         case .present(let from):
             vc.modalPresentationStyle = .fullScreen
             from.present(vc, animated: animated)
