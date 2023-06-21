@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  CoPass
+
+  Created by Oktay Tanrıkulu on 22.05.2023.
+  
+*/
+
+// MARK: - ONBOARDING
+"onboarding_page_title" = "Welcome";
+"onboarding_title" = "Manage Your Passwords Securely";
+"onboarding_subtitle" = "Store your passwords securely and access them easily from your mobile device";
+"onboarding_get_started" = "Get Started";
+"onboarding_have_account" = "I have already account!";
+"onboarding_login" = "Login";
+
+// MARK: - REGISTER
+"register_title" = "Set with your \nmaster password";
+"register_subtitle" = "Enter your username and your master \npassword that will ensure your security while \nentering the application.";
+"register_username" = "Username";
+"register_master_password" = "Master Password";
+"register_remaster_password" = "Re-master Password";
+"register_action" = "Register";
+
+"register_empty_field" = "This field cannot be left blank";
+"register_invalid_username" = "Username must not contain special characters";
+"register_invalid_master_password" = "Password must be at least 6 characters";
+"register_invalid_remaster_password" = "Password does not match";

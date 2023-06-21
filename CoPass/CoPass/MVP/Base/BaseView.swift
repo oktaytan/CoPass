@@ -1,5 +1,5 @@
 //
-//  BaseCustomView.swift
+//  BaseView.swift
 //  CoPass
 //
 //  Created by Oktay Tanrıkulu on 19.05.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BaseCustomView: UIView {
+class BaseView: UIView {
     
     var view: UIView!
     

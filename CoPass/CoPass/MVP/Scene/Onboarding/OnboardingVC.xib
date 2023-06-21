@@ -9,9 +9,13 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnboardingController" customModule="CoPass" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnboardingVC" customModule="CoPass" customModuleProvider="target">
             <connections>
                 <outlet property="getStartedButton" destination="IWd-2A-MWS" id="w1f-9q-Xlf"/>
+                <outlet property="haveAccountLabel" destination="Hs9-Eb-5WR" id="esP-MY-Zez"/>
+                <outlet property="loginButton" destination="VOX-oU-jPX" id="tz6-yc-PBC"/>
+                <outlet property="subtitleLabel" destination="x2l-9g-i8x" id="VqZ-cb-6hi"/>
+                <outlet property="titleLabel" destination="5at-oI-8bt" id="pKi-kj-bqm"/>
                 <outlet property="view" destination="iN0-l3-epB" id="dec-hO-Ndc"/>
             </connections>
         </placeholder>
@@ -60,6 +64,9 @@
                                             <state key="normal" title="Get Started">
                                                 <color key="titleColor" name="coText"/>
                                             </state>
+                                            <connections>
+                                                <action selector="goToRegister:" destination="-1" eventType="touchUpInside" id="Ekk-bg-pPC"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -78,16 +85,18 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOX-oU-jPX">
-                                            <rect key="frame" x="159" y="0.0" width="44" height="44"/>
+                                            <rect key="frame" x="160" y="0.0" width="43" height="44"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="44" id="TDo-fi-JbV"/>
-                                                <constraint firstAttribute="width" constant="44" id="vLb-62-I01"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="Login">
                                                 <color key="titleColor" name="coPurple"/>
                                             </state>
+                                            <connections>
+                                                <action selector="goToLogin:" destination="-1" eventType="touchUpInside" id="rf8-zs-aie"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>

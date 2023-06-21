@@ -8,7 +8,8 @@
 import Foundation
 
 protocol OnboardingPresenterProtocol: Presenter {
-    func start()
+    func goToPresenter()
+    func goToLogin()
 }
 
 final class OnboardingPresenter: OnboardingPresenterProtocol {
@@ -21,11 +22,11 @@ final class OnboardingPresenter: OnboardingPresenterProtocol {
         self.wireframe = wireframe
     }
     
-    func viewDidLoad() {
-        self.ui?.load()
+    func goToPresenter() {
+        wireframe.navigate(to: .register)
     }
     
-    func start() {
-        
+    func goToLogin() {
+        wireframe.navigate(to: .login)
     }
 }

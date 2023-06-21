@@ -13,8 +13,8 @@ protocol OnboardingWireframeProtocol: AnyObject {
 
 final class OnboardingWireframe: BaseWireframe, OnboardingWireframeProtocol {
     
-    static func prepare() -> OnboardingController {
-        let view = OnboardingController(nibName: OnboardingController.className, bundle: nil)
+    static func prepare() -> OnboardingVC {
+        let view = OnboardingVC(nibName: OnboardingVC.className, bundle: nil)
         let wireframe = OnboardingWireframe()
         let presenter = OnboardingPresenter(ui: view, wireframe: wireframe)
         view.presenter = presenter
@@ -22,24 +22,24 @@ final class OnboardingWireframe: BaseWireframe, OnboardingWireframeProtocol {
         return view
     }
     
-    
     func navigate(to route: Router.Onboarding) {
         switch route {
         case .register:
             showRegister()
         case .login:
-            showRegister()
+            showLogin()
         }
     }
-    
 }
 
 extension OnboardingWireframe {
-    func showRegister() {
-        
+    private func showRegister() {
+        let registerVC = RegisterWireframe.prepare()
+        forward(registerVC, with: .push)
     }
     
-    func showLogin() {
-        
+    private func showLogin() {
+        let loginVC = LoginWireframe.prepare()
+        forward(loginVC, with: .push)
     }
 }

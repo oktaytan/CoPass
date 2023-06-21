@@ -7,17 +7,18 @@
 
 import Foundation
 
-public protocol Presenter {
-  func viewDidLoad()
-  func viewWillAppear()
-  func viewDidAppear()
-  func viewWillDisappear()
-  func viewDidDisappear()
+protocol Presenter {
+    func viewDidLoad()
+    func viewWillAppear()
+    func viewDidAppear()
+    func viewWillDisappear()
+    func viewDidDisappear()
 }
 
-public extension Presenter {
-  func viewWillAppear() {}
-  func viewDidAppear() {}
-  func viewWillDisappear() {}
-  func viewDidDisappear() {}
+extension Presenter {
+    func viewDidLoad() {}
+    func viewWillAppear() {}
+    func viewDidAppear() {}
+    func viewWillDisappear() {}
+    func viewDidDisappear() {}
 }

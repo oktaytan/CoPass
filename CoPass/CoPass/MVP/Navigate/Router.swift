@@ -13,4 +13,11 @@ enum Router {
         case register, login
     }
     
+    enum Register {
+        case login
+    }
+    
+    enum Login {
+        case home
+    }
 }

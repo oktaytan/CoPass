@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  CoPass
+
+  Created by Oktay Tanrıkulu on 22.05.2023.
+  
+*/
+
+// MARK: - ONBOARDING
+"onboarding_page_title" = "Hoşgeldin";
+"onboarding_title" = "Şifrelerini Güvenle Yönet";
+"onboarding_subtitle" = "Parolalarınızı güvenli bir şekilde saklayın \nve mobil cihazınızdan kolayca erişin";
+"onboarding_get_started" = "Başla";
+"onboarding_have_account" = "Zaten hesabım var!";
+"onboarding_login" = "Giriş yap";
+
+// MARK: - REGISTER
+"register_title" = "Master şifreni \nayarla";
+"register_subtitle" = "Uygulamaya girerken güvenliğinizi sağlayacak \nkullanıcı adınızı ve ana şifrenizi \ngiriniz.";
+"register_username" = "Kullanıcı adı";
+"register_master_password" = "Master şifre";
+"register_remaster_password" = "Tekrar master şifre";
+"register_action" = "Kayıt ol";
+
+"register_empty_field" = "Bu alan boş bırakılamaz";
+"register_invalid_username" = "Kullanıcı adı özel karakter içermemelidir";
+"register_invalid_master_password" = "Şifre en az 6 karakter olmaılıdır";
+"register_invalid_remaster_password" = "Passwords did not match";
