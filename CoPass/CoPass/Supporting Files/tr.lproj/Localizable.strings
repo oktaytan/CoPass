@@ -21,6 +21,8 @@
 "register_master_password" = "Master şifre";
 "register_remaster_password" = "Tekrar master şifre";
 "register_action" = "Kayıt ol";
+"register_success" = "Kayıt işlemi başarılı";
+"register_failure" = "Kayıt işlemi başarısız.\nDaha sonra tekrar deneyin";
 
 "register_empty_field" = "Bu alan boş bırakılamaz";
 "register_invalid_username" = "Kullanıcı adı özel karakter içermemelidir";

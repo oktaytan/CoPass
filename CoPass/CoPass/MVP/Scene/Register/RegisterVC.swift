@@ -51,10 +51,10 @@ final class RegisterVC: BaseViewController {
     }
     
     private func registerAction() {
-        let userData = UserRegisterData(username: usernameTextField.text,
+        let data = RegisterData(username: usernameTextField.text,
                                         password: masterPasswordTextField.text,
                                         rePassword: reMasterPasswordTextField.text)
-        presenter.register(userData)
+        presenter.register(with: data)
     }
     
     @objc private func hideKeyboard() {
@@ -66,7 +66,7 @@ final class RegisterVC: BaseViewController {
 
 
 extension RegisterVC: RegisterUI {
-    func registerError(error: RegisterError) {
+    func showError(error: RegisterError) {
         switch error {
         case .emptyUsername:
             usernameTextField.errorMessage = Strings.Errors.emptyField
@@ -80,7 +80,13 @@ extension RegisterVC: RegisterUI {
             masterPasswordTextField.errorMessage = Strings.Errors.invalidMasterPassword
         case .invalidRePassword:
             reMasterPasswordTextField.errorMessage = Strings.Errors.invalid_ReMasterPassword
+        case .failureRegister:
+            showAlert(title: nil, message: Strings.registerFailure, error: true)
         }
+    }
+    
+    func registerDone() {
+        showAlert(title: nil, message: Strings.registerSuccess, error: false)
     }
 }
 
@@ -111,6 +117,8 @@ extension RegisterVC {
         static let masterPassword = "register_master_password".localized
         static let reMasterPassword = "register_remaster_password".localized
         static let registerAction = "register_action".localized
+        static let registerSuccess = "register_success".localized
+        static let registerFailure = "register_failure".localized
         
         struct Errors {
             static let emptyField = "register_empty_field".localized

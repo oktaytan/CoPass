@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66475B802A44C29200E76D71 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66475B7F2A44C29200E76D71 /* KeychainManager.swift */; };
+		66475B832A44CAFB00E76D71 /* RegisterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66475B822A44CAFB00E76D71 /* RegisterData.swift */; };
+		66475B852A44D10B00E76D71 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66475B842A44D10B00E76D71 /* User.swift */; };
+		66475B882A44D52B00E76D71 /* SPIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = 66475B872A44D52B00E76D71 /* SPIndicator */; };
 		668CE22E2A1800CC00D6E7DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE22D2A1800CC00D6E7DF /* AppDelegate.swift */; };
 		668CE2302A1800CC00D6E7DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE22F2A1800CC00D6E7DF /* SceneDelegate.swift */; };
 		668CE2382A1800CC00D6E7DF /* CoPass.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 668CE2362A1800CC00D6E7DF /* CoPass.xcdatamodeld */; };
@@ -50,6 +54,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		66475B7F2A44C29200E76D71 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		66475B822A44CAFB00E76D71 /* RegisterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterData.swift; sourceTree = "<group>"; };
+		66475B842A44D10B00E76D71 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		668CE22A2A1800CC00D6E7DF /* CoPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		668CE22D2A1800CC00D6E7DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		668CE22F2A1800CC00D6E7DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,12 +108,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66475B882A44D52B00E76D71 /* SPIndicator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66475B7E2A44C22600E76D71 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				66475B7F2A44C29200E76D71 /* KeychainManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		66475B812A44CA8700E76D71 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				66475B822A44CAFB00E76D71 /* RegisterData.swift */,
+				66475B842A44D10B00E76D71 /* User.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		668CE2212A1800CC00D6E7DF = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +201,7 @@
 		668CE24D2A18033300D6E7DF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				66475B7E2A44C22600E76D71 /* Managers */,
 				668CE2622A180C1E00D6E7DF /* Extensions */,
 				66F9AECD2A1BFA7B00EAFD58 /* Localization.swift */,
 				66F9AECF2A1BFB0300EAFD58 /* Language.swift */,
@@ -222,6 +248,7 @@
 		668CE2542A18076F00D6E7DF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				66475B812A44CA8700E76D71 /* Register */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -299,6 +326,9 @@
 			dependencies = (
 			);
 			name = CoPass;
+			packageProductDependencies = (
+				66475B872A44D52B00E76D71 /* SPIndicator */,
+			);
 			productName = CoPass;
 			productReference = 668CE22A2A1800CC00D6E7DF /* CoPass.app */;
 			productType = "com.apple.product-type.application";
@@ -328,6 +358,9 @@
 				tr,
 			);
 			mainGroup = 668CE2212A1800CC00D6E7DF;
+			packageReferences = (
+				66475B862A44D52B00E76D71 /* XCRemoteSwiftPackageReference "SPIndicator" */,
+			);
 			productRefGroup = 668CE22B2A1800CC00D6E7DF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66475B832A44CAFB00E76D71 /* RegisterData.swift in Sources */,
 				668CE2572A1807A000D6E7DF /* BaseUI.swift in Sources */,
 				66F9AEB62A1BE99400EAFD58 /* RegisterWireframe.swift in Sources */,
 				66EB525E2A43B4A500866CD8 /* UIViewController+Ext.swift in Sources */,
@@ -367,6 +401,7 @@
 				668CE2382A1800CC00D6E7DF /* CoPass.xcdatamodeld in Sources */,
 				668CE24C2A18032500D6E7DF /* TransitionType.swift in Sources */,
 				668CE2592A1807E500D6E7DF /* LoadingUI.swift in Sources */,
+				66475B802A44C29200E76D71 /* KeychainManager.swift in Sources */,
 				668CE25B2A18084400D6E7DF /* BaseViewController.swift in Sources */,
 				668CE26C2A180FA500D6E7DF /* OnboardingWireframe.swift in Sources */,
 				668CE24A2A1802C200D6E7DF /* BaseWireframe.swift in Sources */,
@@ -379,6 +414,7 @@
 				668CE2642A180C2A00D6E7DF /* UIView+Ext.swift in Sources */,
 				66F9AEB82A1BEA8800EAFD58 /* RegisterVC.swift in Sources */,
 				66F9AEC32A1BEF9800EAFD58 /* LoginPresenter.swift in Sources */,
+				66475B852A44D10B00E76D71 /* User.swift in Sources */,
 				668CE25F2A180B5800D6E7DF /* NavigationPresenter.swift in Sources */,
 				668CE2512A18059E00D6E7DF /* Router.swift in Sources */,
 				668CE2302A1800CC00D6E7DF /* SceneDelegate.swift in Sources */,
@@ -617,6 +653,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		66475B862A44D52B00E76D71 /* XCRemoteSwiftPackageReference "SPIndicator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ivanvorobei/SPIndicator.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		66475B872A44D52B00E76D71 /* SPIndicator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66475B862A44D52B00E76D71 /* XCRemoteSwiftPackageReference "SPIndicator" */;
+			productName = SPIndicator;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		668CE2362A1800CC00D6E7DF /* CoPass.xcdatamodeld */ = {

@@ -12,5 +12,6 @@ struct AppConstants {
     
     static let appleLanguagesKey = "AppleLanguages"
     static let appUIRadius = 10.0
-    
+    static let keychainService = "coPass"
+    static let keychainAccount = "com.oktaytan.CoPass"
 }
