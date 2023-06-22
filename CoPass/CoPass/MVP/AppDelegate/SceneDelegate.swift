@@ -10,18 +10,18 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    private let keychainManager = KeychainManager.standard
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        setOnboardingScreen(window)
+        
+        if let _ = keychainManager.read(service: AppConstants.keychainService, account: AppConstants.keychainAccount, type: User.self) {
+            setLoginScreen(window)
+        } else {
+            setOnboardingScreen(window)
+        }
         self.window = window
-    }
-    
-    func setOnboardingScreen(_ window: UIWindow) {
-        let onboardingVC = OnboardingWireframe.prepare()
-        AppWireframe.shared.setRootVC(vc: onboardingVC, window)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -58,3 +58,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+extension SceneDelegate {
+    private func setOnboardingScreen(_ window: UIWindow) {
+        let onboardingVC = OnboardingWireframe.prepare()
+        AppWireframe.shared.setRootVC(vc: onboardingVC, window)
+    }
+    
+    private func setLoginScreen(_ window: UIWindow) {
+        let loginVC = LoginWireframe.prepare()
+        AppWireframe.shared.setRootVC(vc: loginVC, window)
+    }
+}

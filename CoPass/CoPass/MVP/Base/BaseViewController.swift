@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SPIndicator
 
 class BaseViewController: UIViewController {
     
@@ -26,6 +27,6 @@ class BaseViewController: UIViewController {
 
 extension BaseViewController: BaseUI {
     func showAlert(title: String?, message: String?, error: Bool) {
-        
+        SPIndicator.present(title: title ?? "", message: message, preset: error ? .error : .done)
     }
 }
