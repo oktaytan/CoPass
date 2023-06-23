@@ -15,7 +15,7 @@ final class RegisterVC: BaseViewController {
     @IBOutlet weak var usernameTextField: CoTextField!
     @IBOutlet weak var masterPasswordTextField: CoTextField!
     @IBOutlet weak var reMasterPasswordTextField: CoTextField!
-    @IBOutlet weak var registerButton: CoButton!
+    @IBOutlet weak var registerBtn: CoButton!
     
     var presenter: RegisterPresenterProtocol!
     
@@ -37,8 +37,8 @@ final class RegisterVC: BaseViewController {
         masterPasswordTextField.delegate = self
         reMasterPasswordTextField.delegate = self
         
-        registerButton.type = .primary
-        registerButton.setTitle(Strings.registerAction, for: .normal)
+        registerBtn.type = .primary
+        registerBtn.setTitle(Strings.registerAction, for: .normal)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         scrollView.addGestureRecognizer(tapGesture)
@@ -55,12 +55,6 @@ final class RegisterVC: BaseViewController {
                                         password: masterPasswordTextField.text,
                                         rePassword: reMasterPasswordTextField.text)
         presenter.register(with: data)
-    }
-    
-    @objc private func hideKeyboard() {
-        usernameTextField.resignFirstResponder()
-        masterPasswordTextField.resignFirstResponder()
-        reMasterPasswordTextField.resignFirstResponder()
     }
 }
 

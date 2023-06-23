@@ -20,4 +20,8 @@ enum Router {
     enum Login {
         case home
     }
+    
+    enum Home {
+        
+    }
 }

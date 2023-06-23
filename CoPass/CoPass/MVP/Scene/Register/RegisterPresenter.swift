@@ -68,7 +68,7 @@ extension RegisterPresenter {
         if password.isEmpty {
             self.ui?.showError(error: .emptyPassword)
             validate = false
-        } else if password.count < 6 {
+        } else if password.count < 4 {
             self.ui?.showError(error: .invalidPassword)
             validate = false
         } else {

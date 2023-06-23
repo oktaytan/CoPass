@@ -8,5 +8,6 @@
 import Foundation
 
 protocol LoginUI: BaseUI {
-    
+    func load(username: String, hasBioAuth: Bool)
+    func authenticationFail()
 }

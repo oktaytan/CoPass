@@ -41,7 +41,7 @@ extension UIViewController {
         let keyboardFrameConvertedToViewFrame = view.convert(keyboardFrame!, from: nil)
         let options = UIView.AnimationOptions.beginFromCurrentState
         UIView.animate(withDuration: animationDuration, delay: 0, options:options, animations: { () -> Void in
-            let insetHeight = (self.internalScrollView.frame.height + self.internalScrollView.frame.origin.y) - keyboardFrameConvertedToViewFrame.origin.y + 32
+            let insetHeight = (self.internalScrollView.frame.height + self.internalScrollView.frame.origin.y) - keyboardFrameConvertedToViewFrame.origin.y + 24
             self.internalScrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: insetHeight, right: 0)
             self.internalScrollView.scrollIndicatorInsets  = UIEdgeInsets(top: 0, left: 0, bottom: insetHeight, right: 0)
             }) { (complete) -> Void in

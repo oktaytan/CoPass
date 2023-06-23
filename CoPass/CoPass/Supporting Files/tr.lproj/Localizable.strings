@@ -18,13 +18,26 @@
 "register_title" = "Master şifreni \nayarla";
 "register_subtitle" = "Uygulamaya girerken güvenliğinizi sağlayacak \nkullanıcı adınızı ve ana şifrenizi \ngiriniz.";
 "register_username" = "Kullanıcı adı";
-"register_master_password" = "Master şifre";
-"register_remaster_password" = "Tekrar master şifre";
+"register_master_password" = "Master parola";
+"register_remaster_password" = "Tekrar master parola";
 "register_action" = "Kayıt ol";
 "register_success" = "Kayıt işlemi başarılı";
 "register_failure" = "Kayıt işlemi başarısız.\nDaha sonra tekrar deneyin";
 
 "register_empty_field" = "Bu alan boş bırakılamaz";
 "register_invalid_username" = "Kullanıcı adı özel karakter içermemelidir";
-"register_invalid_master_password" = "Şifre en az 6 karakter olmaılıdır";
+"register_invalid_master_password" = "Şifre en az 4 karakter olmaılıdır";
 "register_invalid_remaster_password" = "Passwords did not match";
+
+
+// MARK: - LOGIN
+"login_title" = "Hoşgeldin 😃";
+"login_subtitle" = "Giriş yapmak için Face ID' ini \nya da master parolanı kullan";
+"login_faceID" = "Face ID";
+"login_faceID_reason" = "Bunu uygulamaya giriş yapmak için kullanıyoruz";
+"login_or_text" = "ya da";
+"login_master_password" = "Master parola";
+"login_action" = "Giriş yap";
+"login_fill_password" = "Parolanı girmelisin!";
+"login_failure_title" = "Parola hatalı";
+"login_failure_message" = "Tekrar dene!";
