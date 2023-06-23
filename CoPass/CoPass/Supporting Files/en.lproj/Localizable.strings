@@ -26,5 +26,18 @@
 
 "register_empty_field" = "This field cannot be left blank";
 "register_invalid_username" = "Username must not contain special characters";
-"register_invalid_master_password" = "Password must be at least 6 characters";
+"register_invalid_master_password" = "Password must be at least 4 characters";
 "register_invalid_remaster_password" = "Password does not match";
+
+
+// MARK: - LOGIN
+"login_title %@" = "Welcome %@";
+"login_subtitle" = "Use Face ID or enter your \nmaster password for login";
+"login_faceID" = "Face ID";
+"login_faceID_reason" = "We use this to login to the app";
+"login_or_text" = "or";
+"login_master_password" = "Master password";
+"login_action" = "Login";
+"login_fill_password" = "Enter your password!";
+"login_failure_title" = "Wrong password";
+"login_failure_message" = "Try again!";

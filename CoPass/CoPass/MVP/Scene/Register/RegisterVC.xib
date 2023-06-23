@@ -13,8 +13,8 @@
             <connections>
                 <outlet property="masterPasswordTextField" destination="jz2-1d-eOM" id="Clt-rp-skg"/>
                 <outlet property="reMasterPasswordTextField" destination="Kex-CV-XTL" id="CBg-Hv-tm8"/>
-                <outlet property="registerButton" destination="9ak-gP-47x" id="agf-og-TQq"/>
-                <outlet property="scrollView" destination="Rcd-jX-JYa" id="U3O-3N-iCp"/>
+                <outlet property="registerBtn" destination="9ak-gP-47x" id="agf-og-TQq"/>
+                <outlet property="scrollView" destination="Rcd-jX-JYa" id="Yin-X0-uxc"/>
                 <outlet property="subtitleLabel" destination="g7L-rG-Kac" id="h2J-c1-Hwt"/>
                 <outlet property="titleLabel" destination="WEu-hZ-eWm" id="cfw-hh-YhG"/>
                 <outlet property="usernameTextField" destination="XJD-zE-wqc" id="Wdr-uf-tM7"/>

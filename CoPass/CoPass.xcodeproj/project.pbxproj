@@ -35,6 +35,13 @@
 		668CE2722A18121D00D6E7DF /* OnboardingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668CE2712A18121D00D6E7DF /* OnboardingVC.xib */; };
 		668CE2762A181D3100D6E7DF /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE2752A181D3100D6E7DF /* UIColor+Ext.swift */; };
 		668CE2782A18394500D6E7DF /* CoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE2772A18394500D6E7DF /* CoButton.swift */; };
+		66EAFD072A463F5D005B9DAB /* BioAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EAFD062A463F5D005B9DAB /* BioAuthManager.swift */; };
+		66EAFD092A46488D005B9DAB /* CoOneTimeCodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EAFD082A46488D005B9DAB /* CoOneTimeCodeTextField.swift */; };
+		66EAFD0C2A465293005B9DAB /* HomeUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EAFD0B2A465293005B9DAB /* HomeUI.swift */; };
+		66EAFD0E2A4652B2005B9DAB /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EAFD0D2A4652B2005B9DAB /* HomeVC.swift */; };
+		66EAFD102A4652D9005B9DAB /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66EAFD0F2A4652D9005B9DAB /* HomeVC.xib */; };
+		66EAFD122A46530B005B9DAB /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EAFD112A46530B005B9DAB /* HomeWireframe.swift */; };
+		66EAFD142A4653B0005B9DAB /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EAFD132A4653B0005B9DAB /* HomePresenter.swift */; };
 		66EB525C2A437F9D00866CD8 /* CoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EB525B2A437F9D00866CD8 /* CoTextField.swift */; };
 		66EB525E2A43B4A500866CD8 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EB525D2A43B4A500866CD8 /* UIViewController+Ext.swift */; };
 		66F9AEB22A1BE90700EAFD58 /* RegisterUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9AEB12A1BE90700EAFD58 /* RegisterUI.swift */; };
@@ -83,6 +90,13 @@
 		668CE2712A18121D00D6E7DF /* OnboardingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingVC.xib; sourceTree = "<group>"; };
 		668CE2752A181D3100D6E7DF /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		668CE2772A18394500D6E7DF /* CoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoButton.swift; sourceTree = "<group>"; };
+		66EAFD062A463F5D005B9DAB /* BioAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioAuthManager.swift; sourceTree = "<group>"; };
+		66EAFD082A46488D005B9DAB /* CoOneTimeCodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoOneTimeCodeTextField.swift; sourceTree = "<group>"; };
+		66EAFD0B2A465293005B9DAB /* HomeUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUI.swift; sourceTree = "<group>"; };
+		66EAFD0D2A4652B2005B9DAB /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		66EAFD0F2A4652D9005B9DAB /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		66EAFD112A46530B005B9DAB /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
+		66EAFD132A4653B0005B9DAB /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		66EB525B2A437F9D00866CD8 /* CoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoTextField.swift; sourceTree = "<group>"; };
 		66EB525D2A43B4A500866CD8 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		66F9AEB12A1BE90700EAFD58 /* RegisterUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUI.swift; sourceTree = "<group>"; };
@@ -119,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				66475B7F2A44C29200E76D71 /* KeychainManager.swift */,
+				66EAFD062A463F5D005B9DAB /* BioAuthManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -241,6 +256,7 @@
 			children = (
 				668CE2772A18394500D6E7DF /* CoButton.swift */,
 				66EB525B2A437F9D00866CD8 /* CoTextField.swift */,
+				66EAFD082A46488D005B9DAB /* CoOneTimeCodeTextField.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -267,6 +283,7 @@
 		668CE2652A180EB300D6E7DF /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				66EAFD0A2A465289005B9DAB /* Home */,
 				66F9AEBB2A1BEF3A00EAFD58 /* Login */,
 				66F9AEB02A1BE8F800EAFD58 /* Register */,
 				668CE2662A180EDF00D6E7DF /* Onboarding */,
@@ -284,6 +301,18 @@
 				668CE2712A18121D00D6E7DF /* OnboardingVC.xib */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		66EAFD0A2A465289005B9DAB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				66EAFD0B2A465293005B9DAB /* HomeUI.swift */,
+				66EAFD0D2A4652B2005B9DAB /* HomeVC.swift */,
+				66EAFD132A4653B0005B9DAB /* HomePresenter.swift */,
+				66EAFD112A46530B005B9DAB /* HomeWireframe.swift */,
+				66EAFD0F2A4652D9005B9DAB /* HomeVC.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		66F9AEB02A1BE8F800EAFD58 /* Register */ = {
@@ -381,6 +410,7 @@
 				66F9AEBA2A1BEAF700EAFD58 /* RegisterVC.xib in Resources */,
 				668CE2722A18121D00D6E7DF /* OnboardingVC.xib in Resources */,
 				668CE23A2A1800CD00D6E7DF /* Assets.xcassets in Resources */,
+				66EAFD102A4652D9005B9DAB /* HomeVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +426,8 @@
 				66F9AEB62A1BE99400EAFD58 /* RegisterWireframe.swift in Sources */,
 				66EB525E2A43B4A500866CD8 /* UIViewController+Ext.swift in Sources */,
 				668CE2472A18027C00D6E7DF /* AppWireframe.swift in Sources */,
+				66EAFD072A463F5D005B9DAB /* BioAuthManager.swift in Sources */,
+				66EAFD0C2A465293005B9DAB /* HomeUI.swift in Sources */,
 				66F9AEC52A1BEFA200EAFD58 /* LoginWireframe.swift in Sources */,
 				668CE2782A18394500D6E7DF /* CoButton.swift in Sources */,
 				668CE2382A1800CC00D6E7DF /* CoPass.xcdatamodeld in Sources */,
@@ -406,6 +438,8 @@
 				668CE26C2A180FA500D6E7DF /* OnboardingWireframe.swift in Sources */,
 				668CE24A2A1802C200D6E7DF /* BaseWireframe.swift in Sources */,
 				66F9AED22A1BFB2E00EAFD58 /* AppConstants.swift in Sources */,
+				66EAFD122A46530B005B9DAB /* HomeWireframe.swift in Sources */,
+				66EAFD0E2A4652B2005B9DAB /* HomeVC.swift in Sources */,
 				668CE26E2A18104C00D6E7DF /* OnboardingVC.swift in Sources */,
 				668CE22E2A1800CC00D6E7DF /* AppDelegate.swift in Sources */,
 				668CE2682A180EF100D6E7DF /* OnboardingUI.swift in Sources */,
@@ -425,7 +459,9 @@
 				668CE2612A180BB100D6E7DF /* BaseView.swift in Sources */,
 				66F9AEBD2A1BEF5700EAFD58 /* LoginVC.swift in Sources */,
 				66F9AECE2A1BFA7B00EAFD58 /* Localization.swift in Sources */,
+				66EAFD142A4653B0005B9DAB /* HomePresenter.swift in Sources */,
 				668CE2762A181D3100D6E7DF /* UIColor+Ext.swift in Sources */,
+				66EAFD092A46488D005B9DAB /* CoOneTimeCodeTextField.swift in Sources */,
 				668CE26A2A180F2C00D6E7DF /* OnboardingPresenter.swift in Sources */,
 				668CE2702A18119C00D6E7DF /* NSObject+Ext.swift in Sources */,
 			);
@@ -581,6 +617,7 @@
 				DEVELOPMENT_TEAM = TN6PW5B825;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoPass/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We use this to login to the app";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -611,6 +648,7 @@
 				DEVELOPMENT_TEAM = TN6PW5B825;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoPass/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We use this to login to the app";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
