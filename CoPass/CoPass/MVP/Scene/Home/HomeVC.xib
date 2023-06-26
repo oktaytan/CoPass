@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="CoPass" customModuleProvider="target">
             <connections>
+                <outlet property="testLabel" destination="EgH-rD-xWd" id="vh1-Gd-yhz"/>
                 <outlet property="view" destination="iN0-l3-epB" id="00W-vI-EnV"/>
             </connections>
         </placeholder>

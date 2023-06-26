@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ViewAnimator
 
 final class OnboardingVC: BaseViewController, OnboardingUI {
     
@@ -16,6 +17,7 @@ final class OnboardingVC: BaseViewController, OnboardingUI {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var haveAccountLabel: UILabel!
+    @IBOutlet weak var onboardingImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +35,12 @@ final class OnboardingVC: BaseViewController, OnboardingUI {
         getStartedButton.type = .primary
         haveAccountLabel.text = Strings.haveAccount
         loginButton.setTitle(Strings.loginTitle, for: .normal)
+        
+        let zoomAnimation = AnimationType.zoom(scale: 0.2)
+        UIView.animate(views: [onboardingImageView], animations: [zoomAnimation], duration: 0.3)
+        
+        let fromAnimation = AnimationType.vector(CGVector(dx: 0, dy: 50))
+        UIView.animate(views: [titleLabel, subtitleLabel, getStartedButton], animations: [fromAnimation], delay: 0.3, duration: 0.25)
     }
     
     @IBAction func goToRegister(_ sender: Any) {

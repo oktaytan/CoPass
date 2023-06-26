@@ -6,14 +6,19 @@
 //
 
 import UIKit
+import SkeletonView
 
 final class HomeVC: BaseViewController {
     
     var presenter: HomePresenterProtocol!
+    @IBOutlet weak var testLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+        
+        testLabel.isSkeletonable = true
+        testLabel.showAnimatedGradientSkeleton()
     }
     
 }
