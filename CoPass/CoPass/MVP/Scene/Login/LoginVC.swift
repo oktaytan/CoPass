@@ -27,11 +27,6 @@ final class LoginVC: BaseViewController {
         presenter.viewDidLoad()
     }
     
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        hideKeyboard()
-//    }
-    
     override func setupUI() {
         super.setupUI()
         hideNavBar()

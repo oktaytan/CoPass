@@ -10,6 +10,7 @@ import Foundation
 
 struct AppConstants {
     
+    static let appName = "CoPass"
     static let appleLanguagesKey = "AppleLanguages"
     static let appUIRadius = 10.0
     static let keychainService = "coPass"

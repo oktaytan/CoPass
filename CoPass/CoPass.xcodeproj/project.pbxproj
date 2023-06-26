@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		660838B42A47892700E72F31 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660838B22A47892700E72F31 /* User+CoreDataClass.swift */; };
+		660838B52A47892700E72F31 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660838B32A47892700E72F31 /* User+CoreDataProperties.swift */; };
+		660838B72A478BE600E72F31 /* CoStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660838B62A478BE600E72F31 /* CoStorage.swift */; };
+		660838B92A47968800E72F31 /* CoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660838B82A47968800E72F31 /* CoError.swift */; };
+		660838BC2A47A7E500E72F31 /* CoTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660838BB2A47A7E500E72F31 /* CoTabBarVC.swift */; };
+		660838BF2A47A89A00E72F31 /* CoTabBarWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660838BE2A47A89A00E72F31 /* CoTabBarWireframe.swift */; };
 		66475B802A44C29200E76D71 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66475B7F2A44C29200E76D71 /* KeychainManager.swift */; };
 		66475B832A44CAFB00E76D71 /* RegisterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66475B822A44CAFB00E76D71 /* RegisterData.swift */; };
-		66475B852A44D10B00E76D71 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66475B842A44D10B00E76D71 /* User.swift */; };
 		66475B882A44D52B00E76D71 /* SPIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = 66475B872A44D52B00E76D71 /* SPIndicator */; };
 		668CE22E2A1800CC00D6E7DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE22D2A1800CC00D6E7DF /* AppDelegate.swift */; };
 		668CE2302A1800CC00D6E7DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE22F2A1800CC00D6E7DF /* SceneDelegate.swift */; };
@@ -35,6 +40,31 @@
 		668CE2722A18121D00D6E7DF /* OnboardingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668CE2712A18121D00D6E7DF /* OnboardingVC.xib */; };
 		668CE2762A181D3100D6E7DF /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE2752A181D3100D6E7DF /* UIColor+Ext.swift */; };
 		668CE2782A18394500D6E7DF /* CoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE2772A18394500D6E7DF /* CoButton.swift */; };
+		66D481562A48EBD000CE5B5A /* StoreUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D481552A48EBD000CE5B5A /* StoreUI.swift */; };
+		66D481582A48EBE200CE5B5A /* StorePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D481572A48EBE200CE5B5A /* StorePresenter.swift */; };
+		66D4815A2A48EC5C00CE5B5A /* StoreWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D481592A48EC5C00CE5B5A /* StoreWireframe.swift */; };
+		66D4815C2A48ECAE00CE5B5A /* StoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D4815B2A48ECAE00CE5B5A /* StoreVC.swift */; };
+		66D4815E2A48ECCB00CE5B5A /* StoreVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66D4815D2A48ECCB00CE5B5A /* StoreVC.xib */; };
+		66D481612A48ECFD00CE5B5A /* RecordUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D481602A48ECFD00CE5B5A /* RecordUI.swift */; };
+		66D481632A48ED0F00CE5B5A /* RecordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D481622A48ED0F00CE5B5A /* RecordPresenter.swift */; };
+		66D481652A48ED1700CE5B5A /* RecordWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D481642A48ED1700CE5B5A /* RecordWireframe.swift */; };
+		66D481672A48ED1D00CE5B5A /* RecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D481662A48ED1D00CE5B5A /* RecordVC.swift */; };
+		66D481692A48ED3A00CE5B5A /* RecordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66D481682A48ED3A00CE5B5A /* RecordVC.xib */; };
+		66D4816C2A48EDF800CE5B5A /* SafetyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66D4816B2A48EDF800CE5B5A /* SafetyVC.xib */; };
+		66D4816E2A48EDFE00CE5B5A /* SafetyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D4816D2A48EDFE00CE5B5A /* SafetyVC.swift */; };
+		66D481702A48EE1F00CE5B5A /* SafetyUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D4816F2A48EE1F00CE5B5A /* SafetyUI.swift */; };
+		66D481722A48EE3100CE5B5A /* SafetyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D481712A48EE3100CE5B5A /* SafetyPresenter.swift */; };
+		66D481742A48EE3800CE5B5A /* SafetyWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D481732A48EE3800CE5B5A /* SafetyWireframe.swift */; };
+		66D481772A48EEBF00CE5B5A /* ProfileUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D481762A48EEBF00CE5B5A /* ProfileUI.swift */; };
+		66D481792A48EEC700CE5B5A /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D481782A48EEC700CE5B5A /* ProfilePresenter.swift */; };
+		66D4817B2A48EED300CE5B5A /* ProfileWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D4817A2A48EED300CE5B5A /* ProfileWireframe.swift */; };
+		66D4817D2A48EED800CE5B5A /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D4817C2A48EED800CE5B5A /* ProfileVC.swift */; };
+		66D4817F2A48EEDF00CE5B5A /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66D4817E2A48EEDF00CE5B5A /* ProfileVC.xib */; };
+		66D481822A48F31200CE5B5A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 66D481812A48F31200CE5B5A /* SnapKit */; };
+		66D481892A48FDB500CE5B5A /* CoTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D481882A48FDB500CE5B5A /* CoTabBar.swift */; };
+		66D4818B2A48FE0500CE5B5A /* CoTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66D4818A2A48FE0500CE5B5A /* CoTabBar.xib */; };
+		66D4818D2A490A0800CE5B5A /* CoTabBarUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D4818C2A490A0800CE5B5A /* CoTabBarUI.swift */; };
+		66D4818F2A490A2000CE5B5A /* CoTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D4818E2A490A2000CE5B5A /* CoTabBarPresenter.swift */; };
 		66EAFD072A463F5D005B9DAB /* BioAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EAFD062A463F5D005B9DAB /* BioAuthManager.swift */; };
 		66EAFD092A46488D005B9DAB /* CoOneTimeCodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EAFD082A46488D005B9DAB /* CoOneTimeCodeTextField.swift */; };
 		66EAFD0C2A465293005B9DAB /* HomeUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EAFD0B2A465293005B9DAB /* HomeUI.swift */; };
@@ -61,9 +91,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		660838B22A47892700E72F31 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		660838B32A47892700E72F31 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		660838B62A478BE600E72F31 /* CoStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoStorage.swift; sourceTree = "<group>"; };
+		660838B82A47968800E72F31 /* CoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoError.swift; sourceTree = "<group>"; };
+		660838BB2A47A7E500E72F31 /* CoTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoTabBarVC.swift; sourceTree = "<group>"; };
+		660838BE2A47A89A00E72F31 /* CoTabBarWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoTabBarWireframe.swift; sourceTree = "<group>"; };
 		66475B7F2A44C29200E76D71 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		66475B822A44CAFB00E76D71 /* RegisterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterData.swift; sourceTree = "<group>"; };
-		66475B842A44D10B00E76D71 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		668CE22A2A1800CC00D6E7DF /* CoPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		668CE22D2A1800CC00D6E7DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		668CE22F2A1800CC00D6E7DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +125,30 @@
 		668CE2712A18121D00D6E7DF /* OnboardingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingVC.xib; sourceTree = "<group>"; };
 		668CE2752A181D3100D6E7DF /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		668CE2772A18394500D6E7DF /* CoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoButton.swift; sourceTree = "<group>"; };
+		66D481552A48EBD000CE5B5A /* StoreUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreUI.swift; sourceTree = "<group>"; };
+		66D481572A48EBE200CE5B5A /* StorePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePresenter.swift; sourceTree = "<group>"; };
+		66D481592A48EC5C00CE5B5A /* StoreWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWireframe.swift; sourceTree = "<group>"; };
+		66D4815B2A48ECAE00CE5B5A /* StoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreVC.swift; sourceTree = "<group>"; };
+		66D4815D2A48ECCB00CE5B5A /* StoreVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreVC.xib; sourceTree = "<group>"; };
+		66D481602A48ECFD00CE5B5A /* RecordUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordUI.swift; sourceTree = "<group>"; };
+		66D481622A48ED0F00CE5B5A /* RecordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordPresenter.swift; sourceTree = "<group>"; };
+		66D481642A48ED1700CE5B5A /* RecordWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordWireframe.swift; sourceTree = "<group>"; };
+		66D481662A48ED1D00CE5B5A /* RecordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordVC.swift; sourceTree = "<group>"; };
+		66D481682A48ED3A00CE5B5A /* RecordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordVC.xib; sourceTree = "<group>"; };
+		66D4816B2A48EDF800CE5B5A /* SafetyVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SafetyVC.xib; sourceTree = "<group>"; };
+		66D4816D2A48EDFE00CE5B5A /* SafetyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyVC.swift; sourceTree = "<group>"; };
+		66D4816F2A48EE1F00CE5B5A /* SafetyUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyUI.swift; sourceTree = "<group>"; };
+		66D481712A48EE3100CE5B5A /* SafetyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyPresenter.swift; sourceTree = "<group>"; };
+		66D481732A48EE3800CE5B5A /* SafetyWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyWireframe.swift; sourceTree = "<group>"; };
+		66D481762A48EEBF00CE5B5A /* ProfileUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUI.swift; sourceTree = "<group>"; };
+		66D481782A48EEC700CE5B5A /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		66D4817A2A48EED300CE5B5A /* ProfileWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWireframe.swift; sourceTree = "<group>"; };
+		66D4817C2A48EED800CE5B5A /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		66D4817E2A48EEDF00CE5B5A /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
+		66D481882A48FDB500CE5B5A /* CoTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoTabBar.swift; sourceTree = "<group>"; };
+		66D4818A2A48FE0500CE5B5A /* CoTabBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoTabBar.xib; sourceTree = "<group>"; };
+		66D4818C2A490A0800CE5B5A /* CoTabBarUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoTabBarUI.swift; sourceTree = "<group>"; };
+		66D4818E2A490A2000CE5B5A /* CoTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoTabBarPresenter.swift; sourceTree = "<group>"; };
 		66EAFD062A463F5D005B9DAB /* BioAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioAuthManager.swift; sourceTree = "<group>"; };
 		66EAFD082A46488D005B9DAB /* CoOneTimeCodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoOneTimeCodeTextField.swift; sourceTree = "<group>"; };
 		66EAFD0B2A465293005B9DAB /* HomeUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUI.swift; sourceTree = "<group>"; };
@@ -123,12 +182,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				66475B882A44D52B00E76D71 /* SPIndicator in Frameworks */,
+				66D481822A48F31200CE5B5A /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		660838B12A477FBC00E72F31 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				660838B22A47892700E72F31 /* User+CoreDataClass.swift */,
+				660838B32A47892700E72F31 /* User+CoreDataProperties.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		660838BD2A47A87700E72F31 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				66D4818C2A490A0800CE5B5A /* CoTabBarUI.swift */,
+				66D4818E2A490A2000CE5B5A /* CoTabBarPresenter.swift */,
+				660838BE2A47A89A00E72F31 /* CoTabBarWireframe.swift */,
+				660838BB2A47A7E500E72F31 /* CoTabBarVC.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		66475B7E2A44C22600E76D71 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,7 +222,6 @@
 			isa = PBXGroup;
 			children = (
 				66475B822A44CAFB00E76D71 /* RegisterData.swift */,
-				66475B842A44D10B00E76D71 /* User.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -166,11 +245,9 @@
 		668CE22C2A1800CC00D6E7DF /* CoPass */ = {
 			isa = PBXGroup;
 			children = (
-				668CE2532A18076500D6E7DF /* Common */,
-				668CE2542A18076F00D6E7DF /* Model */,
+				668CE24D2A18033300D6E7DF /* Utilities */,
 				668CE2442A18020F00D6E7DF /* MVP */,
 				668CE2522A18072E00D6E7DF /* Views */,
-				668CE24D2A18033300D6E7DF /* Utilities */,
 				668CE24E2A18035700D6E7DF /* Supporting Files */,
 				668CE23E2A1800CD00D6E7DF /* Info.plist */,
 				668CE2362A1800CC00D6E7DF /* CoPass.xcdatamodeld */,
@@ -181,6 +258,7 @@
 		668CE2442A18020F00D6E7DF /* MVP */ = {
 			isa = PBXGroup;
 			children = (
+				668CE2542A18076F00D6E7DF /* Model */,
 				668CE2452A18021500D6E7DF /* AppDelegate */,
 				668CE2482A1802B700D6E7DF /* Base */,
 				668CE24F2A18059200D6E7DF /* Navigate */,
@@ -216,6 +294,7 @@
 		668CE24D2A18033300D6E7DF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				660838B62A478BE600E72F31 /* CoStorage.swift */,
 				66475B7E2A44C22600E76D71 /* Managers */,
 				668CE2622A180C1E00D6E7DF /* Extensions */,
 				66F9AECD2A1BFA7B00EAFD58 /* Localization.swift */,
@@ -247,6 +326,8 @@
 		668CE2522A18072E00D6E7DF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				66D481872A48FDA000CE5B5A /* TabBar */,
+				668CE2532A18076500D6E7DF /* Common */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -264,6 +345,8 @@
 		668CE2542A18076F00D6E7DF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				660838B82A47968800E72F31 /* CoError.swift */,
+				660838B12A477FBC00E72F31 /* User */,
 				66475B812A44CA8700E76D71 /* Register */,
 			);
 			path = Model;
@@ -283,7 +366,12 @@
 		668CE2652A180EB300D6E7DF /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				66D481752A48EEAE00CE5B5A /* Profile */,
+				66D4816A2A48EDEA00CE5B5A /* Safety */,
+				66D4815F2A48ECF300CE5B5A /* Record */,
+				66D481542A48E9FB00CE5B5A /* Store */,
 				66EAFD0A2A465289005B9DAB /* Home */,
+				660838BD2A47A87700E72F31 /* TabBar */,
 				66F9AEBB2A1BEF3A00EAFD58 /* Login */,
 				66F9AEB02A1BE8F800EAFD58 /* Register */,
 				668CE2662A180EDF00D6E7DF /* Onboarding */,
@@ -303,13 +391,70 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		66D481542A48E9FB00CE5B5A /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				66D481552A48EBD000CE5B5A /* StoreUI.swift */,
+				66D481572A48EBE200CE5B5A /* StorePresenter.swift */,
+				66D481592A48EC5C00CE5B5A /* StoreWireframe.swift */,
+				66D4815B2A48ECAE00CE5B5A /* StoreVC.swift */,
+				66D4815D2A48ECCB00CE5B5A /* StoreVC.xib */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		66D4815F2A48ECF300CE5B5A /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				66D481602A48ECFD00CE5B5A /* RecordUI.swift */,
+				66D481622A48ED0F00CE5B5A /* RecordPresenter.swift */,
+				66D481642A48ED1700CE5B5A /* RecordWireframe.swift */,
+				66D481662A48ED1D00CE5B5A /* RecordVC.swift */,
+				66D481682A48ED3A00CE5B5A /* RecordVC.xib */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		66D4816A2A48EDEA00CE5B5A /* Safety */ = {
+			isa = PBXGroup;
+			children = (
+				66D4816F2A48EE1F00CE5B5A /* SafetyUI.swift */,
+				66D481712A48EE3100CE5B5A /* SafetyPresenter.swift */,
+				66D481732A48EE3800CE5B5A /* SafetyWireframe.swift */,
+				66D4816D2A48EDFE00CE5B5A /* SafetyVC.swift */,
+				66D4816B2A48EDF800CE5B5A /* SafetyVC.xib */,
+			);
+			path = Safety;
+			sourceTree = "<group>";
+		};
+		66D481752A48EEAE00CE5B5A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				66D481762A48EEBF00CE5B5A /* ProfileUI.swift */,
+				66D481782A48EEC700CE5B5A /* ProfilePresenter.swift */,
+				66D4817A2A48EED300CE5B5A /* ProfileWireframe.swift */,
+				66D4817C2A48EED800CE5B5A /* ProfileVC.swift */,
+				66D4817E2A48EEDF00CE5B5A /* ProfileVC.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		66D481872A48FDA000CE5B5A /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				66D481882A48FDB500CE5B5A /* CoTabBar.swift */,
+				66D4818A2A48FE0500CE5B5A /* CoTabBar.xib */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		66EAFD0A2A465289005B9DAB /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				66EAFD0B2A465293005B9DAB /* HomeUI.swift */,
-				66EAFD0D2A4652B2005B9DAB /* HomeVC.swift */,
 				66EAFD132A4653B0005B9DAB /* HomePresenter.swift */,
 				66EAFD112A46530B005B9DAB /* HomeWireframe.swift */,
+				66EAFD0D2A4652B2005B9DAB /* HomeVC.swift */,
 				66EAFD0F2A4652D9005B9DAB /* HomeVC.xib */,
 			);
 			path = Home;
@@ -357,6 +502,7 @@
 			name = CoPass;
 			packageProductDependencies = (
 				66475B872A44D52B00E76D71 /* SPIndicator */,
+				66D481812A48F31200CE5B5A /* SnapKit */,
 			);
 			productName = CoPass;
 			productReference = 668CE22A2A1800CC00D6E7DF /* CoPass.app */;
@@ -389,6 +535,7 @@
 			mainGroup = 668CE2212A1800CC00D6E7DF;
 			packageReferences = (
 				66475B862A44D52B00E76D71 /* XCRemoteSwiftPackageReference "SPIndicator" */,
+				66D481802A48F31200CE5B5A /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 668CE22B2A1800CC00D6E7DF /* Products */;
 			projectDirPath = "";
@@ -405,12 +552,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				66F9AEBF2A1BEF6E00EAFD58 /* LoginVC.xib in Resources */,
+				66D481692A48ED3A00CE5B5A /* RecordVC.xib in Resources */,
+				66D4816C2A48EDF800CE5B5A /* SafetyVC.xib in Resources */,
 				66F9AEC92A1BF64F00EAFD58 /* Localizable.strings in Resources */,
+				66D4815E2A48ECCB00CE5B5A /* StoreVC.xib in Resources */,
 				668CE23D2A1800CD00D6E7DF /* LaunchScreen.storyboard in Resources */,
 				66F9AEBA2A1BEAF700EAFD58 /* RegisterVC.xib in Resources */,
 				668CE2722A18121D00D6E7DF /* OnboardingVC.xib in Resources */,
 				668CE23A2A1800CD00D6E7DF /* Assets.xcassets in Resources */,
 				66EAFD102A4652D9005B9DAB /* HomeVC.xib in Resources */,
+				66D4817F2A48EEDF00CE5B5A /* ProfileVC.xib in Resources */,
+				66D4818B2A48FE0500CE5B5A /* CoTabBar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +574,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				66475B832A44CAFB00E76D71 /* RegisterData.swift in Sources */,
+				66D481892A48FDB500CE5B5A /* CoTabBar.swift in Sources */,
+				66D481672A48ED1D00CE5B5A /* RecordVC.swift in Sources */,
+				66D481742A48EE3800CE5B5A /* SafetyWireframe.swift in Sources */,
+				66D4816E2A48EDFE00CE5B5A /* SafetyVC.swift in Sources */,
+				66D481792A48EEC700CE5B5A /* ProfilePresenter.swift in Sources */,
+				66D4815A2A48EC5C00CE5B5A /* StoreWireframe.swift in Sources */,
+				66D4818D2A490A0800CE5B5A /* CoTabBarUI.swift in Sources */,
 				668CE2572A1807A000D6E7DF /* BaseUI.swift in Sources */,
+				660838BF2A47A89A00E72F31 /* CoTabBarWireframe.swift in Sources */,
 				66F9AEB62A1BE99400EAFD58 /* RegisterWireframe.swift in Sources */,
 				66EB525E2A43B4A500866CD8 /* UIViewController+Ext.swift in Sources */,
 				668CE2472A18027C00D6E7DF /* AppWireframe.swift in Sources */,
@@ -430,38 +590,54 @@
 				66EAFD0C2A465293005B9DAB /* HomeUI.swift in Sources */,
 				66F9AEC52A1BEFA200EAFD58 /* LoginWireframe.swift in Sources */,
 				668CE2782A18394500D6E7DF /* CoButton.swift in Sources */,
+				66D481652A48ED1700CE5B5A /* RecordWireframe.swift in Sources */,
+				66D481612A48ECFD00CE5B5A /* RecordUI.swift in Sources */,
 				668CE2382A1800CC00D6E7DF /* CoPass.xcdatamodeld in Sources */,
 				668CE24C2A18032500D6E7DF /* TransitionType.swift in Sources */,
 				668CE2592A1807E500D6E7DF /* LoadingUI.swift in Sources */,
+				66D4817D2A48EED800CE5B5A /* ProfileVC.swift in Sources */,
 				66475B802A44C29200E76D71 /* KeychainManager.swift in Sources */,
+				66D481772A48EEBF00CE5B5A /* ProfileUI.swift in Sources */,
 				668CE25B2A18084400D6E7DF /* BaseViewController.swift in Sources */,
+				660838B72A478BE600E72F31 /* CoStorage.swift in Sources */,
 				668CE26C2A180FA500D6E7DF /* OnboardingWireframe.swift in Sources */,
 				668CE24A2A1802C200D6E7DF /* BaseWireframe.swift in Sources */,
 				66F9AED22A1BFB2E00EAFD58 /* AppConstants.swift in Sources */,
+				660838B92A47968800E72F31 /* CoError.swift in Sources */,
 				66EAFD122A46530B005B9DAB /* HomeWireframe.swift in Sources */,
+				660838B52A47892700E72F31 /* User+CoreDataProperties.swift in Sources */,
 				66EAFD0E2A4652B2005B9DAB /* HomeVC.swift in Sources */,
 				668CE26E2A18104C00D6E7DF /* OnboardingVC.swift in Sources */,
+				66D481722A48EE3100CE5B5A /* SafetyPresenter.swift in Sources */,
+				66D481582A48EBE200CE5B5A /* StorePresenter.swift in Sources */,
+				66D4818F2A490A2000CE5B5A /* CoTabBarPresenter.swift in Sources */,
+				660838BC2A47A7E500E72F31 /* CoTabBarVC.swift in Sources */,
 				668CE22E2A1800CC00D6E7DF /* AppDelegate.swift in Sources */,
 				668CE2682A180EF100D6E7DF /* OnboardingUI.swift in Sources */,
 				66EB525C2A437F9D00866CD8 /* CoTextField.swift in Sources */,
 				66F9AEB22A1BE90700EAFD58 /* RegisterUI.swift in Sources */,
 				668CE2642A180C2A00D6E7DF /* UIView+Ext.swift in Sources */,
+				660838B42A47892700E72F31 /* User+CoreDataClass.swift in Sources */,
 				66F9AEB82A1BEA8800EAFD58 /* RegisterVC.swift in Sources */,
+				66D4815C2A48ECAE00CE5B5A /* StoreVC.swift in Sources */,
 				66F9AEC32A1BEF9800EAFD58 /* LoginPresenter.swift in Sources */,
-				66475B852A44D10B00E76D71 /* User.swift in Sources */,
 				668CE25F2A180B5800D6E7DF /* NavigationPresenter.swift in Sources */,
 				668CE2512A18059E00D6E7DF /* Router.swift in Sources */,
+				66D481562A48EBD000CE5B5A /* StoreUI.swift in Sources */,
 				668CE2302A1800CC00D6E7DF /* SceneDelegate.swift in Sources */,
 				66F9AEB42A1BE92200EAFD58 /* RegisterPresenter.swift in Sources */,
 				66F9AED02A1BFB0300EAFD58 /* Language.swift in Sources */,
 				668CE25D2A180B3900D6E7DF /* Presenter.swift in Sources */,
 				66F9AEC12A1BEF7F00EAFD58 /* LoginUI.swift in Sources */,
+				66D481632A48ED0F00CE5B5A /* RecordPresenter.swift in Sources */,
 				668CE2612A180BB100D6E7DF /* BaseView.swift in Sources */,
 				66F9AEBD2A1BEF5700EAFD58 /* LoginVC.swift in Sources */,
 				66F9AECE2A1BFA7B00EAFD58 /* Localization.swift in Sources */,
 				66EAFD142A4653B0005B9DAB /* HomePresenter.swift in Sources */,
+				66D4817B2A48EED300CE5B5A /* ProfileWireframe.swift in Sources */,
 				668CE2762A181D3100D6E7DF /* UIColor+Ext.swift in Sources */,
 				66EAFD092A46488D005B9DAB /* CoOneTimeCodeTextField.swift in Sources */,
+				66D481702A48EE1F00CE5B5A /* SafetyUI.swift in Sources */,
 				668CE26A2A180F2C00D6E7DF /* OnboardingPresenter.swift in Sources */,
 				668CE2702A18119C00D6E7DF /* NSObject+Ext.swift in Sources */,
 			);
@@ -701,6 +877,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		66D481802A48F31200CE5B5A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -708,6 +892,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 66475B862A44D52B00E76D71 /* XCRemoteSwiftPackageReference "SPIndicator" */;
 			productName = SPIndicator;
+		};
+		66D481812A48F31200CE5B5A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66D481802A48F31200CE5B5A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 

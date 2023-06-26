@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct RegisterData {
-    let username: String?
-    let password: String?
-    let rePassword: String?
+struct RegisterData: Codable {
+    let username: String
+    let password: String
 }

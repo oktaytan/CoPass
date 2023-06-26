@@ -8,29 +8,27 @@
 import Foundation
 
 protocol RegisterPresenterProtocol: Presenter {
-    func register(with data: RegisterData)
+    func register(username: String, password: String, rePassword: String)
 }
 
 final class RegisterPresenter: RegisterPresenterProtocol {
     
     private weak var ui: RegisterUI?
     private let wireframe: RegisterWireframeProtocol
-    private let keychainManager: KeychainManager
+    private let storage: CoStorageProtocol
     private var validate = true
     
-    init(ui: RegisterUI, wireframe: RegisterWireframeProtocol, keychainManager: KeychainManager) {
+    init(ui: RegisterUI, wireframe: RegisterWireframeProtocol, storage: CoStorageProtocol) {
         self.ui = ui
         self.wireframe = wireframe
-        self.keychainManager = keychainManager
+        self.storage = storage
     }
     
-    func register(with data: RegisterData) {
-        guard checkValidData(data), let username = data.username, let password = data.password else { return }
+    func register(username: String, password: String, rePassword: String) {
+        guard checkValidData(username: username, password: password, rePassword: rePassword) else { return }
         
-        let user = User(username: username, password: password)
-        let result = self.keychainManager.save(user,
-                                  service: AppConstants.keychainService,
-                                  account: AppConstants.keychainAccount)
+        let data = RegisterData(username: username, password: password)
+        let result = storage.register(with: data)
         
         switch result {
         case .success(_):
@@ -39,21 +37,14 @@ final class RegisterPresenter: RegisterPresenterProtocol {
                 self?.wireframe.navigate(to: .login)
             }
         case .failure(let error):
-            switch error {
-            case .failureSave:
-                self.ui?.showError(error: .failureRegister)
-            default:
-                break
-            }
+            self.ui?.showError(error: error)
         }
     }
 }
 
 
 extension RegisterPresenter {
-    private func checkValidData(_ data: RegisterData) -> Bool {
-        guard let username = data.username, let password = data.password, let rePassword = data.rePassword else { return false }
-        
+    private func checkValidData(username: String, password: String, rePassword: String) -> Bool {
         let characterset = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
         if username.isEmpty {
             self.ui?.showError(error: .emptyUsername)
