@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 public class OneTimeCodeTextField: UITextField {
     
@@ -101,12 +102,12 @@ public class OneTimeCodeTextField: UITextField {
         addSubview(slotsStackView)
         addGestureRecognizer(tapGestureRecognizer)
         
-        NSLayoutConstraint.activate([
-            slotsStackView.topAnchor.constraint(equalTo: topAnchor),
-            slotsStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            slotsStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            slotsStackView.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
+        slotsStackView.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
     }
     
     private func configureTextField() {

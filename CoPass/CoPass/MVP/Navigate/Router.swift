@@ -18,10 +18,30 @@ enum Router {
     }
     
     enum Login {
-        case home
+        case tabBar
+    }
+    
+    enum TabBar {
+        case showAddRecord
     }
     
     enum Home {
+        
+    }
+    
+    enum Store {
+        
+    }
+    
+    enum Record {
+        
+    }
+    
+    enum Safety {
+        
+    }
+    
+    enum Profile {
         
     }
 }

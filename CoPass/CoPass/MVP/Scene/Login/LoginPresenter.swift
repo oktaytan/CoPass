@@ -17,14 +17,12 @@ final class LoginPresenter: LoginPresenterProtocol {
     
     private weak var ui: LoginUI?
     private let wireframe: LoginWireframeProtocol
-    private var keychainManager: KeychainManager
-    private var bioAuthManager: BioAuthManager
+    private var storage: CoStorageProtocol
     
-    init(ui: LoginUI, wireframe: LoginWireframeProtocol, keychainManager: KeychainManager, bioAuthManager: BioAuthManager) {
+    init(ui: LoginUI, wireframe: LoginWireframeProtocol, storage: CoStorageProtocol) {
         self.ui = ui
         self.wireframe = wireframe
-        self.keychainManager = keychainManager
-        self.bioAuthManager = bioAuthManager
+        self.storage = storage
     }
     
     func viewDidLoad() {
@@ -32,30 +30,29 @@ final class LoginPresenter: LoginPresenterProtocol {
     }
     
     func fetchUser() {
-        guard let user = keychainManager.read(service: AppConstants.keychainService,
-                                              account: AppConstants.keychainAccount,
-                                              type: User.self) else { return }
+        let result = storage.getUser()
         
-        let hasBioAuth = bioAuthManager.biometricType == .faceID
-        self.ui?.load(username: user.username, hasBioAuth: hasBioAuth)
+        switch result {
+        case .success(let user):
+            self.ui?.load(username: user.username, hasBioAuth: storage.hasFaceID)
+        case .failure(_):
+            self.ui?.showAlert(title: nil, message: "login_failure_message".localized, error: true)
+        }
     }
     
     func authenticateWithFaceID() {
-        bioAuthManager.authenticate { result in
-            switch result {
-            case .success(_):
+        storage.authenticateWithFaceID { success in
+            if success {
                 DispatchQueue.main.async { [weak self] in
-                    self?.wireframe.navigate(to: .home)
+                    self?.wireframe.navigate(to: .tabBar)
                 }
-            case .failure(_):
-                break
             }
         }
     }
     
     func authenticate(with password: String) {
-        if let user = keychainManager.read(service: AppConstants.keychainService, account: AppConstants.keychainAccount, type: User.self), user.password == password {
-            self.wireframe.navigate(to: .home)
+        if let masterPassword = storage.masterPassword, masterPassword == password {
+            self.wireframe.navigate(to: .tabBar)
         } else {
             self.ui?.authenticationFail()
         }

@@ -51,16 +51,17 @@ final class RegisterVC: BaseViewController {
     }
     
     private func registerAction() {
-        let data = RegisterData(username: usernameTextField.text,
-                                        password: masterPasswordTextField.text,
-                                        rePassword: reMasterPasswordTextField.text)
-        presenter.register(with: data)
+        guard let username = usernameTextField.text, let password = masterPasswordTextField.text, let rePassword = reMasterPasswordTextField.text else {
+            showAlert(title: nil, message: Strings.Errors.allFieldFill, error: true)
+            return
+        }
+        presenter.register(username: username, password: password, rePassword: rePassword)
     }
 }
 
 
 extension RegisterVC: RegisterUI {
-    func showError(error: RegisterError) {
+    func showError(error: CoError) {
         switch error {
         case .emptyUsername:
             usernameTextField.errorMessage = Strings.Errors.emptyField
@@ -76,6 +77,8 @@ extension RegisterVC: RegisterUI {
             reMasterPasswordTextField.errorMessage = Strings.Errors.invalid_ReMasterPassword
         case .failureRegister:
             showAlert(title: nil, message: Strings.registerFailure, error: true)
+        default:
+            break
         }
     }
     
@@ -116,6 +119,7 @@ extension RegisterVC {
         
         struct Errors {
             static let emptyField = "register_empty_field".localized
+            static let allFieldFill = "register_all_field_should_fill".localized
             static let invalidUsername = "register_invalid_username".localized
             static let invalidMasterPassword = "register_invalid_master_password".localized
             static let invalid_ReMasterPassword = "register_invalid_remaster_password".localized

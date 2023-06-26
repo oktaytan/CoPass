@@ -16,7 +16,10 @@ final class KeychainManager {
     static let standard = KeychainManager()
     private init() {}
     
-    func save(_ data: Data, service: String, account: String) -> Result<Bool, KeychainError> {
+    private let service = AppConstants.keychainService
+    private let account = AppConstants.keychainAccount
+    
+    func save(_ data: Data) -> Result<Bool, KeychainError> {
         
         let query = [
             kSecValueData: data,
@@ -55,7 +58,7 @@ final class KeychainManager {
         }
     }
     
-    func read(service: String, account: String) -> Data? {
+    func read() -> Data? {
         
         let query = [
             kSecAttrService: service,
@@ -70,7 +73,7 @@ final class KeychainManager {
         return (result as? Data)
     }
     
-    func delete(service: String, account: String) {
+    func delete() {
         
         let query = [
             kSecAttrService: service,
@@ -81,18 +84,24 @@ final class KeychainManager {
         // Delete item from keychain
         SecItemDelete(query)
     }
+    
+    // MARK: - GLOBAL PROPERTIES
+    lazy var masterPassword: String? = {
+        guard let user = self.read(type: RegisterData.self) else { return nil }
+        return user.password
+    }()
 }
 
 
 extension KeychainManager {
     //If we want to save something else from Data class, such as a custom Authentication struct, we can use this generic functions
     
-    func save<T>(_ item: T, service: String, account: String) -> Result<Bool, KeychainError> where T: Codable {
+    func save<T>(_ item: T) -> Result<Bool, KeychainError> where T: Codable {
         
         do {
             // Encode as JSIN data and save in keychain
             let data = try JSONEncoder().encode(item)
-            return save(data, service: service, account: account)
+            return save(data)
         } catch {
             assertionFailure("Fail to encode item for keychain: \(error)")
             return .failure(.failureEncoding)
@@ -100,10 +109,10 @@ extension KeychainManager {
         
     }
     
-    func read<T>(service: String, account: String, type: T.Type) -> T? where T: Codable {
+    func read<T>(type: T.Type) -> T? where T: Codable {
         
         // Read item data from keychain
-        guard let data = read(service: service, account: account) else {
+        guard let data = read() else {
             return nil
         }
         

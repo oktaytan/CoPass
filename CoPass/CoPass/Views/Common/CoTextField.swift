@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 final class CoTextField: UITextField {
     
@@ -74,7 +75,14 @@ extension CoTextField {
         guard self.errorMessage != nil else { return }
         self.addSubview(errorLabel)
         self.clipsToBounds = false
-        errorLabel.anchor(top: self.bottomAnchor, left: self.leftAnchor, bottom: nil, right: self.rightAnchor, paddingTop: 4, paddingLeft: 16, paddingBottom: 0, paddingRight: 0, width: self.bounds.width, height: 18)
+        
+        errorLabel.snp.makeConstraints { make in
+            make.width.equalTo(self.bounds.width)
+            make.height.equalTo(18)
+            make.top.equalTo(self.snp.bottom).offset(4)
+            make.left.equalTo(self.snp.left).offset(16)
+            make.right.equalTo(self.snp.right)
+        }
         
         UIView.animate(withDuration: 0.15, delay: 0, options: .curveEaseIn, animations: { [weak self] in
             self?.errorLabel.transform = CGAffineTransform(translationX: 0, y: 0)

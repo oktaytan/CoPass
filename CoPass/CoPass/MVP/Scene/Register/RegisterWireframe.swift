@@ -16,7 +16,7 @@ final class RegisterWireframe: BaseWireframe, RegisterWireframeProtocol {
     static func prepare() -> RegisterVC {
         let view = RegisterVC(nibName: RegisterVC.className, bundle: nil)
         let wireframe = RegisterWireframe()
-        let presenter = RegisterPresenter(ui: view, wireframe: wireframe, keychainManager: KeychainManager.standard)
+        let presenter = RegisterPresenter(ui: view, wireframe: wireframe, storage: CoStorage.shared)
         view.presenter = presenter
         wireframe.view = view
         return view

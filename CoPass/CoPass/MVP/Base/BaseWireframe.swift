@@ -20,7 +20,7 @@ class BaseWireframe {
             vc.modalPresentationStyle = .fullScreen
             from.present(vc, animated: animated)
         case .modal(let from):
-            vc.modalPresentationStyle = .overFullScreen
+            vc.modalPresentationStyle = .automatic
             from.present(vc, animated: animated)
         case .root(let window):
             window.rootViewController = vc

@@ -20,7 +20,7 @@ class BaseViewController: UIViewController {
     }
     
     func deleteUser() {
-        KeychainManager.standard.delete(service: AppConstants.keychainService, account: AppConstants.keychainAccount)
+        CoStorage.shared.deleteUser()
     }
     
     func hideNavBar() {

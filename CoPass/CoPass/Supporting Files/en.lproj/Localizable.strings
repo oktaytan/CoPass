@@ -25,6 +25,7 @@
 "register_failure" = "Registration failed.\nTry again later";
 
 "register_empty_field" = "This field cannot be left blank";
+"register_all_field_should_fill" = "All fields must be filled!";
 "register_invalid_username" = "Username must not contain special characters";
 "register_invalid_master_password" = "Password must be at least 4 characters";
 "register_invalid_remaster_password" = "Password does not match";

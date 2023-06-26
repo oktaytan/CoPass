@@ -16,7 +16,7 @@ final class LoginWireframe: BaseWireframe, LoginWireframeProtocol {
     static func prepare() -> LoginVC {
         let view = LoginVC(nibName: LoginVC.className, bundle: nil)
         let wireframe = LoginWireframe()
-        let presenter = LoginPresenter(ui: view, wireframe: wireframe, keychainManager: KeychainManager.standard, bioAuthManager: BioAuthManager.shared)
+        let presenter = LoginPresenter(ui: view, wireframe: wireframe, storage: CoStorage.shared)
         view.presenter = presenter
         wireframe.view = view
         return view
@@ -24,15 +24,15 @@ final class LoginWireframe: BaseWireframe, LoginWireframeProtocol {
     
     func navigate(to route: Router.Login) {
         switch route {
-        case .home:
-            showHome()
+        case .tabBar:
+            showTabBar()
         }
     }
 }
 
 extension LoginWireframe {
-    private func showHome() {
-        let homeVC = HomeWireframe.prepare()
-        forward(homeVC, with: .push)
+    private func showTabBar() {
+        let tabBarVC = CoTabBarWireframe.prepare()
+        forward(tabBarVC, with: .push)
     }
 }

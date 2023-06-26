@@ -7,11 +7,7 @@
 
 import Foundation
 
-enum RegisterError {
-    case emptyUsername, emptyPassword, emptyRePassword, invalidUsername, invalidPassword, invalidRePassword, failureRegister
-}
-
 protocol RegisterUI: BaseUI {
-    func showError(error: RegisterError)
+    func showError(error: CoError)
     func registerDone()
 }

@@ -10,17 +10,19 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    private let keychainManager = KeychainManager.standard
+    private let storage = CoStorage.shared
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         
-        if let _ = keychainManager.read(service: AppConstants.keychainService, account: AppConstants.keychainAccount, type: User.self) {
+        switch storage.getUser() {
+        case .success(_):
             setLoginScreen(window)
-        } else {
+        case .failure(_):
             setOnboardingScreen(window)
         }
+        
         self.window = window
     }
 
@@ -52,7 +54,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
 
         // Save changes in the application's managed object context when the application transitions to the background.
-        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+        storage.saveContext()
     }
 
 

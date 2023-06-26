@@ -25,6 +25,7 @@
 "register_failure" = "Kayıt işlemi başarısız.\nDaha sonra tekrar deneyin";
 
 "register_empty_field" = "Bu alan boş bırakılamaz";
+"register_all_field_should_fill" = "Bütün alanlar doldurulmalıdır!";
 "register_invalid_username" = "Kullanıcı adı özel karakter içermemelidir";
 "register_invalid_master_password" = "Şifre en az 4 karakter olmaılıdır";
 "register_invalid_remaster_password" = "Passwords did not match";
