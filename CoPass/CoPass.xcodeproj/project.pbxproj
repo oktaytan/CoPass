@@ -13,6 +13,10 @@
 		660838B92A47968800E72F31 /* CoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660838B82A47968800E72F31 /* CoError.swift */; };
 		660838BC2A47A7E500E72F31 /* CoTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660838BB2A47A7E500E72F31 /* CoTabBarVC.swift */; };
 		660838BF2A47A89A00E72F31 /* CoTabBarWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660838BE2A47A89A00E72F31 /* CoTabBarWireframe.swift */; };
+		661088EC2A4A372B00FE6643 /* AppDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661088EB2A4A372B00FE6643 /* AppDesign.swift */; };
+		661088F12A4A3DF800FE6643 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 661088F02A4A3DF800FE6643 /* SkeletonView */; };
+		6622B5872A4A29FF000F31F1 /* ViewAnimator in Frameworks */ = {isa = PBXBuildFile; productRef = 6622B5862A4A29FF000F31F1 /* ViewAnimator */; };
+		6622B58A2A4A3648000F31F1 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 6622B5892A4A3648000F31F1 /* NVActivityIndicatorView */; };
 		66475B802A44C29200E76D71 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66475B7F2A44C29200E76D71 /* KeychainManager.swift */; };
 		66475B832A44CAFB00E76D71 /* RegisterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66475B822A44CAFB00E76D71 /* RegisterData.swift */; };
 		66475B882A44D52B00E76D71 /* SPIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = 66475B872A44D52B00E76D71 /* SPIndicator */; };
@@ -97,6 +101,7 @@
 		660838B82A47968800E72F31 /* CoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoError.swift; sourceTree = "<group>"; };
 		660838BB2A47A7E500E72F31 /* CoTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoTabBarVC.swift; sourceTree = "<group>"; };
 		660838BE2A47A89A00E72F31 /* CoTabBarWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoTabBarWireframe.swift; sourceTree = "<group>"; };
+		661088EB2A4A372B00FE6643 /* AppDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDesign.swift; sourceTree = "<group>"; };
 		66475B7F2A44C29200E76D71 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		66475B822A44CAFB00E76D71 /* RegisterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterData.swift; sourceTree = "<group>"; };
 		668CE22A2A1800CC00D6E7DF /* CoPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,8 +186,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6622B58A2A4A3648000F31F1 /* NVActivityIndicatorView in Frameworks */,
 				66475B882A44D52B00E76D71 /* SPIndicator in Frameworks */,
 				66D481822A48F31200CE5B5A /* SnapKit in Frameworks */,
+				6622B5872A4A29FF000F31F1 /* ViewAnimator in Frameworks */,
+				661088F12A4A3DF800FE6643 /* SkeletonView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +239,7 @@
 			children = (
 				668CE22C2A1800CC00D6E7DF /* CoPass */,
 				668CE22B2A1800CC00D6E7DF /* Products */,
+				9F204861E7BD285AAD258C47 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -300,6 +309,7 @@
 				66F9AECD2A1BFA7B00EAFD58 /* Localization.swift */,
 				66F9AECF2A1BFB0300EAFD58 /* Language.swift */,
 				66F9AED12A1BFB2E00EAFD58 /* AppConstants.swift */,
+				661088EB2A4A372B00FE6643 /* AppDesign.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -484,6 +494,13 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		9F204861E7BD285AAD258C47 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -503,6 +520,9 @@
 			packageProductDependencies = (
 				66475B872A44D52B00E76D71 /* SPIndicator */,
 				66D481812A48F31200CE5B5A /* SnapKit */,
+				6622B5862A4A29FF000F31F1 /* ViewAnimator */,
+				6622B5892A4A3648000F31F1 /* NVActivityIndicatorView */,
+				661088F02A4A3DF800FE6643 /* SkeletonView */,
 			);
 			productName = CoPass;
 			productReference = 668CE22A2A1800CC00D6E7DF /* CoPass.app */;
@@ -536,6 +556,9 @@
 			packageReferences = (
 				66475B862A44D52B00E76D71 /* XCRemoteSwiftPackageReference "SPIndicator" */,
 				66D481802A48F31200CE5B5A /* XCRemoteSwiftPackageReference "SnapKit" */,
+				6622B5852A4A29FF000F31F1 /* XCRemoteSwiftPackageReference "ViewAnimator" */,
+				6622B5882A4A3648000F31F1 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+				661088EF2A4A3DF800FE6643 /* XCRemoteSwiftPackageReference "SkeletonView" */,
 			);
 			productRefGroup = 668CE22B2A1800CC00D6E7DF /* Products */;
 			projectDirPath = "";
@@ -614,6 +637,7 @@
 				660838BC2A47A7E500E72F31 /* CoTabBarVC.swift in Sources */,
 				668CE22E2A1800CC00D6E7DF /* AppDelegate.swift in Sources */,
 				668CE2682A180EF100D6E7DF /* OnboardingUI.swift in Sources */,
+				661088EC2A4A372B00FE6643 /* AppDesign.swift in Sources */,
 				66EB525C2A437F9D00866CD8 /* CoTextField.swift in Sources */,
 				66F9AEB22A1BE90700EAFD58 /* RegisterUI.swift in Sources */,
 				668CE2642A180C2A00D6E7DF /* UIView+Ext.swift in Sources */,
@@ -796,8 +820,8 @@
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "We use this to login to the app";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -827,8 +851,8 @@
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "We use this to login to the app";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -869,6 +893,30 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		661088EF2A4A3DF800FE6643 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		6622B5852A4A29FF000F31F1 /* XCRemoteSwiftPackageReference "ViewAnimator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marcosgriselli/ViewAnimator.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		6622B5882A4A3648000F31F1 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		66475B862A44D52B00E76D71 /* XCRemoteSwiftPackageReference "SPIndicator" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ivanvorobei/SPIndicator.git";
@@ -888,6 +936,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		661088F02A4A3DF800FE6643 /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 661088EF2A4A3DF800FE6643 /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
+		};
+		6622B5862A4A29FF000F31F1 /* ViewAnimator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6622B5852A4A29FF000F31F1 /* XCRemoteSwiftPackageReference "ViewAnimator" */;
+			productName = ViewAnimator;
+		};
+		6622B5892A4A3648000F31F1 /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6622B5882A4A3648000F31F1 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
+		};
 		66475B872A44D52B00E76D71 /* SPIndicator */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 66475B862A44D52B00E76D71 /* XCRemoteSwiftPackageReference "SPIndicator" */;

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ViewAnimator
 
 final class RegisterVC: BaseViewController {
     
@@ -44,6 +45,11 @@ final class RegisterVC: BaseViewController {
         scrollView.addGestureRecognizer(tapGesture)
         
         setupKeyboardNotifcationListeners(scrollView)
+        
+        let fromAnimation = AnimationType.from(direction: .left, offset: 100)
+        UIView.animate(views: [usernameTextField,
+                              masterPasswordTextField,
+                               reMasterPasswordTextField], animations: [fromAnimation], duration: 0.5)
     }
     
     @IBAction func registerBtnTapped(_ sender: Any) {

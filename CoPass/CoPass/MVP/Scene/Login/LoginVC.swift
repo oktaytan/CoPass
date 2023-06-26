@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import LocalAuthentication
+import ViewAnimator
 
 final class LoginVC: BaseViewController {
     
@@ -50,6 +50,12 @@ final class LoginVC: BaseViewController {
         masterPasswordField.didReceiveCode = { [weak self] code in
             self?.presenter.authenticate(with: code)
         }
+        
+        let scaleAnimation = AnimationType.zoom(scale: 0.2)
+        let fromAnimation = AnimationType.from(direction: .bottom, offset: 50)
+        
+        UIView.animate(views: [faceIDView], animations: [scaleAnimation])
+        UIView.animate(views: [masterPasswordField], animations: [fromAnimation], delay: 0.2)
     }
     
     @IBAction func faceIDBtnTapped(_ sender: Any) {
