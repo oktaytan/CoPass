@@ -42,3 +42,9 @@
 "login_fill_password" = "Parolanı girmelisin!";
 "login_failure_title" = "Parola hatalı";
 "login_failure_message" = "Tekrar dene!";
+
+
+// MARK: - PASSWORD CATEGORY
+"password_category_login" = "Giriş";
+"password_category_app" = "Uygulama";
+"password_category_bank" = "Banka";

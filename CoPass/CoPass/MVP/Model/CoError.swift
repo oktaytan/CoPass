@@ -18,5 +18,10 @@ enum CoError: Error {
          failureUserSave,
          unknownError,
          notFoundUser,
-         deleteUser
+         deleteUser,
+         recordNotFound,
+         recordSaveFailure,
+         recordGetFailure,
+         recordUpdateFailure,
+         recordDeleteFailure
 }

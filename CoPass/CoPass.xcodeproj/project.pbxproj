@@ -44,6 +44,14 @@
 		668CE2722A18121D00D6E7DF /* OnboardingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668CE2712A18121D00D6E7DF /* OnboardingVC.xib */; };
 		668CE2762A181D3100D6E7DF /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE2752A181D3100D6E7DF /* UIColor+Ext.swift */; };
 		668CE2782A18394500D6E7DF /* CoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE2772A18394500D6E7DF /* CoButton.swift */; };
+		66A972372A4CB666009791E2 /* CoCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A972362A4CB666009791E2 /* CoCategory.swift */; };
+		66A972392A4CB6FF009791E2 /* RecordEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A972382A4CB6FF009791E2 /* RecordEntity.swift */; };
+		66A9723C2A4CB8DD009791E2 /* Record+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A9723A2A4CB8DD009791E2 /* Record+CoreDataClass.swift */; };
+		66A9723D2A4CB8DD009791E2 /* Record+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A9723B2A4CB8DD009791E2 /* Record+CoreDataProperties.swift */; };
+		66B3A48A2A4B76330046BD92 /* ViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B3A4892A4B76330046BD92 /* ViewDataSource.swift */; };
+		66B3A48C2A4B76BC0046BD92 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B3A48B2A4B76BC0046BD92 /* TableViewDataSource.swift */; };
+		66B3A48E2A4B76EA0046BD92 /* ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B3A48D2A4B76EA0046BD92 /* ViewCell.swift */; };
+		66B3A4902A4B7D2D0046BD92 /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B3A48F2A4B7D2D0046BD92 /* CollectionViewDataSource.swift */; };
 		66D481562A48EBD000CE5B5A /* StoreUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D481552A48EBD000CE5B5A /* StoreUI.swift */; };
 		66D481582A48EBE200CE5B5A /* StorePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D481572A48EBE200CE5B5A /* StorePresenter.swift */; };
 		66D4815A2A48EC5C00CE5B5A /* StoreWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D481592A48EC5C00CE5B5A /* StoreWireframe.swift */; };
@@ -130,6 +138,14 @@
 		668CE2712A18121D00D6E7DF /* OnboardingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingVC.xib; sourceTree = "<group>"; };
 		668CE2752A181D3100D6E7DF /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		668CE2772A18394500D6E7DF /* CoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoButton.swift; sourceTree = "<group>"; };
+		66A972362A4CB666009791E2 /* CoCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoCategory.swift; sourceTree = "<group>"; };
+		66A972382A4CB6FF009791E2 /* RecordEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordEntity.swift; sourceTree = "<group>"; };
+		66A9723A2A4CB8DD009791E2 /* Record+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataClass.swift"; sourceTree = "<group>"; };
+		66A9723B2A4CB8DD009791E2 /* Record+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		66B3A4892A4B76330046BD92 /* ViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDataSource.swift; sourceTree = "<group>"; };
+		66B3A48B2A4B76BC0046BD92 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		66B3A48D2A4B76EA0046BD92 /* ViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCell.swift; sourceTree = "<group>"; };
+		66B3A48F2A4B7D2D0046BD92 /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
 		66D481552A48EBD000CE5B5A /* StoreUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreUI.swift; sourceTree = "<group>"; };
 		66D481572A48EBE200CE5B5A /* StorePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePresenter.swift; sourceTree = "<group>"; };
 		66D481592A48EC5C00CE5B5A /* StoreWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWireframe.swift; sourceTree = "<group>"; };
@@ -270,6 +286,7 @@
 				668CE2542A18076F00D6E7DF /* Model */,
 				668CE2452A18021500D6E7DF /* AppDelegate */,
 				668CE2482A1802B700D6E7DF /* Base */,
+				66B3A4882A4B761F0046BD92 /* DataSource */,
 				668CE24F2A18059200D6E7DF /* Navigate */,
 				668CE2652A180EB300D6E7DF /* Scene */,
 			);
@@ -356,6 +373,8 @@
 			isa = PBXGroup;
 			children = (
 				660838B82A47968800E72F31 /* CoError.swift */,
+				66A972362A4CB666009791E2 /* CoCategory.swift */,
+				66A9722C2A4CAEF8009791E2 /* Record */,
 				660838B12A477FBC00E72F31 /* User */,
 				66475B812A44CA8700E76D71 /* Register */,
 			);
@@ -399,6 +418,27 @@
 				668CE2712A18121D00D6E7DF /* OnboardingVC.xib */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		66A9722C2A4CAEF8009791E2 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				66A9723A2A4CB8DD009791E2 /* Record+CoreDataClass.swift */,
+				66A9723B2A4CB8DD009791E2 /* Record+CoreDataProperties.swift */,
+				66A972382A4CB6FF009791E2 /* RecordEntity.swift */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		66B3A4882A4B761F0046BD92 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				66B3A4892A4B76330046BD92 /* ViewDataSource.swift */,
+				66B3A48B2A4B76BC0046BD92 /* TableViewDataSource.swift */,
+				66B3A48F2A4B7D2D0046BD92 /* CollectionViewDataSource.swift */,
+				66B3A48D2A4B76EA0046BD92 /* ViewCell.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		66D481542A48E9FB00CE5B5A /* Store */ = {
@@ -600,6 +640,7 @@
 				66D481892A48FDB500CE5B5A /* CoTabBar.swift in Sources */,
 				66D481672A48ED1D00CE5B5A /* RecordVC.swift in Sources */,
 				66D481742A48EE3800CE5B5A /* SafetyWireframe.swift in Sources */,
+				66A9723D2A4CB8DD009791E2 /* Record+CoreDataProperties.swift in Sources */,
 				66D4816E2A48EDFE00CE5B5A /* SafetyVC.swift in Sources */,
 				66D481792A48EEC700CE5B5A /* ProfilePresenter.swift in Sources */,
 				66D4815A2A48EC5C00CE5B5A /* StoreWireframe.swift in Sources */,
@@ -614,13 +655,17 @@
 				66F9AEC52A1BEFA200EAFD58 /* LoginWireframe.swift in Sources */,
 				668CE2782A18394500D6E7DF /* CoButton.swift in Sources */,
 				66D481652A48ED1700CE5B5A /* RecordWireframe.swift in Sources */,
+				66A9723C2A4CB8DD009791E2 /* Record+CoreDataClass.swift in Sources */,
 				66D481612A48ECFD00CE5B5A /* RecordUI.swift in Sources */,
 				668CE2382A1800CC00D6E7DF /* CoPass.xcdatamodeld in Sources */,
+				66B3A48A2A4B76330046BD92 /* ViewDataSource.swift in Sources */,
 				668CE24C2A18032500D6E7DF /* TransitionType.swift in Sources */,
 				668CE2592A1807E500D6E7DF /* LoadingUI.swift in Sources */,
 				66D4817D2A48EED800CE5B5A /* ProfileVC.swift in Sources */,
+				66A972372A4CB666009791E2 /* CoCategory.swift in Sources */,
 				66475B802A44C29200E76D71 /* KeychainManager.swift in Sources */,
 				66D481772A48EEBF00CE5B5A /* ProfileUI.swift in Sources */,
+				66B3A48C2A4B76BC0046BD92 /* TableViewDataSource.swift in Sources */,
 				668CE25B2A18084400D6E7DF /* BaseViewController.swift in Sources */,
 				660838B72A478BE600E72F31 /* CoStorage.swift in Sources */,
 				668CE26C2A180FA500D6E7DF /* OnboardingWireframe.swift in Sources */,
@@ -641,6 +686,7 @@
 				66EB525C2A437F9D00866CD8 /* CoTextField.swift in Sources */,
 				66F9AEB22A1BE90700EAFD58 /* RegisterUI.swift in Sources */,
 				668CE2642A180C2A00D6E7DF /* UIView+Ext.swift in Sources */,
+				66A972392A4CB6FF009791E2 /* RecordEntity.swift in Sources */,
 				660838B42A47892700E72F31 /* User+CoreDataClass.swift in Sources */,
 				66F9AEB82A1BEA8800EAFD58 /* RegisterVC.swift in Sources */,
 				66D4815C2A48ECAE00CE5B5A /* StoreVC.swift in Sources */,
@@ -661,8 +707,10 @@
 				66D4817B2A48EED300CE5B5A /* ProfileWireframe.swift in Sources */,
 				668CE2762A181D3100D6E7DF /* UIColor+Ext.swift in Sources */,
 				66EAFD092A46488D005B9DAB /* CoOneTimeCodeTextField.swift in Sources */,
+				66B3A4902A4B7D2D0046BD92 /* CollectionViewDataSource.swift in Sources */,
 				66D481702A48EE1F00CE5B5A /* SafetyUI.swift in Sources */,
 				668CE26A2A180F2C00D6E7DF /* OnboardingPresenter.swift in Sources */,
+				66B3A48E2A4B76EA0046BD92 /* ViewCell.swift in Sources */,
 				668CE2702A18119C00D6E7DF /* NSObject+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
