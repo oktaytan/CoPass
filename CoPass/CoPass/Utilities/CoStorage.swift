@@ -12,13 +12,18 @@ protocol CoStorageProtocol {
     var masterPassword: String? { get }
     var hasFaceID: Bool { get }
     
+    /// USER
     func register(with data: RegisterData) -> Result<Bool, CoError>
     func saveUser(data: RegisterData) -> Result<User, CoError>
     func getUser() -> Result<User, CoError>
     func updateUser(with user: User) -> Result<User, CoError>
     func deleteUser() -> Result<Bool, CoError>
     
+    /// FACEID
     func authenticateWithFaceID(completion: @escaping (Bool) -> Void)
+    
+    /// RECORD
+    func saveRecord(with entity: RecordEntity) -> Result<Record, CoError>
 }
 
 final class CoStorage: CoStorageProtocol {
@@ -167,6 +172,97 @@ extension CoStorage {
                 return .failure(.deleteUser)
             }
         case .failure(let error): return .failure(error)
+        }
+    }
+}
+
+
+// MARK: - RECORD
+extension CoStorage {
+    func saveRecord(with entity: RecordEntity) -> Result<Record, CoError> {
+        let context = persistentContainer.viewContext
+        let record = Record(context: context)
+        record.id = UUID()
+        record.platform = entity.platform
+        record.entry = entity.entry
+        record.password = entity.password
+        record.category = entity.category.rawValue
+        record.createdAt = .now
+        record.updatedAt = .now
+        
+        do {
+            try context.save()
+            return .success(record)
+        } catch {
+            return .failure(.recordSaveFailure)
+        }
+    }
+    
+    func getRecord(with id: UUID) -> Result<Record, CoError> {
+        let context = persistentContainer.viewContext
+        
+        switch getRecords() {
+        case .success(let records):
+            guard let record = records.first(where: { $0.id == id }) else {
+                return .failure(.recordNotFound)
+            }
+            
+            return .success(record)
+        case .failure:
+            return .failure(.recordNotFound)
+        }
+    }
+    
+    func getRecords() -> Result<[Record], CoError> {
+        let context = persistentContainer.viewContext
+        do {
+            let records = try context.fetch(Record.fetchRequest())
+            return .success(records)
+        } catch {
+            return .failure(.recordNotFound)
+        }
+    }
+    
+    func updateRecord(with entity: Record) -> Result<Record, CoError> {
+        let context = persistentContainer.viewContext
+        
+        switch getRecord(with: entity.id) {
+        case .success(let record):
+            record.id = entity.id
+            record.platform = entity.platform
+            record.entry = entity.entry
+            record.category = entity.category
+            record.password = entity.password
+            record.updatedAt = .now
+            
+            do {
+                try context.save()
+                return .success(record)
+            } catch {
+                return .failure(.recordUpdateFailure)
+            }
+            
+        case .failure:
+            return .failure(.recordUpdateFailure)
+        }
+    }
+    
+    @discardableResult
+    func deleteRecord(with id: UUID) -> Result<Bool, CoError> {
+        let context = persistentContainer.viewContext
+        
+        switch getRecord(with: id) {
+        case .success(let record):
+            context.delete(record)
+            
+            do {
+                try context.save()
+                return .success(true)
+            } catch {
+                return .failure(.recordDeleteFailure)
+            }
+        case .failure:
+            return .failure(.recordDeleteFailure)
         }
     }
 }

@@ -42,3 +42,9 @@
 "login_fill_password" = "Enter your password!";
 "login_failure_title" = "Wrong password";
 "login_failure_message" = "Try again!";
+
+
+// MARK: - PASSWORD CATEGORY
+"password_category_login" = "Login";
+"password_category_app" = "App";
+"password_category_bank" = "Bank";
