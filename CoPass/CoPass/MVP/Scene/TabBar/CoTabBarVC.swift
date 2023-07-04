@@ -32,6 +32,11 @@ final class CoTabBarVC: UITabBarController, UITabBarControllerDelegate {
             make.height.equalTo(106)
         }
     }
+    
+    func changeTabBar(with index: Int) {
+        selectedIndex = index
+        coTabBar.selectedIndex = index
+    }
 }
 
 

@@ -5,9 +5,9 @@
 //  Created by Oktay Tanrıkulu on 28.06.2023.
 //
 
-import Foundation
+import UIKit
 
-enum CoCategory: String, CustomStringConvertible {
+enum CoCategory: String, CustomStringConvertible, CaseIterable {
     case login
     case app
     case bank
@@ -21,5 +21,9 @@ enum CoCategory: String, CustomStringConvertible {
         case .bank:
             return "password_category_bank".localized
         }
+    }
+    
+    var icon: UIImage {
+        return UIImage(named: "\(rawValue)Icon")!
     }
 }

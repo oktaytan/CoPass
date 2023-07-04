@@ -40,6 +40,10 @@ class BaseViewController: UIViewController {
         CoStorage.shared.deleteUser()
     }
     
+    func showNavBar() {
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
     func hideNavBar() {
         self.navigationController?.isNavigationBarHidden = true
     }

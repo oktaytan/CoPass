@@ -6,6 +6,17 @@
   
 */
 
+// MARK: - ERRORS
+"error_general" = "Something went wrong!";
+"error_user_not_found" = "User not found!";
+"error_record_not_found" = "Record not found!";
+
+// MARK: - COMMON
+"%d password_count_singular" = "%d password";
+"%d password_count_plural" = "%d passwords";
+"password_copied" = "Copied 👍";
+
+
 // MARK: - ONBOARDING
 "onboarding_page_title" = "Welcome";
 "onboarding_title" = "Manage Your Passwords Securely";
@@ -13,6 +24,7 @@
 "onboarding_get_started" = "Get Started";
 "onboarding_have_account" = "I have already account!";
 "onboarding_login" = "Login";
+
 
 // MARK: - REGISTER
 "register_title" = "Set with your \nmaster password";
@@ -48,3 +60,10 @@
 "password_category_login" = "Login";
 "password_category_app" = "App";
 "password_category_bank" = "Bank";
+
+
+// MARK: - HOME
+"home_welcome" = "Welcome";
+"home_safety_score_title" = "Safety Score";
+"home_category_title" = "Categories";
+"home_recently_added_title" = "Recently Added";

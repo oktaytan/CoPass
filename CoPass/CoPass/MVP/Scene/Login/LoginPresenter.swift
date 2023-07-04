@@ -30,7 +30,7 @@ final class LoginPresenter: LoginPresenterProtocol {
     }
     
     func fetchUser() {
-        let result = storage.getUser()
+        let result = storage.fetchUser()
         
         switch result {
         case .success(let user):

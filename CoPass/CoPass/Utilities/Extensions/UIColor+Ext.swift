@@ -33,6 +33,14 @@ extension UIColor {
         return UIColor(named: "coRed10")!
     }
     
+    static var coGreen: UIColor {
+        return UIColor(named: "coGreen")!
+    }
+    
+    static var coGreen10: UIColor {
+        return UIColor(named: "coGreen10")!
+    }
+    
     static var coText: UIColor {
         return UIColor(named: "coText")!
     }

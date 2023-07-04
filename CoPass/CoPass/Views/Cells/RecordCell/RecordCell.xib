@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="105" id="KGk-i7-Jjw" customClass="RecordCell" customModule="CoPass" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="354" height="105"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="354" height="105"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pol-ND-7C4">
+                        <rect key="frame" x="20" y="7" width="314" height="91"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="2bG-d3-Fdu">
+                                <rect key="frame" x="12" y="12" width="290" height="67"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="0Sk-XB-9BM">
+                                        <rect key="frame" x="0.0" y="11.666666666666671" width="222" height="44"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="passwordIcon" translatesAutoresizingMaskIntoConstraints="NO" id="pbz-M4-Cnp">
+                                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="INd-bV-vq2"/>
+                                                    <constraint firstAttribute="width" constant="44" id="Qym-vH-ahu"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="azT-gO-EJF">
+                                                <rect key="frame" x="62" y="5.3333333333333321" width="160" height="33.333333333333343"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bk7-Fu-JPy">
+                                                        <rect key="frame" x="0.0" y="0.0" width="160" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                        <color key="textColor" name="coText"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6A-aW-lTx">
+                                                        <rect key="frame" x="0.0" y="19" width="160" height="14.333333333333336"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" name="coTextGray"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcQ-CA-6GQ">
+                                        <rect key="frame" x="246" y="11.666666666666671" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="FVW-aM-egc"/>
+                                            <constraint firstAttribute="width" constant="44" id="rHF-T1-2Vd"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="copyIcon"/>
+                                        <connections>
+                                            <action selector="copyTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Fvp-zE-oap"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="coPurple10"/>
+                        <constraints>
+                            <constraint firstItem="2bG-d3-Fdu" firstAttribute="leading" secondItem="pol-ND-7C4" secondAttribute="leading" constant="12" id="8Db-Np-yEL"/>
+                            <constraint firstAttribute="trailing" secondItem="2bG-d3-Fdu" secondAttribute="trailing" constant="12" id="GHA-8b-dWC"/>
+                            <constraint firstAttribute="bottom" secondItem="2bG-d3-Fdu" secondAttribute="bottom" constant="12" id="esj-Me-4yl"/>
+                            <constraint firstItem="2bG-d3-Fdu" firstAttribute="top" secondItem="pol-ND-7C4" secondAttribute="top" constant="12" id="g7p-Rc-DHJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="pol-ND-7C4" secondAttribute="bottom" constant="7" id="1ze-6l-Bzz"/>
+                    <constraint firstItem="pol-ND-7C4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="ChI-bI-78l"/>
+                    <constraint firstAttribute="trailing" secondItem="pol-ND-7C4" secondAttribute="trailing" constant="20" id="dIJ-tI-ZTp"/>
+                    <constraint firstItem="pol-ND-7C4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="e5a-H3-NZe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="containerView" destination="pol-ND-7C4" id="gP9-a2-vdP"/>
+                <outlet property="entryLabel" destination="L6A-aW-lTx" id="aQm-pS-Krg"/>
+                <outlet property="iconImageView" destination="pbz-M4-Cnp" id="1IP-yC-QXg"/>
+                <outlet property="platformLabel" destination="bk7-Fu-JPy" id="W8g-V8-iOK"/>
+            </connections>
+            <point key="canvasLocation" x="158.77862595419847" y="42.605633802816904"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="copyIcon" width="44" height="44"/>
+        <image name="passwordIcon" width="44" height="44"/>
+        <namedColor name="coPurple10">
+            <color red="0.42399999499320984" green="0.3880000114440918" blue="1" alpha="0.10000000149011612" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="coText">
+            <color red="0.18431372549019609" green="0.1803921568627451" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="coTextGray">
+            <color red="0.58431372549019611" green="0.68627450980392157" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

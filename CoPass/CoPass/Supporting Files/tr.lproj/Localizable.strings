@@ -6,6 +6,18 @@
   
 */
 
+// MARK: - ERRORS
+"error_general" = "Birşeyler ters gitti!";
+"error_user_not_found" = "Kullanıcı bulunamadı!";
+"error_record_not_found" = "Kayıt bulunamadı!";
+"password_copied" = "Kopyalandı 👍";
+
+
+// MARK: - COMMON
+"%d password_count_singular" = "%d parola";
+"%d password_count_plural" = "%d parola";
+
+
 // MARK: - ONBOARDING
 "onboarding_page_title" = "Hoşgeldin";
 "onboarding_title" = "Şifrelerini Güvenle Yönet";
@@ -13,6 +25,7 @@
 "onboarding_get_started" = "Başla";
 "onboarding_have_account" = "Zaten hesabım var!";
 "onboarding_login" = "Giriş yap";
+
 
 // MARK: - REGISTER
 "register_title" = "Master şifreni \nayarla";
@@ -48,3 +61,12 @@
 "password_category_login" = "Giriş";
 "password_category_app" = "Uygulama";
 "password_category_bank" = "Banka";
+
+
+// MARK: - HOME
+"home_welcome" = "Hoş geldin";
+"home_safety_score_title" = "Güvenlik Skoru";
+"%d home_safety_password_count_singular" = "%d Parola";
+"%d home_safety_password_count_plural" = "%d Parola";
+"home_category_title" = "Kategoriler";
+"home_recently_added_title" = "Son eklenenler";
