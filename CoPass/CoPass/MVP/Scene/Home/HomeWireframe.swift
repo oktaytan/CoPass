@@ -13,11 +13,12 @@ protocol HomeWireframeProtocol: AnyObject {
 
 final class HomeWireframe: BaseWireframe, HomeWireframeProtocol {
     
-    static func prepare() -> HomeVC {
+    static func prepare(delegate: HomeVCDelegate) -> HomeVC {
         let view = HomeVC(nibName: HomeVC.className, bundle: nil)
         let wireframe = HomeWireframe()
-        let presenter = HomePresenter(ui: view, wireframe: wireframe)
-        view.presenter = presenter
+        let presenter = HomePresenter(ui: view, wireframe: wireframe, storage: CoStorage.shared)
+        let provider = HomeTableViewProviderImpl()
+        view.inject(presenter: presenter, provider: provider, delegate: delegate)
         wireframe.view = view
         return view
     }

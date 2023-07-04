@@ -2,22 +2,23 @@
 //  User+CoreDataProperties.swift
 //  CoPass
 //
-//  Created by Oktay Tanrıkulu on 24.06.2023.
+//  Created by Oktay Tanrıkulu on 30.06.2023.
 //
 //
 
 import Foundation
 import CoreData
 
-
 extension User {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<User> {
-        return NSFetchRequest<User>(entityName: "User")
+        let fetchRequest = NSFetchRequest<User>(entityName: "User")
+        fetchRequest.fetchLimit = 1
+        return fetchRequest
     }
 
-    @NSManaged public var image: Data?
     @NSManaged public var username: String
+    @NSManaged public var image: String?
     @NSManaged public var createdAt: Date
     @NSManaged public var updatedAt: Date?
     @NSManaged public var isLogin: Bool

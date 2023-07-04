@@ -18,6 +18,7 @@ final class CoTabBar: BaseView {
     @IBOutlet weak var addRecordButton: UIButton!
     
     weak var delegate: CoTabBarDelegate?
+    
     var selectedIndex: Int = 0 {
         didSet {
             stackView.arrangedSubviews.forEach { view in
@@ -50,6 +51,8 @@ final class CoTabBar: BaseView {
     
     private func setupUI() {
         addRecordButton.backgroundColor = .white
+        addRecordButton.setImage(UIImage(named: "tabbar-plus")!, for: .normal)
+        addRecordButton.setImage(UIImage(named: "tabbar-plus")!, for: .highlighted)
         addRecordButton.configureShadow(shadowColor: .black, offset: CGSize(width: 0, height: 4), shadowRadius: 8, shadowOpacity: 0.18, cornerRadius: AppConstants.appUIRadius)
     }
     

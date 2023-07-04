@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData
 
 enum Router {
     
@@ -22,7 +23,19 @@ enum Router {
     }
     
     enum TabBar {
-        case showAddRecord
+        case home, store, safety, profile
+        case openRecordWith(id: NSManagedObjectID?)
+        case openStoreWith(category: CoCategory)
+        
+        var index: Int {
+            switch self {
+            case .home: return 0
+            case .store, .openStoreWith: return 1
+            case .safety: return 2
+            case .profile: return 3
+            default: return 0
+            }
+        }
     }
     
     enum Home {
@@ -33,7 +46,7 @@ enum Router {
         
     }
     
-    enum Record {
+    enum Records {
         
     }
     

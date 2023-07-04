@@ -14,10 +14,17 @@ extension Record {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Record> {
         let request = NSFetchRequest<Record>(entityName: "Record")
+        let sortDescriptor = NSSortDescriptor(key: "createdAt", ascending: false)
+        request.sortDescriptors = [sortDescriptor]
+        return request
+    }
+    
+    @nonobjc class func fetchRequestWith(category: CoCategory) -> NSFetchRequest<Record> {
+        let request = NSFetchRequest<Record>(entityName: "Record")
+        request.predicate = NSPredicate(format: "category = %@", category.rawValue)
         return request
     }
 
-    @NSManaged public var id: UUID
     @NSManaged public var platform: String
     @NSManaged public var entry: String?
     @NSManaged public var password: String

@@ -6,23 +6,24 @@
 //
 
 import Foundation
+import CoreData
 
 protocol RecordWireframeProtocol: AnyObject {
-    func navigate(to route: Router.Record)
+    func navigate(to route: Router.Records)
 }
 
 final class RecordWireframe: BaseWireframe, RecordWireframeProtocol {
     
-    static func prepare() -> RecordVC {
+    static func prepare(id: NSManagedObjectID?) -> RecordVC {
         let view = RecordVC(nibName: RecordVC.className, bundle: nil)
         let wireframe = RecordWireframe()
-        let presenter = RecordPresenter(ui: view, wireframe: wireframe)
+        let presenter = RecordPresenter(ui: view, wireframe: wireframe, id: id, storage: CoStorage.shared)
         view.presenter = presenter
         wireframe.view = view
         return view
     }
     
-    func navigate(to route: Router.Record) {
+    func navigate(to route: Router.Records) {
         
     }
 }

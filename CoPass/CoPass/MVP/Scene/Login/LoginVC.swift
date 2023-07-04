@@ -25,6 +25,15 @@ final class LoginVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+        
+//        CoStorage.shared.saveRecord(with: .init(platform: "Twitter", entry: "@cawisdev", password: "123456", category: .app))
+//        CoStorage.shared.saveRecord(with: .init(platform: "Spotify", entry: "@zidak", password: "zidak3333", category: .app))
+//        CoStorage.shared.saveRecord(with: .init(platform: "Gmail", entry: "zidak@gmail.com", password: "998H44cawis", category: .login))
+//        CoStorage.shared.saveRecord(with: .init(platform: "Linkedin", entry: "/cawistan", password: "111111", category: .login))
+//        CoStorage.shared.saveRecord(with: .init(platform: "Memrise", entry: "/cawistan", password: "2233445", category: .login))
+//        CoStorage.shared.saveRecord(with: .init(platform: "Cawis Bank", entry: "Visa Card", password: "seeH2222", category: .bank))
+//        CoStorage.shared.saveRecord(with: .init(platform: "Zidak Bank", entry: "Master Card", password: "rrr5", category: .bank))
+//        CoStorage.shared.saveRecord(with: .init(platform: "Facebook", entry: "cawisdev", password: "123456", category: .login))
     }
     
     override func setupUI() {

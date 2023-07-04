@@ -8,5 +8,5 @@
 import Foundation
 
 protocol HomeUI: BaseUI {
-    
+    func load(with data: [HomePresenter.SectionType])
 }

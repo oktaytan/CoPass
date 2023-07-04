@@ -7,7 +7,8 @@
 
 import Foundation
 
-enum CoError: Error {
+enum CoError: Error, CustomStringConvertible {
+    
     case emptyUsername,
          emptyPassword,
          emptyRePassword,
@@ -24,4 +25,12 @@ enum CoError: Error {
          recordGetFailure,
          recordUpdateFailure,
          recordDeleteFailure
+    
+    var description: String {
+        switch self {
+        case .notFoundUser: return "error_user_not_found".localized
+        case .recordNotFound: return "error_record_not_found".localized
+        default: return "error_general".localized
+        }
+    }
 }

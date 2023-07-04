@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="CoPass" customModuleProvider="target">
             <connections>
-                <outlet property="testLabel" destination="EgH-rD-xWd" id="vh1-Gd-yhz"/>
+                <outlet property="tableView" destination="QGA-Mo-qlw" id="QbA-pK-wpV"/>
                 <outlet property="view" destination="iN0-l3-epB" id="00W-vI-EnV"/>
             </connections>
         </placeholder>
@@ -19,20 +19,20 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgH-rD-xWd">
-                    <rect key="frame" x="161" y="412.33333333333331" width="71.333333333333314" height="27.666666666666686"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QGA-Mo-qlw">
+                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="EgH-rD-xWd" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="6AQ-2h-rQb"/>
-                <constraint firstItem="EgH-rD-xWd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Afq-Kv-Xtf"/>
+                <constraint firstItem="QGA-Mo-qlw" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="1Gc-LX-MPG"/>
+                <constraint firstAttribute="bottom" secondItem="QGA-Mo-qlw" secondAttribute="bottom" id="57G-kx-Kpg"/>
+                <constraint firstItem="QGA-Mo-qlw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Uk8-zH-egq"/>
+                <constraint firstItem="QGA-Mo-qlw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dDS-e0-8T4"/>
             </constraints>
-            <point key="canvasLocation" x="-25" y="21"/>
+            <point key="canvasLocation" x="-25.190839694656489" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>

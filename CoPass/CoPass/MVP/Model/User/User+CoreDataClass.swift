@@ -2,7 +2,7 @@
 //  User+CoreDataClass.swift
 //  CoPass
 //
-//  Created by Oktay Tanrıkulu on 24.06.2023.
+//  Created by Oktay Tanrıkulu on 30.06.2023.
 //
 //
 

@@ -15,8 +15,8 @@ protocol CoStorageProtocol {
     /// USER
     func register(with data: RegisterData) -> Result<Bool, CoError>
     func saveUser(data: RegisterData) -> Result<User, CoError>
-    func getUser() -> Result<User, CoError>
-    func updateUser(with user: User) -> Result<User, CoError>
+    func fetchUser() -> Result<User, CoError>
+    func updateUser(with object: User) -> Result<User, CoError>
     func deleteUser() -> Result<Bool, CoError>
     
     /// FACEID
@@ -24,6 +24,11 @@ protocol CoStorageProtocol {
     
     /// RECORD
     func saveRecord(with entity: RecordEntity) -> Result<Record, CoError>
+    func fetchRecord(with id: NSManagedObjectID) -> Result<Record, CoError>
+    func fetchRecords() -> Result<[Record], CoError>
+    func fetchRecords(with category: CoCategory) -> Result<[Record], CoError>
+    func updateRecord(at id: NSManagedObjectID, with entity: Record) -> Result<Record, CoError>
+    func deleteRecord(with id: NSManagedObjectID) -> Result<Bool, CoError>
 }
 
 final class CoStorage: CoStorageProtocol {
@@ -108,11 +113,12 @@ extension CoStorage {
     // MARK: - User
     func saveUser(data: RegisterData) -> Result<User, CoError> {
         let context = persistentContainer.viewContext
+        
         let user = User(context: context)
-        user.username = data.username
-        user.image = nil
-        user.createdAt = .now
-        user.isLogin = false
+        user.setValue(data.username, forKey: #keyPath(User.username))
+        user.setValue(nil, forKey: #keyPath(User.image))
+        user.setValue(Date.now, forKey: #keyPath(User.createdAt))
+        user.setValue(false, forKey: #keyPath(User.isLogin))
         
         do {
             try context.save()
@@ -122,7 +128,7 @@ extension CoStorage {
         }
     }
     
-    func getUser() -> Result<User, CoError> {
+    func fetchUser() -> Result<User, CoError> {
         let context = persistentContainer.viewContext
         do {
             guard let user = try context.fetch(User.fetchRequest()).first else {
@@ -135,24 +141,23 @@ extension CoStorage {
         }
     }
     
-    func updateUser(with data: User) -> Result<User, CoError> {
+    func updateUser(with object: User) -> Result<User, CoError> {
         let context = persistentContainer.viewContext
         
-        switch getUser() {
-        case .success(let user):
-            
-            user.username = data.username
-            user.image = data.image
-            user.updatedAt = .now
-            user.isLogin = data.isLogin
-            
-            do {
-                try context.save()
-                return .success(user)
-            } catch {
-                return .failure(.failureUserSave)
+        do {
+            guard let user = try context.existingObject(with: object.objectID) as? User else {
+                return .failure(.notFoundUser)
             }
-        case .failure(let error): return .failure(error)
+            
+            user.setValue(object.username, forKey: #keyPath(User.username))
+            user.setValue(object.image, forKey: #keyPath(User.image))
+            user.setValue(Date.now, forKey: #keyPath(User.updatedAt))
+            user.setValue(object.isLogin, forKey: #keyPath(User.isLogin))
+            
+            try context.save()
+            return .success(user)
+        } catch {
+            return .failure(.failureUserSave)
         }
     }
     
@@ -160,7 +165,7 @@ extension CoStorage {
     func deleteUser() -> Result<Bool, CoError> {
         let context = persistentContainer.viewContext
         
-        switch getUser() {
+        switch fetchUser() {
         case .success(let user):
             context.delete(user)
             
@@ -181,14 +186,16 @@ extension CoStorage {
 extension CoStorage {
     func saveRecord(with entity: RecordEntity) -> Result<Record, CoError> {
         let context = persistentContainer.viewContext
+        
+        let encryptedPassword = try! entity.password.aesEncrypt(key: AppConstants.cyrptoKey, iv: AppConstants.cyrptoIv)
+        
         let record = Record(context: context)
-        record.id = UUID()
-        record.platform = entity.platform
-        record.entry = entity.entry
-        record.password = entity.password
-        record.category = entity.category.rawValue
-        record.createdAt = .now
-        record.updatedAt = .now
+        record.setValue(entity.platform, forKey: #keyPath(Record.platform))
+        record.setValue(entity.entry, forKey: #keyPath(Record.entry))
+        record.setValue(encryptedPassword, forKey: #keyPath(Record.password))
+        record.setValue(entity.category.rawValue, forKey: #keyPath(Record.category))
+        record.setValue(Date.now, forKey: #keyPath(Record.createdAt))
+        record.setValue(Date.now, forKey: #keyPath(Record.updatedAt))
         
         do {
             try context.save()
@@ -198,22 +205,20 @@ extension CoStorage {
         }
     }
     
-    func getRecord(with id: UUID) -> Result<Record, CoError> {
+    func fetchRecord(with id: NSManagedObjectID) -> Result<Record, CoError> {
         let context = persistentContainer.viewContext
         
-        switch getRecords() {
-        case .success(let records):
-            guard let record = records.first(where: { $0.id == id }) else {
+        do {
+            guard let record = try context.existingObject(with: id) as? Record else {
                 return .failure(.recordNotFound)
             }
-            
             return .success(record)
-        case .failure:
+        } catch {
             return .failure(.recordNotFound)
         }
     }
     
-    func getRecords() -> Result<[Record], CoError> {
+    func fetchRecords() -> Result<[Record], CoError> {
         let context = persistentContainer.viewContext
         do {
             let records = try context.fetch(Record.fetchRequest())
@@ -223,17 +228,30 @@ extension CoStorage {
         }
     }
     
-    func updateRecord(with entity: Record) -> Result<Record, CoError> {
+    func fetchRecords(with category: CoCategory) -> Result<[Record], CoError> {
         let context = persistentContainer.viewContext
         
-        switch getRecord(with: entity.id) {
-        case .success(let record):
-            record.id = entity.id
-            record.platform = entity.platform
-            record.entry = entity.entry
-            record.category = entity.category
-            record.password = entity.password
-            record.updatedAt = .now
+        do {
+            let records = try context.fetch(Record.fetchRequestWith(category: category))
+            return .success(records)
+        } catch {
+            return .failure(.recordNotFound)
+        }
+    }
+    
+    func updateRecord(at id: NSManagedObjectID, with entity: Record) -> Result<Record, CoError> {
+        let context = persistentContainer.viewContext
+        
+        do {
+            guard let record = try context.existingObject(with: id) as? Record else {
+                return .failure(.recordNotFound)
+            }
+            
+            record.setValue(entity.platform, forKey: #keyPath(Record.platform))
+            record.setValue(entity.entry, forKey: #keyPath(Record.entry))
+            record.setValue(entity.password, forKey: #keyPath(Record.password))
+            record.setValue(entity.category, forKey: #keyPath(Record.category))
+            record.setValue(Date.now, forKey: #keyPath(Record.updatedAt))
             
             do {
                 try context.save()
@@ -241,27 +259,22 @@ extension CoStorage {
             } catch {
                 return .failure(.recordUpdateFailure)
             }
-            
-        case .failure:
-            return .failure(.recordUpdateFailure)
+        } catch {
+            return .failure(.recordNotFound)
         }
     }
     
     @discardableResult
-    func deleteRecord(with id: UUID) -> Result<Bool, CoError> {
+    func deleteRecord(with id: NSManagedObjectID) -> Result<Bool, CoError> {
         let context = persistentContainer.viewContext
         
-        switch getRecord(with: id) {
-        case .success(let record):
-            context.delete(record)
+        do {
+            let object = try context.existingObject(with: id)
+            context.delete(object)
             
-            do {
-                try context.save()
-                return .success(true)
-            } catch {
-                return .failure(.recordDeleteFailure)
-            }
-        case .failure:
+            try context.save()
+            return .success(true)
+        } catch {
             return .failure(.recordDeleteFailure)
         }
     }

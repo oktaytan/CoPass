@@ -26,6 +26,6 @@ final class CoTabBarPresenter: CoTabBarPresenterProtocol {
     }
     
     func showAddRecord() {
-        wireframe.navigate(to: .showAddRecord)
+        wireframe.navigate(to: .openRecordWith(id: nil))
     }
 }

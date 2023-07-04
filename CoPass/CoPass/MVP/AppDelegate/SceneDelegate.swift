@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         
-        switch storage.getUser() {
+        switch storage.fetchUser() {
         case .success(_):
             setLoginScreen(window)
         case .failure(_):

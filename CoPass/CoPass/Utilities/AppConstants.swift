@@ -15,4 +15,11 @@ struct AppConstants {
     static let appUIRadius = 10.0
     static let keychainService = "coPass"
     static let keychainAccount = "com.oktaytan.CoPass"
+    
+    static let cyrptoKey = "3yD3K202lYcWErblydtyMNWff1DkpKze"
+    static let cyrptoIv = "drB3T32lkZbKAzid"
+    
+    static let recentlyAddedRecordsCount = 3
+    
+    static let NOTIFICATION_COUNT = "NotificationCount"
 }
