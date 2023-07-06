@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SkeletonView
 import CoreData
 
 protocol HomeVCDelegate: AnyObject {
@@ -36,6 +35,11 @@ final class HomeVC: BaseViewController {
         setupListView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.viewWillAppear()
+    }
+    
     func inject(presenter: Presenter, provider: Provider, delegate: HomeVCDelegate) {
         self.presenter = presenter
         self.provider = provider
@@ -55,8 +59,6 @@ final class HomeVC: BaseViewController {
     
     func setupListView() {
         provider.setupTableView(tableView: self.tableView)
-        tableView.isSkeletonable = true
-        tableView.startSkeletonAnimation()
     }
 }
 
@@ -76,9 +78,19 @@ extension HomeVC {
             presenter.copyPassword(record: record)
         case .selectedRecord(let id):
             delegate?.action(.goToRecordWith(id: id))
+        case .deleteRecord(let id):
+            deleteRecordDialog(id: id)
         default:
             break
         }
+    }
+    
+    private func deleteRecordDialog(id: NSManagedObjectID) {
+        let deletedAction = UIAlertAction(title: "dialog_delete".localized, style: .destructive) { [weak self] _ in
+            self?.presenter.deleteRecord(id: id)
+        }
+        let cancelAction = UIAlertAction(title: "dialog_cancel".localized, style: .cancel)
+        showDialog(message: "record_delete_confirm".localized, actions: [deletedAction, cancelAction])
     }
 }
 
@@ -93,5 +105,17 @@ extension HomeVC {
 extension HomeVC: HomeUI {
     func load(with data: [HomePresenter.SectionType]) {
         provider.setData(data: data)
+    }
+    
+    func copyToPassword(password: String) {
+        self.showBottomPopup(message: Strings.copyPassword)
+        UIPasteboard.general.string = password
+    }
+}
+
+
+extension HomeVC {
+    struct Strings {
+        static let copyPassword =  "password_copied".localized
     }
 }

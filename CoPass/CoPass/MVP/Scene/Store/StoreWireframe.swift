@@ -13,11 +13,12 @@ protocol StoreWireframeProtocol: AnyObject {
 
 final class StoreWireframe: BaseWireframe, StoreWireframeProtocol {
     
-    static func prepare(category: CoCategory? = nil) -> StoreVC {
+    static func prepare(category: CoCategory? = nil, delegate: StoreVCDelegate) -> StoreVC {
         let view = StoreVC(nibName: StoreVC.className, bundle: nil)
         let wireframe = StoreWireframe()
         let presenter = StorePresenter(ui: view, wireframe: wireframe, category: category, storage: CoStorage.shared)
-        view.presenter = presenter
+        let provider = StoreTableViewProviderImpl()
+        view.inject(presenter: presenter, provider: provider, delegate: delegate)
         wireframe.view = view
         return view
     }

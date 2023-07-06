@@ -44,8 +44,6 @@ final class RegisterVC: BaseViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         scrollView.addGestureRecognizer(tapGesture)
         
-        setupKeyboardNotifcationListeners(scrollView)
-        
         let fromAnimation = AnimationType.from(direction: .left, offset: 100)
         UIView.animate(views: [usernameTextField,
                               masterPasswordTextField,

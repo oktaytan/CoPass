@@ -7,7 +7,6 @@
 
 import UIKit
 import CoreData
-import ViewAnimator
 
 protocol HomeTableViewProvider {
     var stateClosure: ((ObservationType<HomeTableViewProviderImpl.UserInteractivity, Error>) -> ())? { get set }
@@ -23,6 +22,7 @@ final class HomeTableViewProviderImpl: NSObject, BaseTableViewProvider, HomeTabl
     
     var dataList: [T]?
     var stateClosure: ((ObservationType<UserInteractivity, Error>) -> ())?
+    var menuActionList = [MenuActionType]()
     
     private var tableView: UITableView?
     
@@ -31,13 +31,13 @@ final class HomeTableViewProviderImpl: NSObject, BaseTableViewProvider, HomeTabl
     func setData(data: [T]?) {
         self.dataList = data
         tableViewReload()
+        menuActionList = MenuActionType.allCases
     }
     
     /// TableView'i reload eder.
     func tableViewReload() {
         DispatchQueue.main.async { [weak self] in
             self?.tableView?.reloadData()
-            self?.setAnimation()
         }
     }
     
@@ -45,7 +45,7 @@ final class HomeTableViewProviderImpl: NSObject, BaseTableViewProvider, HomeTabl
     /// - Parameter tableView: UITableView
     func setupTableView(tableView: UITableView) {
         self.tableView = tableView
-        let cells = [HomeUserCell.self, HomeSafetyScoreCell.self, HomeCategoryCell.self, RecordCell.self]
+        let cells = [HomeUserCell.self, HomeSafetyScoreCell.self, HomeCategoryCell.self, RecordCell.self, EmptyRecordCell.self]
         self.tableView?.register(cellTypes: cells)
         self.tableView?.sectionHeaderTopPadding = 16
         self.tableView?.sectionFooterHeight = 0
@@ -54,23 +54,19 @@ final class HomeTableViewProviderImpl: NSObject, BaseTableViewProvider, HomeTabl
         self.tableView?.separatorStyle = .none
         self.tableView?.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 24, right: 0)
     }
-    
-    private func setAnimation() {
-        guard let numberOfSections = self.tableView?.numberOfSections else { return }
-        let fromAnimation = AnimationType.from(direction: .left, offset: 100)
-        
-        for i in (0..<numberOfSections) {
-            guard let cells = self.tableView?.visibleCells(in: i) else { return }
-            UIView.animate(views: cells, animations: [fromAnimation], initialAlpha: 0.0, finalAlpha: 1.0, delay: (0.1 * Double(i)), duration: 0.25)
-        }
-    }
 }
 
 
 extension HomeTableViewProviderImpl {
     /// Provider ile ViewController arasındaki iletişim sırasındaki event'leri tanımlar
     enum UserInteractivity {
-        case goToProfile, goToNotification, goToSafetyScore, selectedCategory(_ category: CoCategory), copiedRecord(Record), selectedRecord(id: NSManagedObjectID)
+        case goToProfile,
+             goToNotification,
+             goToSafetyScore,
+             selectedCategory(_ category: CoCategory),
+             copiedRecord(Record),
+             selectedRecord(id: NSManagedObjectID),
+             deleteRecord(id: NSManagedObjectID)
     }
 }
 
@@ -80,15 +76,15 @@ extension HomeTableViewProviderImpl: UITableViewDataSource, UITableViewDelegate 
     func numberOfSections(in tableView: UITableView) -> Int {
         return dataList?.count ?? 0
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let sectionType = dataList?[section] else { return 0 }
         switch sectionType {
-        case .recentlyAdded(let rows, _): return rows.count
+        case .frequentlyUsed(let rows, _): return rows.count
         default: return 1
         }
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let sectionType = dataList?[indexPath.section] else { return UITableViewCell() }
         
@@ -105,7 +101,7 @@ extension HomeTableViewProviderImpl: UITableViewDataSource, UITableViewDelegate 
             let cell = tableView.dequeueReusableCell(with: HomeCategoryCell.self, for: indexPath)
             cell.set(with: data, delegate: self)
             return cell
-        case .recentlyAdded(let rows, _):
+        case .frequentlyUsed(let rows, _):
             return getCellForRow(tableView, rows: rows, at: indexPath)
         }
     }
@@ -117,6 +113,9 @@ extension HomeTableViewProviderImpl: UITableViewDataSource, UITableViewDelegate 
             let cell = tableView.dequeueReusableCell(with: RecordCell.self, for: indexPath)
             cell.set(record: data, delegate: self)
             return cell
+        case .emptyRecord:
+            let cell = tableView.dequeueReusableCell(with: EmptyRecordCell.self, for: indexPath)
+            return cell
         }
     }
     
@@ -126,11 +125,13 @@ extension HomeTableViewProviderImpl: UITableViewDataSource, UITableViewDelegate 
         switch sectionType {
         case .safetyScore:
             stateClosure?(.updateUI(data: .goToSafetyScore))
-        case .recentlyAdded(let rows, _):
+        case .frequentlyUsed(let rows, _):
             let row = rows[indexPath.row]
             switch row {
             case .record(let data):
                 stateClosure?(.updateUI(data: .selectedRecord(id: data.objectID)))
+            default:
+                break
             }
         default:
             break
@@ -140,20 +141,79 @@ extension HomeTableViewProviderImpl: UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let sectionType = dataList?[section] else { return nil }
         switch sectionType {
-        case .categories(_, let title), .recentlyAdded(_, let title):
+        case .categories(_, let title), .frequentlyUsed(_, let title):
             let titleView: CoSectionTitleView = CoSectionTitleView()
             titleView.configure(title: title)
             return titleView
         default: return nil
         }
     }
-
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         guard let sectionType = dataList?[section] else { return 0.0 }
         switch sectionType {
-        case .categories, .recentlyAdded:
+        case .categories, .frequentlyUsed:
             return 32
         default: return 0.0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        guard let sectionType = dataList?[indexPath.section] else { return nil }
+        switch sectionType {
+        case .frequentlyUsed(let rows, _):
+            let rowType = rows[indexPath.row]
+            switch rowType {
+            case .record(let data):
+                return setContextMenu(data: data)
+            default:
+                return nil
+            }
+        default:
+            return nil
+        }
+    }
+    
+    private func setContextMenu(data: Record) -> UIContextMenuConfiguration? {
+
+        let config = UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { [weak self] _ in
+            
+            guard let self else { return nil }
+            
+            let menuElementList: [UIMenuElement] = menuActionList.map { actionType in
+                
+                let action = UIAction(title: actionType.title, image: actionType.icon) { [weak self] _ in
+                    switch actionType {
+                    case .copy:
+                        self?.stateClosure?(.updateUI(data: .copiedRecord(data)))
+                    case .edit:
+                        self?.stateClosure?(.updateUI(data: .selectedRecord(id: data.objectID)))
+                    case .delete:
+                        self?.stateClosure?(.updateUI(data: .deleteRecord(id: data.objectID)))
+                    }
+                }
+                
+                return action
+            }
+            
+            let menu = UIMenu(children: menuElementList)
+            return menu
+        }
+        
+        return config
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let sectionType = dataList?[indexPath.section] else { return }
+        switch sectionType {
+        case .frequentlyUsed(let rows, _):
+            let rowType = rows[indexPath.row]
+            switch rowType {
+            case .record: cell.setAnimation(index: indexPath.row)
+            default: break
+            }
+        default:
+            break
         }
     }
 }

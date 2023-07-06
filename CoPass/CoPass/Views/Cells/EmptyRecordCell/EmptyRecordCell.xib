@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="150" id="KGk-i7-Jjw" customClass="EmptyRecordCell" customModule="CoPass" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="348" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="348" height="150"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YtZ-z1-9Sh">
+                        <rect key="frame" x="20" y="6.9999999999999929" width="308" height="120.33333333333331"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qDQ-o7-jxu">
+                                <rect key="frame" x="12" y="12" width="284" height="96.333333333333329"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="passwordIcon" translatesAutoresizingMaskIntoConstraints="NO" id="7uq-Bc-bkp">
+                                        <rect key="frame" x="116" y="0.0" width="52" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="52" id="265-Nz-CNJ"/>
+                                            <constraint firstAttribute="width" secondItem="7uq-Bc-bkp" secondAttribute="height" multiplier="1:1" id="VZB-iA-3cf"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pJ5-9z-Mg5">
+                                        <rect key="frame" x="124" y="60" width="36" height="36.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0r-Ko-q33">
+                                                <rect key="frame" x="0.0" y="0.0" width="36" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="22" id="QOP-O0-tGw"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <color key="textColor" name="coText"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0A-FK-nIh">
+                                                <rect key="frame" x="2.6666666666666572" y="22" width="31" height="14.333333333333336"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="22" id="hnE-f7-kec"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" name="coTextGray"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qDQ-o7-jxu" firstAttribute="leading" secondItem="YtZ-z1-9Sh" secondAttribute="leading" constant="12" id="V4n-uM-ojo"/>
+                            <constraint firstAttribute="trailing" secondItem="qDQ-o7-jxu" secondAttribute="trailing" constant="12" id="V6m-fd-caS"/>
+                            <constraint firstAttribute="bottom" secondItem="qDQ-o7-jxu" secondAttribute="bottom" constant="12" id="uGL-zV-roQ"/>
+                            <constraint firstItem="qDQ-o7-jxu" firstAttribute="top" secondItem="YtZ-z1-9Sh" secondAttribute="top" constant="12" id="zmg-br-3f5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="YtZ-z1-9Sh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="2Zu-7P-iGa"/>
+                    <constraint firstAttribute="trailing" secondItem="YtZ-z1-9Sh" secondAttribute="trailing" constant="20" id="TFF-t0-g2l"/>
+                    <constraint firstItem="YtZ-z1-9Sh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="o2Q-lI-nUO"/>
+                    <constraint firstAttribute="bottom" secondItem="YtZ-z1-9Sh" secondAttribute="bottom" constant="7" id="tBU-ft-Rto"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addRecordLabel" destination="H0A-FK-nIh" id="a67-JY-OBL"/>
+                <outlet property="containerView" destination="YtZ-z1-9Sh" id="Uwn-DG-e0g"/>
+                <outlet property="iconImageView" destination="7uq-Bc-bkp" id="4YT-nn-aSS"/>
+                <outlet property="messageLabel" destination="l0r-Ko-q33" id="tit-1n-8y0"/>
+            </connections>
+            <point key="canvasLocation" x="160.30534351145039" y="57.74647887323944"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="passwordIcon" width="44" height="44"/>
+        <namedColor name="coText">
+            <color red="0.18431372549019609" green="0.1803921568627451" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="coTextGray">
+            <color red="0.51372549019607838" green="0.61176470588235299" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

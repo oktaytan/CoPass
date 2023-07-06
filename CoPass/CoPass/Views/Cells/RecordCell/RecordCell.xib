@@ -20,30 +20,30 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pol-ND-7C4">
                         <rect key="frame" x="20" y="7" width="314" height="91"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="2bG-d3-Fdu">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="2bG-d3-Fdu">
                                 <rect key="frame" x="12" y="12" width="290" height="67"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="0Sk-XB-9BM">
-                                        <rect key="frame" x="0.0" y="11.666666666666671" width="222" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="222" height="67"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="passwordIcon" translatesAutoresizingMaskIntoConstraints="NO" id="pbz-M4-Cnp">
-                                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                                <rect key="frame" x="0.0" y="15.666666666666664" width="36" height="36"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="INd-bV-vq2"/>
-                                                    <constraint firstAttribute="width" constant="44" id="Qym-vH-ahu"/>
+                                                    <constraint firstAttribute="width" secondItem="pbz-M4-Cnp" secondAttribute="height" multiplier="1:1" id="NDk-1O-gMB"/>
+                                                    <constraint firstAttribute="width" constant="36" id="Qym-vH-ahu"/>
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="azT-gO-EJF">
-                                                <rect key="frame" x="62" y="5.3333333333333321" width="160" height="33.333333333333343"/>
+                                                <rect key="frame" x="54" y="17.000000000000004" width="168" height="33.333333333333343"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bk7-Fu-JPy">
-                                                        <rect key="frame" x="0.0" y="0.0" width="160" height="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="168" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <color key="textColor" name="coText"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6A-aW-lTx">
-                                                        <rect key="frame" x="0.0" y="19" width="160" height="14.333333333333336"/>
+                                                        <rect key="frame" x="0.0" y="19" width="168" height="14.333333333333336"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" name="coTextGray"/>
                                                         <nil key="highlightedColor"/>
@@ -53,9 +53,8 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcQ-CA-6GQ">
-                                        <rect key="frame" x="246" y="11.666666666666671" width="44" height="44"/>
+                                        <rect key="frame" x="246" y="0.0" width="44" height="67"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="FVW-aM-egc"/>
                                             <constraint firstAttribute="width" constant="44" id="rHF-T1-2Vd"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -65,9 +64,12 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="vcQ-CA-6GQ" firstAttribute="height" secondItem="2bG-d3-Fdu" secondAttribute="height" id="OXu-io-qCl"/>
+                                </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" name="coPurple10"/>
+                        <color key="backgroundColor" name="coBg"/>
                         <constraints>
                             <constraint firstItem="2bG-d3-Fdu" firstAttribute="leading" secondItem="pol-ND-7C4" secondAttribute="leading" constant="12" id="8Db-Np-yEL"/>
                             <constraint firstAttribute="trailing" secondItem="2bG-d3-Fdu" secondAttribute="trailing" constant="12" id="GHA-8b-dWC"/>
@@ -86,6 +88,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="containerView" destination="pol-ND-7C4" id="gP9-a2-vdP"/>
+                <outlet property="copyBtn" destination="vcQ-CA-6GQ" id="ARP-rv-984"/>
                 <outlet property="entryLabel" destination="L6A-aW-lTx" id="aQm-pS-Krg"/>
                 <outlet property="iconImageView" destination="pbz-M4-Cnp" id="1IP-yC-QXg"/>
                 <outlet property="platformLabel" destination="bk7-Fu-JPy" id="W8g-V8-iOK"/>
@@ -96,14 +99,14 @@
     <resources>
         <image name="copyIcon" width="44" height="44"/>
         <image name="passwordIcon" width="44" height="44"/>
-        <namedColor name="coPurple10">
-            <color red="0.42399999499320984" green="0.3880000114440918" blue="1" alpha="0.10000000149011612" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="coBg">
+            <color red="0.58431372549019611" green="0.68627450980392157" blue="0.75294117647058822" alpha="0.15000000596046448" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="coText">
             <color red="0.18431372549019609" green="0.1803921568627451" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="coTextGray">
-            <color red="0.58431372549019611" green="0.68627450980392157" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.51372549019607838" green="0.61176470588235299" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -17,7 +17,7 @@ protocol CoStorageProtocol {
     func saveUser(data: RegisterData) -> Result<User, CoError>
     func fetchUser() -> Result<User, CoError>
     func updateUser(with object: User) -> Result<User, CoError>
-    func deleteUser() -> Result<Bool, CoError>
+    @discardableResult func deleteUser() -> Result<Bool, CoError>
     
     /// FACEID
     func authenticateWithFaceID(completion: @escaping (Bool) -> Void)
@@ -27,7 +27,7 @@ protocol CoStorageProtocol {
     func fetchRecord(with id: NSManagedObjectID) -> Result<Record, CoError>
     func fetchRecords() -> Result<[Record], CoError>
     func fetchRecords(with category: CoCategory) -> Result<[Record], CoError>
-    func updateRecord(at id: NSManagedObjectID, with entity: Record) -> Result<Record, CoError>
+    @discardableResult func updateRecord(at id: NSManagedObjectID, with entity: Record) -> Result<Record, CoError>
     func deleteRecord(with id: NSManagedObjectID) -> Result<Bool, CoError>
 }
 
@@ -196,6 +196,7 @@ extension CoStorage {
         record.setValue(entity.category.rawValue, forKey: #keyPath(Record.category))
         record.setValue(Date.now, forKey: #keyPath(Record.createdAt))
         record.setValue(Date.now, forKey: #keyPath(Record.updatedAt))
+        record.setValue(0, forKey: #keyPath(Record.usageCount))
         
         do {
             try context.save()
@@ -239,6 +240,7 @@ extension CoStorage {
         }
     }
     
+    @discardableResult
     func updateRecord(at id: NSManagedObjectID, with entity: Record) -> Result<Record, CoError> {
         let context = persistentContainer.viewContext
         
@@ -252,6 +254,7 @@ extension CoStorage {
             record.setValue(entity.password, forKey: #keyPath(Record.password))
             record.setValue(entity.category, forKey: #keyPath(Record.category))
             record.setValue(Date.now, forKey: #keyPath(Record.updatedAt))
+            record.setValue(entity.usageCount + 1, forKey: #keyPath(Record.usageCount))
             
             do {
                 try context.save()

@@ -31,7 +31,7 @@ class HomeCategoryCell: UITableViewCell {
     private func setupUI() {
         self.titleLabel.text = Strings.categoryTitle
         collectionView.cornerRadius = AppConstants.appUIRadius
-        collectionView.backgroundColor = .coPurple10
+        collectionView.backgroundColor = .coBg
         collectionView.register(cellType: HomeCategoryItemCell.self)
         
         let layout = UICollectionViewFlowLayout()
@@ -47,6 +47,9 @@ class HomeCategoryCell: UITableViewCell {
     func set(with data: [CoCategory : Int], delegate: HomeCategoryCellDelegate) {
         self.data = data
         self.delegate = delegate
+        DispatchQueue.main.async { [weak self] in
+            self?.collectionView.reloadData()
+        }
     }
 }
 

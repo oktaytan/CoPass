@@ -9,4 +9,5 @@ import Foundation
 
 protocol BaseUI: AnyObject {
     func showAlert(title: String?, message: String?, error: Bool)
+    func showBottomPopup(message: String?)
 }

@@ -8,5 +8,6 @@
 import Foundation
 
 protocol StoreUI: BaseUI {
-    
+    func load(with data: [StorePresenter.SectionType])
+    func copyToPassword(password: String)
 }
