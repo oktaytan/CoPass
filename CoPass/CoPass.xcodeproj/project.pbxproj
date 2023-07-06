@@ -23,7 +23,6 @@
 		6608C6D62A4F7D7E0081603C /* CoBadgeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6608C6D52A4F7D7D0081603C /* CoBadgeView.xib */; };
 		6608C6D82A4F7E4A0081603C /* CoCircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608C6D72A4F7E4A0081603C /* CoCircularImageView.swift */; };
 		661088EC2A4A372B00FE6643 /* AppDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661088EB2A4A372B00FE6643 /* AppDesign.swift */; };
-		661088F12A4A3DF800FE6643 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 661088F02A4A3DF800FE6643 /* SkeletonView */; };
 		6622B5872A4A29FF000F31F1 /* ViewAnimator in Frameworks */ = {isa = PBXBuildFile; productRef = 6622B5862A4A29FF000F31F1 /* ViewAnimator */; };
 		6622B58A2A4A3648000F31F1 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 6622B5892A4A3648000F31F1 /* NVActivityIndicatorView */; };
 		66475B802A44C29200E76D71 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66475B7F2A44C29200E76D71 /* KeychainManager.swift */; };
@@ -63,12 +62,14 @@
 		668CE2782A18394500D6E7DF /* CoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE2772A18394500D6E7DF /* CoButton.swift */; };
 		66A972372A4CB666009791E2 /* CoCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A972362A4CB666009791E2 /* CoCategory.swift */; };
 		66A972392A4CB6FF009791E2 /* RecordEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A972382A4CB6FF009791E2 /* RecordEntity.swift */; };
-		66A9723C2A4CB8DD009791E2 /* Record+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A9723A2A4CB8DD009791E2 /* Record+CoreDataClass.swift */; };
-		66A9723D2A4CB8DD009791E2 /* Record+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A9723B2A4CB8DD009791E2 /* Record+CoreDataProperties.swift */; };
 		66B768D32A5216510055CECF /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B768D22A5216510055CECF /* Notification.swift */; };
 		66B768D62A5223580055CECF /* HomeSafetyScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B768D42A5223580055CECF /* HomeSafetyScoreCell.swift */; };
 		66B768D72A5223580055CECF /* HomeSafetyScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66B768D52A5223580055CECF /* HomeSafetyScoreCell.xib */; };
 		66B768E02A522EC70055CECF /* CoPieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B768DF2A522EC70055CECF /* CoPieChartView.swift */; };
+		66C8E1542A55EF450058FF89 /* Record+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8E1522A55EF450058FF89 /* Record+CoreDataClass.swift */; };
+		66C8E1552A55EF450058FF89 /* Record+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8E1532A55EF450058FF89 /* Record+CoreDataProperties.swift */; };
+		66C8E1572A5600A40058FF89 /* CoSearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8E1562A5600A40058FF89 /* CoSearchField.swift */; };
+		66C8E1592A56102A0058FF89 /* StoreTableViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8E1582A56102A0058FF89 /* StoreTableViewProvider.swift */; };
 		66D481562A48EBD000CE5B5A /* StoreUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D481552A48EBD000CE5B5A /* StoreUI.swift */; };
 		66D481582A48EBE200CE5B5A /* StorePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D481572A48EBE200CE5B5A /* StorePresenter.swift */; };
 		66D4815A2A48EC5C00CE5B5A /* StoreWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D481592A48EC5C00CE5B5A /* StoreWireframe.swift */; };
@@ -103,6 +104,11 @@
 		66EAFD142A4653B0005B9DAB /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EAFD132A4653B0005B9DAB /* HomePresenter.swift */; };
 		66EB525C2A437F9D00866CD8 /* CoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EB525B2A437F9D00866CD8 /* CoTextField.swift */; };
 		66EB525E2A43B4A500866CD8 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EB525D2A43B4A500866CD8 /* UIViewController+Ext.swift */; };
+		66EB5B372A54D2640072B01D /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 66EB5B362A54D2640072B01D /* IQKeyboardManagerSwift */; };
+		66EB5B3B2A54D42A0072B01D /* EmptyRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EB5B392A54D42A0072B01D /* EmptyRecordCell.swift */; };
+		66EB5B3C2A54D42A0072B01D /* EmptyRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66EB5B3A2A54D42A0072B01D /* EmptyRecordCell.xib */; };
+		66EEA5D22A574E1A00A0267D /* MenuActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EEA5D12A574E1A00A0267D /* MenuActionType.swift */; };
+		66EEA5D42A576A3E00A0267D /* UITableViewCell+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EEA5D32A576A3E00A0267D /* UITableViewCell+Ext.swift */; };
 		66EF16932A4E28E300CFF0B2 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 66EF16922A4E28E300CFF0B2 /* CryptoSwift */; };
 		66EF16952A4E290400CFF0B2 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EF16942A4E290400CFF0B2 /* String+Ext.swift */; };
 		66EF16972A4E292900CFF0B2 /* Data+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EF16962A4E292900CFF0B2 /* Data+Ext.swift */; };
@@ -179,12 +185,14 @@
 		668CE2772A18394500D6E7DF /* CoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoButton.swift; sourceTree = "<group>"; };
 		66A972362A4CB666009791E2 /* CoCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoCategory.swift; sourceTree = "<group>"; };
 		66A972382A4CB6FF009791E2 /* RecordEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordEntity.swift; sourceTree = "<group>"; };
-		66A9723A2A4CB8DD009791E2 /* Record+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataClass.swift"; sourceTree = "<group>"; };
-		66A9723B2A4CB8DD009791E2 /* Record+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		66B768D22A5216510055CECF /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		66B768D42A5223580055CECF /* HomeSafetyScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSafetyScoreCell.swift; sourceTree = "<group>"; };
 		66B768D52A5223580055CECF /* HomeSafetyScoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeSafetyScoreCell.xib; sourceTree = "<group>"; };
 		66B768DF2A522EC70055CECF /* CoPieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoPieChartView.swift; sourceTree = "<group>"; };
+		66C8E1522A55EF450058FF89 /* Record+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataClass.swift"; sourceTree = "<group>"; };
+		66C8E1532A55EF450058FF89 /* Record+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		66C8E1562A5600A40058FF89 /* CoSearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoSearchField.swift; sourceTree = "<group>"; };
+		66C8E1582A56102A0058FF89 /* StoreTableViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewProvider.swift; sourceTree = "<group>"; };
 		66D481552A48EBD000CE5B5A /* StoreUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreUI.swift; sourceTree = "<group>"; };
 		66D481572A48EBE200CE5B5A /* StorePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePresenter.swift; sourceTree = "<group>"; };
 		66D481592A48EC5C00CE5B5A /* StoreWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWireframe.swift; sourceTree = "<group>"; };
@@ -218,6 +226,10 @@
 		66EAFD132A4653B0005B9DAB /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		66EB525B2A437F9D00866CD8 /* CoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoTextField.swift; sourceTree = "<group>"; };
 		66EB525D2A43B4A500866CD8 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		66EB5B392A54D42A0072B01D /* EmptyRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyRecordCell.swift; sourceTree = "<group>"; };
+		66EB5B3A2A54D42A0072B01D /* EmptyRecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyRecordCell.xib; sourceTree = "<group>"; };
+		66EEA5D12A574E1A00A0267D /* MenuActionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuActionType.swift; sourceTree = "<group>"; };
+		66EEA5D32A576A3E00A0267D /* UITableViewCell+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Ext.swift"; sourceTree = "<group>"; };
 		66EF16942A4E290400CFF0B2 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		66EF16962A4E292900CFF0B2 /* Data+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Ext.swift"; sourceTree = "<group>"; };
 		66EF16982A4E33A000CFF0B2 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -245,11 +257,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66EB5B372A54D2640072B01D /* IQKeyboardManagerSwift in Frameworks */,
 				6622B58A2A4A3648000F31F1 /* NVActivityIndicatorView in Frameworks */,
 				66475B882A44D52B00E76D71 /* SPIndicator in Frameworks */,
 				66D481822A48F31200CE5B5A /* SnapKit in Frameworks */,
 				6622B5872A4A29FF000F31F1 /* ViewAnimator in Frameworks */,
-				661088F12A4A3DF800FE6643 /* SkeletonView in Frameworks */,
 				66EF16932A4E28E300CFF0B2 /* CryptoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				6608C6C22A4F675C0081603C /* HomeTableViewProvider.swift */,
+				66C8E1582A56102A0058FF89 /* StoreTableViewProvider.swift */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -288,6 +301,7 @@
 		6608C6CC2A4F6A260081603C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				66EB5B382A54D4060072B01D /* EmptyRecordCell */,
 				667395E82A53893200F823F8 /* RecordCell */,
 				6608C6CD2A4F6A2C0081603C /* Home */,
 			);
@@ -425,6 +439,7 @@
 				6608C6BF2A4F66F40081603C /* ObservationType.swift */,
 				66F9AED12A1BFB2E00EAFD58 /* AppConstants.swift */,
 				661088EB2A4A372B00FE6643 /* AppDesign.swift */,
+				66EEA5D12A574E1A00A0267D /* MenuActionType.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -468,6 +483,7 @@
 				66EAFD082A46488D005B9DAB /* CoOneTimeCodeTextField.swift */,
 				6608C6D72A4F7E4A0081603C /* CoCircularImageView.swift */,
 				667395E62A5384C500F823F8 /* CoSectionTitleView.swift */,
+				66C8E1562A5600A40058FF89 /* CoSearchField.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -495,6 +511,7 @@
 				66EF16942A4E290400CFF0B2 /* String+Ext.swift */,
 				66EF16962A4E292900CFF0B2 /* Data+Ext.swift */,
 				6608C6C82A4F69750081603C /* UITableView+Ext.swift */,
+				66EEA5D32A576A3E00A0267D /* UITableViewCell+Ext.swift */,
 				6608C6CA2A4F69960081603C /* UICollectionView+Ext.swift */,
 			);
 			path = Extensions;
@@ -531,9 +548,9 @@
 		66A9722C2A4CAEF8009791E2 /* Record */ = {
 			isa = PBXGroup;
 			children = (
-				66A9723A2A4CB8DD009791E2 /* Record+CoreDataClass.swift */,
-				66A9723B2A4CB8DD009791E2 /* Record+CoreDataProperties.swift */,
 				66A972382A4CB6FF009791E2 /* RecordEntity.swift */,
+				66C8E1522A55EF450058FF89 /* Record+CoreDataClass.swift */,
+				66C8E1532A55EF450058FF89 /* Record+CoreDataProperties.swift */,
 			);
 			path = Record;
 			sourceTree = "<group>";
@@ -615,6 +632,15 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		66EB5B382A54D4060072B01D /* EmptyRecordCell */ = {
+			isa = PBXGroup;
+			children = (
+				66EB5B392A54D42A0072B01D /* EmptyRecordCell.swift */,
+				66EB5B3A2A54D42A0072B01D /* EmptyRecordCell.xib */,
+			);
+			path = EmptyRecordCell;
+			sourceTree = "<group>";
+		};
 		66F9AEB02A1BE8F800EAFD58 /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -667,8 +693,8 @@
 				66D481812A48F31200CE5B5A /* SnapKit */,
 				6622B5862A4A29FF000F31F1 /* ViewAnimator */,
 				6622B5892A4A3648000F31F1 /* NVActivityIndicatorView */,
-				661088F02A4A3DF800FE6643 /* SkeletonView */,
 				66EF16922A4E28E300CFF0B2 /* CryptoSwift */,
+				66EB5B362A54D2640072B01D /* IQKeyboardManagerSwift */,
 			);
 			productName = CoPass;
 			productReference = 668CE22A2A1800CC00D6E7DF /* CoPass.app */;
@@ -704,8 +730,8 @@
 				66D481802A48F31200CE5B5A /* XCRemoteSwiftPackageReference "SnapKit" */,
 				6622B5852A4A29FF000F31F1 /* XCRemoteSwiftPackageReference "ViewAnimator" */,
 				6622B5882A4A3648000F31F1 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
-				661088EF2A4A3DF800FE6643 /* XCRemoteSwiftPackageReference "SkeletonView" */,
 				66EF16912A4E28E300CFF0B2 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+				66EB5B352A54D2640072B01D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 668CE22B2A1800CC00D6E7DF /* Products */;
 			projectDirPath = "";
@@ -731,6 +757,7 @@
 				668CE23D2A1800CD00D6E7DF /* LaunchScreen.storyboard in Resources */,
 				66F9AEBA2A1BEAF700EAFD58 /* RegisterVC.xib in Resources */,
 				668CE2722A18121D00D6E7DF /* OnboardingVC.xib in Resources */,
+				66EB5B3C2A54D42A0072B01D /* EmptyRecordCell.xib in Resources */,
 				668CE23A2A1800CD00D6E7DF /* Assets.xcassets in Resources */,
 				6608C6D62A4F7D7E0081603C /* CoBadgeView.xib in Resources */,
 				66B768D72A5223580055CECF /* HomeSafetyScoreCell.xib in Resources */,
@@ -752,10 +779,10 @@
 				66475B832A44CAFB00E76D71 /* RegisterData.swift in Sources */,
 				66D481892A48FDB500CE5B5A /* CoTabBar.swift in Sources */,
 				66D481672A48ED1D00CE5B5A /* RecordVC.swift in Sources */,
+				66C8E1542A55EF450058FF89 /* Record+CoreDataClass.swift in Sources */,
 				66D481742A48EE3800CE5B5A /* SafetyWireframe.swift in Sources */,
 				667395E42A534F8200F823F8 /* HomeCategoryItemCell.swift in Sources */,
 				667395D82A53333300F823F8 /* CoSafetyType.swift in Sources */,
-				66A9723D2A4CB8DD009791E2 /* Record+CoreDataProperties.swift in Sources */,
 				66D4816E2A48EDFE00CE5B5A /* SafetyVC.swift in Sources */,
 				66D481792A48EEC700CE5B5A /* ProfilePresenter.swift in Sources */,
 				66D4815A2A48EC5C00CE5B5A /* StoreWireframe.swift in Sources */,
@@ -767,6 +794,7 @@
 				6608C6C92A4F69750081603C /* UITableView+Ext.swift in Sources */,
 				668CE2572A1807A000D6E7DF /* BaseUI.swift in Sources */,
 				660838BF2A47A89A00E72F31 /* CoTabBarWireframe.swift in Sources */,
+				66C8E1572A5600A40058FF89 /* CoSearchField.swift in Sources */,
 				66F9AEB62A1BE99400EAFD58 /* RegisterWireframe.swift in Sources */,
 				66EB525E2A43B4A500866CD8 /* UIViewController+Ext.swift in Sources */,
 				66B768E02A522EC70055CECF /* CoPieChartView.swift in Sources */,
@@ -778,7 +806,6 @@
 				66F9AEC52A1BEFA200EAFD58 /* LoginWireframe.swift in Sources */,
 				668CE2782A18394500D6E7DF /* CoButton.swift in Sources */,
 				66D481652A48ED1700CE5B5A /* RecordWireframe.swift in Sources */,
-				66A9723C2A4CB8DD009791E2 /* Record+CoreDataClass.swift in Sources */,
 				66B768D62A5223580055CECF /* HomeSafetyScoreCell.swift in Sources */,
 				66D481612A48ECFD00CE5B5A /* RecordUI.swift in Sources */,
 				668CE2382A1800CC00D6E7DF /* CoPass.xcdatamodeld in Sources */,
@@ -798,6 +825,7 @@
 				668CE24A2A1802C200D6E7DF /* BaseWireframe.swift in Sources */,
 				66F9AED22A1BFB2E00EAFD58 /* AppConstants.swift in Sources */,
 				660838B92A47968800E72F31 /* CoError.swift in Sources */,
+				66EEA5D42A576A3E00A0267D /* UITableViewCell+Ext.swift in Sources */,
 				66EAFD122A46530B005B9DAB /* HomeWireframe.swift in Sources */,
 				66EAFD0E2A4652B2005B9DAB /* HomeVC.swift in Sources */,
 				668CE26E2A18104C00D6E7DF /* OnboardingVC.swift in Sources */,
@@ -811,18 +839,21 @@
 				66EB525C2A437F9D00866CD8 /* CoTextField.swift in Sources */,
 				66F9AEB22A1BE90700EAFD58 /* RegisterUI.swift in Sources */,
 				668CE2642A180C2A00D6E7DF /* UIView+Ext.swift in Sources */,
+				66EB5B3B2A54D42A0072B01D /* EmptyRecordCell.swift in Sources */,
 				6608C6C72A4F67E50081603C /* BaseCollectionViewProvider.swift in Sources */,
 				6608C6CB2A4F69960081603C /* UICollectionView+Ext.swift in Sources */,
 				66A972392A4CB6FF009791E2 /* RecordEntity.swift in Sources */,
 				66F9AEB82A1BEA8800EAFD58 /* RegisterVC.swift in Sources */,
 				6608C6C32A4F675C0081603C /* HomeTableViewProvider.swift in Sources */,
 				66D4815C2A48ECAE00CE5B5A /* StoreVC.swift in Sources */,
+				66C8E1552A55EF450058FF89 /* Record+CoreDataProperties.swift in Sources */,
 				66F9AEC32A1BEF9800EAFD58 /* LoginPresenter.swift in Sources */,
 				668CE25F2A180B5800D6E7DF /* NavigationPresenter.swift in Sources */,
 				668CE2512A18059E00D6E7DF /* Router.swift in Sources */,
 				66D481562A48EBD000CE5B5A /* StoreUI.swift in Sources */,
 				667395E72A5384C500F823F8 /* CoSectionTitleView.swift in Sources */,
 				668CE2302A1800CC00D6E7DF /* SceneDelegate.swift in Sources */,
+				66C8E1592A56102A0058FF89 /* StoreTableViewProvider.swift in Sources */,
 				66EF169B2A4E33A000CFF0B2 /* User+CoreDataProperties.swift in Sources */,
 				66F9AEB42A1BE92200EAFD58 /* RegisterPresenter.swift in Sources */,
 				66F9AED02A1BFB0300EAFD58 /* Language.swift in Sources */,
@@ -830,6 +861,7 @@
 				66F9AEC12A1BEF7F00EAFD58 /* LoginUI.swift in Sources */,
 				66D481632A48ED0F00CE5B5A /* RecordPresenter.swift in Sources */,
 				668CE2612A180BB100D6E7DF /* BaseView.swift in Sources */,
+				66EEA5D22A574E1A00A0267D /* MenuActionType.swift in Sources */,
 				66F9AEBD2A1BEF5700EAFD58 /* LoginVC.swift in Sources */,
 				66F9AECE2A1BFA7B00EAFD58 /* Localization.swift in Sources */,
 				66EAFD142A4653B0005B9DAB /* HomePresenter.swift in Sources */,
@@ -1069,14 +1101,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		661088EF2A4A3DF800FE6643 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		6622B5852A4A29FF000F31F1 /* XCRemoteSwiftPackageReference "ViewAnimator" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/marcosgriselli/ViewAnimator.git";
@@ -1109,6 +1133,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		66EB5B352A54D2640072B01D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 		66EF16912A4E28E300CFF0B2 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
@@ -1120,11 +1152,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		661088F02A4A3DF800FE6643 /* SkeletonView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 661088EF2A4A3DF800FE6643 /* XCRemoteSwiftPackageReference "SkeletonView" */;
-			productName = SkeletonView;
-		};
 		6622B5862A4A29FF000F31F1 /* ViewAnimator */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6622B5852A4A29FF000F31F1 /* XCRemoteSwiftPackageReference "ViewAnimator" */;
@@ -1144,6 +1171,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 66D481802A48F31200CE5B5A /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		66EB5B362A54D2640072B01D /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EB5B352A54D2640072B01D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 		66EF16922A4E28E300CFF0B2 /* CryptoSwift */ = {
 			isa = XCSwiftPackageProductDependency;

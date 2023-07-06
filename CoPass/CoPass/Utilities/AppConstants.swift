@@ -19,7 +19,7 @@ struct AppConstants {
     static let cyrptoKey = "3yD3K202lYcWErblydtyMNWff1DkpKze"
     static let cyrptoIv = "drB3T32lkZbKAzid"
     
-    static let recentlyAddedRecordsCount = 3
+    static let recordsShowingCount = 3
     
     static let NOTIFICATION_COUNT = "NotificationCount"
 }

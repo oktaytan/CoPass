@@ -48,7 +48,7 @@ extension CoTabBarWireframe {
     }
     
     private func openStoreWith(category: CoCategory) {
-        let storeVC = StoreWireframe.prepare(category: category)
+        let storeVC = StoreWireframe.prepare(category: category, delegate: self)
         forward(storeVC, with: .modal(from: self.view))
     }
 }
@@ -57,7 +57,7 @@ extension CoTabBarWireframe {
 extension CoTabBarWireframe {
     private func setTabBar(with view: UITabBarController) {
         let homeVC = HomeWireframe.prepare(delegate: self)
-        let storeVC = StoreWireframe.prepare()
+        let storeVC = StoreWireframe.prepare(delegate: self)
         let safetyVC = SafetyWireframe.prepare()
         let profileVC = ProfileWireframe.prepare()
         
@@ -87,6 +87,17 @@ extension CoTabBarWireframe: HomeVCDelegate {
             navigate(to: .safety)
         case .goToStore(let category):
             navigate(to: .openStoreWith(category: category))
+        case .goToRecordWith(let id):
+            navigate(to: .openRecordWith(id: id))
+        }
+    }
+}
+
+
+// MARK: - StoreVC Delegation
+extension CoTabBarWireframe: StoreVCDelegate {
+    func action(_ event: StoreVC.UserEvent) {
+        switch event {
         case .goToRecordWith(let id):
             navigate(to: .openRecordWith(id: id))
         }

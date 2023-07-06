@@ -57,6 +57,18 @@ extension BaseViewController: BaseUI {
         }
     }
     
+    func showBottomPopup(message: String?) {
+        DispatchQueue.main.async {
+            SPIndicator.present(title: "", message: message, preset: .done, from: .bottom)
+        }
+    }
+    
+    func showDialog(message: String, actions: [UIAlertAction]) {
+        let alert = UIAlertController(title: AppConstants.appName, message: message, preferredStyle: .alert)
+        actions.forEach { alert.addAction($0) }
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     @objc func hideKeyboard() {
         view.endEditing(true)
     }

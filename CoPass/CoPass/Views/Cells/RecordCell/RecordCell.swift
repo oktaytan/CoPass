@@ -21,6 +21,7 @@ class RecordCell: UITableViewCell {
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var platformLabel: UILabel!
     @IBOutlet weak var entryLabel: UILabel!
+    @IBOutlet weak var copyBtn: UIButton!
     
     weak var delegate: RecordCellDelegate?
     var record: Record?
@@ -32,7 +33,7 @@ class RecordCell: UITableViewCell {
     
     private func setupUI() {
         containerView.cornerRadius = AppConstants.appUIRadius
-        iconImageView.cornerRadius = 10
+        iconImageView.applyCircle()
     }
     
     func set(record: Record, delegate: RecordCellDelegate) {
@@ -40,6 +41,13 @@ class RecordCell: UITableViewCell {
         self.delegate = delegate
         platformLabel.text = record.platform
         entryLabel.text = record.entry
+        
+        if let category = CoCategory(rawValue: record.category) {
+            containerView.backgroundColor = category.bgColor
+            iconImageView.image = category.icon
+            copyBtn.setImage(category.copyIcon, for: .normal)
+            copyBtn.setImage(category.copyIcon, for: .highlighted)
+        }
     }
     
     @IBAction func copyTapped(_ sender: Any) {

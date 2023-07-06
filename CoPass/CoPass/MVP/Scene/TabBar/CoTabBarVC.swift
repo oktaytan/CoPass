@@ -57,4 +57,10 @@ extension CoTabBarVC: CoTabBarUI {
             SPIndicator.present(title: title ?? "", message: message, preset: error ? .error : .done)
         }
     }
+    
+    func showBottomPopup(message: String?) {
+        DispatchQueue.main.async {
+            SPIndicator.present(title: "", message: message, preset: .done, from: .center)
+        }
+    }
 }

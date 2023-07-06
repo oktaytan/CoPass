@@ -7,7 +7,6 @@
 
 import UIKit.UITableView
 
-
 extension UITableView {
     
     func register<T: UITableViewCell>(cellType: T.Type, bundle: Bundle? = nil) {

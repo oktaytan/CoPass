@@ -28,6 +28,7 @@ final class CoSectionTitleView: UIView {
     }
     
     private func setupUI() {
+        backgroundColor = .white
         addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
             make.top.equalToSuperview()

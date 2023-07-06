@@ -53,8 +53,6 @@ final class LoginVC: BaseViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         scrollView.addGestureRecognizer(tapGesture)
         
-        setupKeyboardNotifcationListeners(scrollView)
-        
         masterPasswordField.configure(withSlotCount: 4, andSpacing: 18)
         masterPasswordField.didReceiveCode = { [weak self] code in
             self?.presenter.authenticate(with: code)
