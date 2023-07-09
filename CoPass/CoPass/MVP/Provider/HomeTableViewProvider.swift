@@ -209,7 +209,7 @@ extension HomeTableViewProviderImpl: UITableViewDataSource, UITableViewDelegate 
         case .frequentlyUsed(let rows, _):
             let rowType = rows[indexPath.row]
             switch rowType {
-            case .record: cell.setAnimation(index: indexPath.row)
+            case .record: cell.setFromAnimation(index: indexPath.row)
             default: break
             }
         default:

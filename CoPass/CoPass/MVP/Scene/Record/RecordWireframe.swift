@@ -17,14 +17,19 @@ final class RecordWireframe: BaseWireframe, RecordWireframeProtocol {
     static func prepare(id: NSManagedObjectID?) -> RecordVC {
         let view = RecordVC(nibName: RecordVC.className, bundle: nil)
         let wireframe = RecordWireframe()
-        let presenter = RecordPresenter(ui: view, wireframe: wireframe, id: id, storage: CoStorage.shared)
-        view.presenter = presenter
+        let status: RecordStatusType = id == nil ? .add : .update
+        let presenter = RecordPresenter(ui: view, wireframe: wireframe, id: id, status: status, storage: CoStorage.shared)
+        let provider = RecordTableViewProviderImpl()
+        view.inject(presenter: presenter, provider: provider)
         wireframe.view = view
         return view
     }
     
     func navigate(to route: Router.Records) {
-        
+        switch route {
+        case .dismiss:
+            backward(animated: true)
+        }
     }
 }
 

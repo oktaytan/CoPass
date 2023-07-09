@@ -37,7 +37,13 @@ final class HomeVC: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        hideNavBar()
         presenter.viewWillAppear()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        showNavBar()
     }
     
     func inject(presenter: Presenter, provider: Provider, delegate: HomeVCDelegate) {
@@ -57,6 +63,10 @@ final class HomeVC: BaseViewController {
         }
     }
     
+    override func setupUI() {
+        super.setupUI()
+    }
+    
     func setupListView() {
         provider.setupTableView(tableView: self.tableView)
     }
@@ -73,11 +83,11 @@ extension HomeVC {
         case .goToSafetyScore:
             delegate?.action(.goToSafetyScore)
         case .selectedCategory(let category):
-            delegate?.action(.goToStore(for: category))
+            presenter.goToStoreWith(category: category)
         case .copiedRecord(let record):
             presenter.copyPassword(record: record)
         case .selectedRecord(let id):
-            delegate?.action(.goToRecordWith(id: id))
+            presenter.goToRecord(id: id)
         case .deleteRecord(let id):
             deleteRecordDialog(id: id)
         default:
@@ -97,7 +107,7 @@ extension HomeVC {
 
 extension HomeVC {
     enum UserEvent {
-        case goToProfile, goToSafetyScore, goToStore(for: CoCategory), goToRecordWith(id: NSManagedObjectID)
+        case goToProfile, goToSafetyScore
     }
 }
 

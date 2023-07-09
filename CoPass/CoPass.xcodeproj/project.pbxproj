@@ -23,11 +23,19 @@
 		6608C6D62A4F7D7E0081603C /* CoBadgeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6608C6D52A4F7D7D0081603C /* CoBadgeView.xib */; };
 		6608C6D82A4F7E4A0081603C /* CoCircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608C6D72A4F7E4A0081603C /* CoCircularImageView.swift */; };
 		661088EC2A4A372B00FE6643 /* AppDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661088EB2A4A372B00FE6643 /* AppDesign.swift */; };
+		661D3BE62A58B67B0033AFA1 /* RecordTableViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661D3BE52A58B67B0033AFA1 /* RecordTableViewProvider.swift */; };
+		661D3BE92A58CE160033AFA1 /* RecordCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661D3BE72A58CE160033AFA1 /* RecordCategoryCell.swift */; };
+		661D3BEA2A58CE160033AFA1 /* RecordCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 661D3BE82A58CE160033AFA1 /* RecordCategoryCell.xib */; };
+		661D3BED2A58D02D0033AFA1 /* RecordCategoryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661D3BEB2A58D02D0033AFA1 /* RecordCategoryItemCell.swift */; };
+		661D3BEE2A58D02D0033AFA1 /* RecordCategoryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 661D3BEC2A58D02D0033AFA1 /* RecordCategoryItemCell.xib */; };
 		6622B5872A4A29FF000F31F1 /* ViewAnimator in Frameworks */ = {isa = PBXBuildFile; productRef = 6622B5862A4A29FF000F31F1 /* ViewAnimator */; };
 		6622B58A2A4A3648000F31F1 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 6622B5892A4A3648000F31F1 /* NVActivityIndicatorView */; };
 		66475B802A44C29200E76D71 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66475B7F2A44C29200E76D71 /* KeychainManager.swift */; };
 		66475B832A44CAFB00E76D71 /* RegisterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66475B822A44CAFB00E76D71 /* RegisterData.swift */; };
 		66475B882A44D52B00E76D71 /* SPIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = 66475B872A44D52B00E76D71 /* SPIndicator */; };
+		66513C712A5AD94A00C86EAE /* CoRecordFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66513C702A5AD94A00C86EAE /* CoRecordFieldType.swift */; };
+		66513C762A5AF10400C86EAE /* RecordPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66513C742A5AF10400C86EAE /* RecordPreviewCell.swift */; };
+		66513C772A5AF10400C86EAE /* RecordPreviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66513C752A5AF10400C86EAE /* RecordPreviewCell.xib */; };
 		667395D82A53333300F823F8 /* CoSafetyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667395D72A53333300F823F8 /* CoSafetyType.swift */; };
 		667395DB2A534BA900F823F8 /* HomeCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667395D92A534BA900F823F8 /* HomeCategoryCell.swift */; };
 		667395DC2A534BA900F823F8 /* HomeCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 667395DA2A534BA900F823F8 /* HomeCategoryCell.xib */; };
@@ -70,6 +78,8 @@
 		66C8E1552A55EF450058FF89 /* Record+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8E1532A55EF450058FF89 /* Record+CoreDataProperties.swift */; };
 		66C8E1572A5600A40058FF89 /* CoSearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8E1562A5600A40058FF89 /* CoSearchField.swift */; };
 		66C8E1592A56102A0058FF89 /* StoreTableViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8E1582A56102A0058FF89 /* StoreTableViewProvider.swift */; };
+		66D4157D2A5A07E20023DC1A /* RecordFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D4157B2A5A07E20023DC1A /* RecordFieldCell.swift */; };
+		66D4157E2A5A07E20023DC1A /* RecordFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66D4157C2A5A07E20023DC1A /* RecordFieldCell.xib */; };
 		66D481562A48EBD000CE5B5A /* StoreUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D481552A48EBD000CE5B5A /* StoreUI.swift */; };
 		66D481582A48EBE200CE5B5A /* StorePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D481572A48EBE200CE5B5A /* StorePresenter.swift */; };
 		66D4815A2A48EC5C00CE5B5A /* StoreWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D481592A48EC5C00CE5B5A /* StoreWireframe.swift */; };
@@ -108,7 +118,6 @@
 		66EB5B3B2A54D42A0072B01D /* EmptyRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EB5B392A54D42A0072B01D /* EmptyRecordCell.swift */; };
 		66EB5B3C2A54D42A0072B01D /* EmptyRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66EB5B3A2A54D42A0072B01D /* EmptyRecordCell.xib */; };
 		66EEA5D22A574E1A00A0267D /* MenuActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EEA5D12A574E1A00A0267D /* MenuActionType.swift */; };
-		66EEA5D42A576A3E00A0267D /* UITableViewCell+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EEA5D32A576A3E00A0267D /* UITableViewCell+Ext.swift */; };
 		66EF16932A4E28E300CFF0B2 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 66EF16922A4E28E300CFF0B2 /* CryptoSwift */; };
 		66EF16952A4E290400CFF0B2 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EF16942A4E290400CFF0B2 /* String+Ext.swift */; };
 		66EF16972A4E292900CFF0B2 /* Data+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EF16962A4E292900CFF0B2 /* Data+Ext.swift */; };
@@ -147,8 +156,16 @@
 		6608C6D52A4F7D7D0081603C /* CoBadgeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoBadgeView.xib; sourceTree = "<group>"; };
 		6608C6D72A4F7E4A0081603C /* CoCircularImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoCircularImageView.swift; sourceTree = "<group>"; };
 		661088EB2A4A372B00FE6643 /* AppDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDesign.swift; sourceTree = "<group>"; };
+		661D3BE52A58B67B0033AFA1 /* RecordTableViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewProvider.swift; sourceTree = "<group>"; };
+		661D3BE72A58CE160033AFA1 /* RecordCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCategoryCell.swift; sourceTree = "<group>"; };
+		661D3BE82A58CE160033AFA1 /* RecordCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordCategoryCell.xib; sourceTree = "<group>"; };
+		661D3BEB2A58D02D0033AFA1 /* RecordCategoryItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCategoryItemCell.swift; sourceTree = "<group>"; };
+		661D3BEC2A58D02D0033AFA1 /* RecordCategoryItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordCategoryItemCell.xib; sourceTree = "<group>"; };
 		66475B7F2A44C29200E76D71 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		66475B822A44CAFB00E76D71 /* RegisterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterData.swift; sourceTree = "<group>"; };
+		66513C702A5AD94A00C86EAE /* CoRecordFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoRecordFieldType.swift; sourceTree = "<group>"; };
+		66513C742A5AF10400C86EAE /* RecordPreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordPreviewCell.swift; sourceTree = "<group>"; };
+		66513C752A5AF10400C86EAE /* RecordPreviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordPreviewCell.xib; sourceTree = "<group>"; };
 		667395D72A53333300F823F8 /* CoSafetyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoSafetyType.swift; sourceTree = "<group>"; };
 		667395D92A534BA900F823F8 /* HomeCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryCell.swift; sourceTree = "<group>"; };
 		667395DA2A534BA900F823F8 /* HomeCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCategoryCell.xib; sourceTree = "<group>"; };
@@ -193,6 +210,8 @@
 		66C8E1532A55EF450058FF89 /* Record+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		66C8E1562A5600A40058FF89 /* CoSearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoSearchField.swift; sourceTree = "<group>"; };
 		66C8E1582A56102A0058FF89 /* StoreTableViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewProvider.swift; sourceTree = "<group>"; };
+		66D4157B2A5A07E20023DC1A /* RecordFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordFieldCell.swift; sourceTree = "<group>"; };
+		66D4157C2A5A07E20023DC1A /* RecordFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordFieldCell.xib; sourceTree = "<group>"; };
 		66D481552A48EBD000CE5B5A /* StoreUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreUI.swift; sourceTree = "<group>"; };
 		66D481572A48EBE200CE5B5A /* StorePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePresenter.swift; sourceTree = "<group>"; };
 		66D481592A48EC5C00CE5B5A /* StoreWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWireframe.swift; sourceTree = "<group>"; };
@@ -229,7 +248,6 @@
 		66EB5B392A54D42A0072B01D /* EmptyRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyRecordCell.swift; sourceTree = "<group>"; };
 		66EB5B3A2A54D42A0072B01D /* EmptyRecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyRecordCell.xib; sourceTree = "<group>"; };
 		66EEA5D12A574E1A00A0267D /* MenuActionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuActionType.swift; sourceTree = "<group>"; };
-		66EEA5D32A576A3E00A0267D /* UITableViewCell+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Ext.swift"; sourceTree = "<group>"; };
 		66EF16942A4E290400CFF0B2 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		66EF16962A4E292900CFF0B2 /* Data+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Ext.swift"; sourceTree = "<group>"; };
 		66EF16982A4E33A000CFF0B2 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -294,6 +312,7 @@
 			children = (
 				6608C6C22A4F675C0081603C /* HomeTableViewProvider.swift */,
 				66C8E1582A56102A0058FF89 /* StoreTableViewProvider.swift */,
+				661D3BE52A58B67B0033AFA1 /* RecordTableViewProvider.swift */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -354,6 +373,14 @@
 			children = (
 				667395E92A53894900F823F8 /* RecordCell.swift */,
 				667395EA2A53894900F823F8 /* RecordCell.xib */,
+				66513C742A5AF10400C86EAE /* RecordPreviewCell.swift */,
+				66513C752A5AF10400C86EAE /* RecordPreviewCell.xib */,
+				661D3BE72A58CE160033AFA1 /* RecordCategoryCell.swift */,
+				661D3BE82A58CE160033AFA1 /* RecordCategoryCell.xib */,
+				661D3BEB2A58D02D0033AFA1 /* RecordCategoryItemCell.swift */,
+				661D3BEC2A58D02D0033AFA1 /* RecordCategoryItemCell.xib */,
+				66D4157B2A5A07E20023DC1A /* RecordFieldCell.swift */,
+				66D4157C2A5A07E20023DC1A /* RecordFieldCell.xib */,
 			);
 			path = RecordCell;
 			sourceTree = "<group>";
@@ -494,6 +521,7 @@
 				660838B82A47968800E72F31 /* CoError.swift */,
 				66A972362A4CB666009791E2 /* CoCategory.swift */,
 				667395D72A53333300F823F8 /* CoSafetyType.swift */,
+				66513C702A5AD94A00C86EAE /* CoRecordFieldType.swift */,
 				66A9722C2A4CAEF8009791E2 /* Record */,
 				660838B12A477FBC00E72F31 /* User */,
 				66475B812A44CA8700E76D71 /* Register */,
@@ -511,7 +539,6 @@
 				66EF16942A4E290400CFF0B2 /* String+Ext.swift */,
 				66EF16962A4E292900CFF0B2 /* Data+Ext.swift */,
 				6608C6C82A4F69750081603C /* UITableView+Ext.swift */,
-				66EEA5D32A576A3E00A0267D /* UITableViewCell+Ext.swift */,
 				6608C6CA2A4F69960081603C /* UICollectionView+Ext.swift */,
 			);
 			path = Extensions;
@@ -750,7 +777,9 @@
 				667395EC2A53894900F823F8 /* RecordCell.xib in Resources */,
 				66F9AEBF2A1BEF6E00EAFD58 /* LoginVC.xib in Resources */,
 				66D481692A48ED3A00CE5B5A /* RecordVC.xib in Resources */,
+				66D4157E2A5A07E20023DC1A /* RecordFieldCell.xib in Resources */,
 				66D4816C2A48EDF800CE5B5A /* SafetyVC.xib in Resources */,
+				661D3BEA2A58CE160033AFA1 /* RecordCategoryCell.xib in Resources */,
 				66F9AEC92A1BF64F00EAFD58 /* Localizable.strings in Resources */,
 				66D4815E2A48ECCB00CE5B5A /* StoreVC.xib in Resources */,
 				667395E52A534F8200F823F8 /* HomeCategoryItemCell.xib in Resources */,
@@ -758,11 +787,13 @@
 				66F9AEBA2A1BEAF700EAFD58 /* RegisterVC.xib in Resources */,
 				668CE2722A18121D00D6E7DF /* OnboardingVC.xib in Resources */,
 				66EB5B3C2A54D42A0072B01D /* EmptyRecordCell.xib in Resources */,
+				661D3BEE2A58D02D0033AFA1 /* RecordCategoryItemCell.xib in Resources */,
 				668CE23A2A1800CD00D6E7DF /* Assets.xcassets in Resources */,
 				6608C6D62A4F7D7E0081603C /* CoBadgeView.xib in Resources */,
 				66B768D72A5223580055CECF /* HomeSafetyScoreCell.xib in Resources */,
 				66EAFD102A4652D9005B9DAB /* HomeVC.xib in Resources */,
 				667395DC2A534BA900F823F8 /* HomeCategoryCell.xib in Resources */,
+				66513C772A5AF10400C86EAE /* RecordPreviewCell.xib in Resources */,
 				66D4817F2A48EEDF00CE5B5A /* ProfileVC.xib in Resources */,
 				6608C6D12A4F6A5E0081603C /* HomeUserCell.xib in Resources */,
 				66D4818B2A48FE0500CE5B5A /* CoTabBar.xib in Resources */,
@@ -783,6 +814,7 @@
 				66D481742A48EE3800CE5B5A /* SafetyWireframe.swift in Sources */,
 				667395E42A534F8200F823F8 /* HomeCategoryItemCell.swift in Sources */,
 				667395D82A53333300F823F8 /* CoSafetyType.swift in Sources */,
+				66D4157D2A5A07E20023DC1A /* RecordFieldCell.swift in Sources */,
 				66D4816E2A48EDFE00CE5B5A /* SafetyVC.swift in Sources */,
 				66D481792A48EEC700CE5B5A /* ProfilePresenter.swift in Sources */,
 				66D4815A2A48EC5C00CE5B5A /* StoreWireframe.swift in Sources */,
@@ -806,10 +838,12 @@
 				66F9AEC52A1BEFA200EAFD58 /* LoginWireframe.swift in Sources */,
 				668CE2782A18394500D6E7DF /* CoButton.swift in Sources */,
 				66D481652A48ED1700CE5B5A /* RecordWireframe.swift in Sources */,
+				66513C762A5AF10400C86EAE /* RecordPreviewCell.swift in Sources */,
 				66B768D62A5223580055CECF /* HomeSafetyScoreCell.swift in Sources */,
 				66D481612A48ECFD00CE5B5A /* RecordUI.swift in Sources */,
 				668CE2382A1800CC00D6E7DF /* CoPass.xcdatamodeld in Sources */,
 				66EF16952A4E290400CFF0B2 /* String+Ext.swift in Sources */,
+				661D3BE92A58CE160033AFA1 /* RecordCategoryCell.swift in Sources */,
 				66EF16972A4E292900CFF0B2 /* Data+Ext.swift in Sources */,
 				668CE24C2A18032500D6E7DF /* TransitionType.swift in Sources */,
 				668CE2592A1807E500D6E7DF /* LoadingUI.swift in Sources */,
@@ -825,7 +859,6 @@
 				668CE24A2A1802C200D6E7DF /* BaseWireframe.swift in Sources */,
 				66F9AED22A1BFB2E00EAFD58 /* AppConstants.swift in Sources */,
 				660838B92A47968800E72F31 /* CoError.swift in Sources */,
-				66EEA5D42A576A3E00A0267D /* UITableViewCell+Ext.swift in Sources */,
 				66EAFD122A46530B005B9DAB /* HomeWireframe.swift in Sources */,
 				66EAFD0E2A4652B2005B9DAB /* HomeVC.swift in Sources */,
 				668CE26E2A18104C00D6E7DF /* OnboardingVC.swift in Sources */,
@@ -837,6 +870,7 @@
 				668CE2682A180EF100D6E7DF /* OnboardingUI.swift in Sources */,
 				661088EC2A4A372B00FE6643 /* AppDesign.swift in Sources */,
 				66EB525C2A437F9D00866CD8 /* CoTextField.swift in Sources */,
+				661D3BED2A58D02D0033AFA1 /* RecordCategoryItemCell.swift in Sources */,
 				66F9AEB22A1BE90700EAFD58 /* RegisterUI.swift in Sources */,
 				668CE2642A180C2A00D6E7DF /* UIView+Ext.swift in Sources */,
 				66EB5B3B2A54D42A0072B01D /* EmptyRecordCell.swift in Sources */,
@@ -847,12 +881,14 @@
 				6608C6C32A4F675C0081603C /* HomeTableViewProvider.swift in Sources */,
 				66D4815C2A48ECAE00CE5B5A /* StoreVC.swift in Sources */,
 				66C8E1552A55EF450058FF89 /* Record+CoreDataProperties.swift in Sources */,
+				66513C712A5AD94A00C86EAE /* CoRecordFieldType.swift in Sources */,
 				66F9AEC32A1BEF9800EAFD58 /* LoginPresenter.swift in Sources */,
 				668CE25F2A180B5800D6E7DF /* NavigationPresenter.swift in Sources */,
 				668CE2512A18059E00D6E7DF /* Router.swift in Sources */,
 				66D481562A48EBD000CE5B5A /* StoreUI.swift in Sources */,
 				667395E72A5384C500F823F8 /* CoSectionTitleView.swift in Sources */,
 				668CE2302A1800CC00D6E7DF /* SceneDelegate.swift in Sources */,
+				661D3BE62A58B67B0033AFA1 /* RecordTableViewProvider.swift in Sources */,
 				66C8E1592A56102A0058FF89 /* StoreTableViewProvider.swift in Sources */,
 				66EF169B2A4E33A000CFF0B2 /* User+CoreDataProperties.swift in Sources */,
 				66F9AEB42A1BE92200EAFD58 /* RegisterPresenter.swift in Sources */,

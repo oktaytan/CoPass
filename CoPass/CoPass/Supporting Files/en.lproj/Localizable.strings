@@ -10,17 +10,19 @@
 "error_general" = "Something went wrong!";
 "error_user_not_found" = "User not found!";
 "error_record_not_found" = "Record not found!";
+"error_empty_field" = "Tüm alanlar doldurulmalıdır!";
 
 // MARK: - COMMON
 "%d password_count_singular" = "%d password";
 "%d password_count_plural" = "%d passwords";
 "password_copied" = "Copied 👍";
 "no_record" = "No record!";
-"record_deleted" = "Password deleted 👍";
+
 "lets_add_record" = "Let's save your first password";
-"record_delete_confirm" = "Do you want to delete this password?";
 "dialog_delete" = "Delete";
 "dialog_cancel" = "Cancel";
+"close" = "Close";
+"save" = "Save";
 
 
 // MARK: - ONBOARDING
@@ -77,3 +79,24 @@
 
 // MARK: - STORE
 "store_search_place_holder" = "Search";
+
+
+// MARK: - RECORD
+"record_select_category_title" = "Category";
+"record_form_title" = "Password infos";
+"record_prerview_title" = "Preview";
+"record_password_placeholder" = "Password";
+
+"record_platform_app" = "App name";
+"record_entry_app" = "Username or email";
+
+"record_platform_login" = "Website name";
+"record_entry_login" = "Username or email";
+
+"record_platform_bank" = "Bank name";
+"record_entry_bank" = "Card name";
+
+"record_save_successful" = "Password saved 👍";
+"record_update_successful" = "Password updated 👍";
+"record_delete_successful" = "Password deleted 👍";
+"record_delete_confirm" = "Do you want to delete this password?";

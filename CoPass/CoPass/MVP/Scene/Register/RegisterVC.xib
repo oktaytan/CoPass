@@ -55,7 +55,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="u1b-rP-t6Z">
                                             <rect key="frame" x="0.0" y="125.33333333333334" width="329" height="220.00000000000003"/>
                                             <subviews>
-                                                <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XJD-zE-wqc" customClass="CoTextField" customModule="CoPass" customModuleProvider="target">
+                                                <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XJD-zE-wqc" customClass="CoTextField" customModule="CoPass" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="329" height="52"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="52" id="Z8P-R3-GpK"/>
@@ -63,7 +63,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" textContentType="name"/>
                                                 </textField>
-                                                <textField opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jz2-1d-eOM" customClass="CoTextField" customModule="CoPass" customModuleProvider="target">
+                                                <textField opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jz2-1d-eOM" customClass="CoTextField" customModule="CoPass" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="83.999999999999972" width="329" height="52"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="52" id="uz9-Y6-LO4"/>
@@ -71,7 +71,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                                 </textField>
-                                                <textField opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Kex-CV-XTL" customClass="CoTextField" customModule="CoPass" customModuleProvider="target">
+                                                <textField opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kex-CV-XTL" customClass="CoTextField" customModule="CoPass" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="167.99999999999997" width="329" height="52"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="52" id="ZNZ-wj-uQt"/>

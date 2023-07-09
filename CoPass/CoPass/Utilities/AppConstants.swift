@@ -22,4 +22,5 @@ struct AppConstants {
     static let recordsShowingCount = 3
     
     static let NOTIFICATION_COUNT = "NotificationCount"
+    static let RECORDS_UPDATED = "RecordsUpdated"
 }

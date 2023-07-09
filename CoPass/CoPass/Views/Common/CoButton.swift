@@ -10,13 +10,14 @@ import UIKit
 final class CoButton: UIButton {
     
     enum CoButtonType {
-        case primary, secondary, delete
+        case primary, secondary, delete, disable
         
         var bgColor: UIColor {
             switch self {
             case .primary: return .coPurple
             case .secondary: return .coOrange
             case .delete: return .coRed10
+            case .disable: return .coBg
             }
         }
         
@@ -25,6 +26,7 @@ final class CoButton: UIButton {
             case .primary: return .white
             case .secondary: return .white
             case .delete: return .coRed
+            case .disable: return .coTextGray
             }
         }
     }

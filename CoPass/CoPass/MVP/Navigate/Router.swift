@@ -25,12 +25,11 @@ enum Router {
     enum TabBar {
         case home, store, safety, profile
         case openRecordWith(id: NSManagedObjectID?)
-        case openStoreWith(category: CoCategory)
         
         var index: Int {
             switch self {
             case .home: return 0
-            case .store, .openStoreWith: return 1
+            case .store : return 1
             case .safety: return 2
             case .profile: return 3
             default: return 0
@@ -39,15 +38,16 @@ enum Router {
     }
     
     enum Home {
-        
+        case goToStoreWith(category: CoCategory)
+        case openRecordWith(id: NSManagedObjectID)
     }
     
     enum Store {
-        
+        case openRecordWith(id: NSManagedObjectID)
     }
     
     enum Records {
-        
+        case dismiss
     }
     
     enum Safety {

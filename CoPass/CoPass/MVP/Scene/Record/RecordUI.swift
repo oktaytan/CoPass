@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum RecordStatusType {
+    case add, update
+}
+
 protocol RecordUI: BaseUI {
-    
+    func load(data: [RecordPresenter.SectionType], with status: RecordStatusType)
+    func validation(status: Bool)
 }

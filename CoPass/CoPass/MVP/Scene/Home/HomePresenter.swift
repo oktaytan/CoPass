@@ -9,6 +9,8 @@ import Foundation
 import CoreData
 
 protocol HomePresenterProtocol: Presenter {
+    func goToStoreWith(category: CoCategory)
+    func goToRecord(id: NSManagedObjectID)
     func copyPassword(record: Record)
     func deleteRecord(id: NSManagedObjectID)
 }
@@ -29,18 +31,16 @@ final class HomePresenter: HomePresenterProtocol {
         self.storage = storage
     }
     
+    func viewDidLoad() {
+        NotificationCenter.default.addObserver(self, selector: #selector(recordsUpdated), name: Notification.Name(AppConstants.RECORDS_UPDATED), object: nil)
+    }
+    
     func viewWillAppear() {
-        Task(priority: .background) { [weak self] in
-            guard let self else { return }
-            do {
-                user = try await fetchUser()
-                records = try await fetchRecords()
-                prepareUI()
-            } catch {
-                ui?.showAlert(title: nil, message: (error as! CoError).description, error: true)
-            }
-            
-        }
+        load()
+    }
+    
+    func viewDidDisappear() {
+        NotificationCenter.default.removeObserver(self)
     }
     
     private func fetchUser() async throws -> User? {
@@ -57,6 +57,14 @@ final class HomePresenter: HomePresenterProtocol {
         case .success(let records): return records
         case .failure(let error): throw error
         }
+    }
+    
+    func goToStoreWith(category: CoCategory) {
+        wireframe.navigate(to: .goToStoreWith(category: category))
+    }
+    
+    func goToRecord(id: NSManagedObjectID) {
+        wireframe.navigate(to: .openRecordWith(id: id))
     }
     
     func copyPassword(record: Record) {
@@ -80,6 +88,10 @@ final class HomePresenter: HomePresenterProtocol {
             self.ui?.showAlert(title: nil, message: error.description, error: true)
         }
     }
+    
+    @objc func recordsUpdated() {
+        load()
+    }
 }
 
 
@@ -95,6 +107,19 @@ extension HomePresenter {
 
 
 extension HomePresenter {
+    private func load(){
+        Task(priority: .background) { [weak self] in
+            guard let self else { return }
+            do {
+                user = try await fetchUser()
+                records = try await fetchRecords()
+                prepareUI()
+            } catch {
+                ui?.showAlert(title: nil, message: (error as! CoError).description, error: true)
+            }
+        }
+    }
+    
     private func prepareUI()  {
         self.sections.removeAll()
         
@@ -184,6 +209,6 @@ extension HomePresenter {
     struct Strings {
         static let categoryTitle = "home_category_title".localized
         static let frequentlyUsedTitle = "home_frequently_used_title".localized
-        static let recordDeleted = "record_deleted".localized
+        static let recordDeleted = "record_delete_successful".localized
     }
 }
