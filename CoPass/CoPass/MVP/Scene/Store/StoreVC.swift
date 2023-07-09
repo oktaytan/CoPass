@@ -8,26 +8,16 @@
 import UIKit
 import CoreData
 
-protocol StoreVCDelegate: AnyObject {
-    func action(_ event: StoreVC.UserEvent)
-}
-
-extension StoreVCDelegate {
-    func action(_ event: StoreVC.UserEvent) {}
-}
-
 final class StoreVC: BaseViewController {
     
     typealias Presenter = StorePresenterProtocol
     typealias Provider = StoreTableViewProvider
-    typealias Delegate = StoreVCDelegate
     
     @IBOutlet weak var coSearchField: CoSearchField!
     @IBOutlet weak var tableView: UITableView!
     
     var presenter: Presenter!
     var provider: Provider!
-    weak var delegate: Delegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,10 +31,13 @@ final class StoreVC: BaseViewController {
         presenter.viewWillAppear()
     }
     
-    func inject(presenter: Presenter, provider: Provider, delegate: StoreVCDelegate) {
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+    }
+    
+    func inject(presenter: Presenter, provider: Provider) {
         self.presenter = presenter
         self.provider = provider
-        self.delegate = delegate
     }
     
     func addObservationListener() {
@@ -92,19 +85,12 @@ extension StoreVC: StoreUI {
 
 
 extension StoreVC {
-    enum UserEvent {
-        case goToRecordWith(id: NSManagedObjectID)
-    }
-}
-
-
-extension StoreVC {
     private func tableViewUserActivity(event: StoreTableViewProviderImpl.UserInteractivity?) {
         switch event {
         case .copiedRecord(let record):
             presenter.copyPassword(record: record)
         case .selectedRecord(let id):
-            delegate?.action(.goToRecordWith(id: id))
+            presenter.goToRecord(id: id)
         case .deleteRecord(let id):
             deleteRecordDialog(id: id)
         default:

@@ -9,6 +9,7 @@ import Foundation
 import CoreData
 
 protocol StorePresenterProtocol: Presenter {
+    func goToRecord(id: NSManagedObjectID)
     func copyPassword(record: Record)
     func deleteRecord(id: NSManagedObjectID)
     func searchRecord(with searchText: String)
@@ -32,21 +33,24 @@ final class StorePresenter: StorePresenterProtocol {
         self.storage = storage
     }
     
+    func viewDidLoad() {
+        NotificationCenter.default.addObserver(self, selector: #selector(recordsUpdated), name: Notification.Name(AppConstants.RECORDS_UPDATED), object: nil)
+    }
+    
+    func viewDidDisappear() {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     func viewWillAppear() {
-        Task(priority: .background) { [weak self] in
-            guard let self else { return }
-            do {
-                if let category {
-                    records = try await fetchRecordsWith(category: category)
-                } else {
-                    records = try await fetchRecords()
-                }
-                prepareUI()
-            } catch {
-                ui?.showAlert(title: nil, message: (error as! CoError).description, error: true)
-            }
-            
-        }
+        load()
+    }
+    
+    @objc func recordsUpdated() {
+        load()
+    }
+    
+    func goToRecord(id: NSManagedObjectID) {
+        wireframe.navigate(to: .openRecordWith(id: id))
     }
     
     func copyPassword(record: Record) {
@@ -122,7 +126,7 @@ extension StorePresenter {
             viewWillAppear()
         } else {
             self.records = self.records.filter({(record: Record) -> Bool in
-                return record.platform.range(of: searchText, options: .caseInsensitive) != nil || record.entry?.range(of: searchText, options: .caseInsensitive) != nil
+                return record.platform.range(of: searchText, options: .caseInsensitive) != nil || record.entry.range(of: searchText, options: .caseInsensitive) != nil
             })
             prepareUI()
         }
@@ -173,11 +177,28 @@ extension StorePresenter {
         let records: [RowType] = self.records.map { RowType.record(data: $0) }
         return records
     }
+    
+    private func load() {
+        Task(priority: .background) { [weak self] in
+            guard let self else { return }
+            do {
+                if let category {
+                    records = try await fetchRecordsWith(category: category)
+                } else {
+                    records = try await fetchRecords()
+                }
+                prepareUI()
+            } catch {
+                ui?.showAlert(title: nil, message: (error as! CoError).description, error: true)
+            }
+            
+        }
+    }
 }
 
 
 extension StorePresenter {
     struct Strings {
-        static let recordDeleted = "record_deleted".localized
+        static let recordDeleted = "record_delete_successful".localized
     }
 }

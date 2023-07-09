@@ -9,7 +9,8 @@ import Foundation
 
 enum CoError: Error, CustomStringConvertible {
     
-    case emptyUsername,
+    case emptyField,
+         emptyUsername,
          emptyPassword,
          emptyRePassword,
          invalidUsername,

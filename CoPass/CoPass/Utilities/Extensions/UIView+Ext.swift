@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ViewAnimator
 
 extension UIView {
     
@@ -97,5 +98,16 @@ extension UIView {
         let tap = UITapGestureRecognizer(target: target, action: action)
         self.addGestureRecognizer(tap)
         self.isUserInteractionEnabled = true
+    }
+    
+    public func setFromAnimation(from: Direction = .left, index: Int, offset: CGFloat = 30, delay: Double = 0.0) {
+        let fromAnimation = AnimationType.from(direction: from, offset: offset)
+        let animationDelay = delay > 0 ? delay : (0.1 * Double(index))
+        UIView.animate(views: [self], animations: [fromAnimation], initialAlpha: 0.0, finalAlpha: 1.0, delay: animationDelay, duration: 0.25)
+    }
+    
+    public func setScaleAnimation(index: Int, delay: Double = 0.0) {
+        let fromAnimation = AnimationType.zoom(scale: 0.2)
+        UIView.animate(views: [self], animations: [fromAnimation], initialAlpha: 0.0, finalAlpha: 1.0, delay: delay, duration: 0.25)
     }
 }

@@ -33,8 +33,6 @@ final class CoTabBarWireframe: BaseWireframe, CoTabBarWireframeProtocol {
         switch route {
         case .home, .store, .safety, .profile:
             changeTabBar(with: route.index)
-        case .openStoreWith(let category):
-            openStoreWith(category: category)
         case .openRecordWith(let id):
             openRecordWith(id: id)
         }
@@ -46,22 +44,22 @@ extension CoTabBarWireframe {
         let recordVC = RecordWireframe.prepare(id: id)
         forward(recordVC, with: .modal(from: self.view))
     }
-    
-    private func openStoreWith(category: CoCategory) {
-        let storeVC = StoreWireframe.prepare(category: category, delegate: self)
-        forward(storeVC, with: .modal(from: self.view))
-    }
 }
 
 
 extension CoTabBarWireframe {
     private func setTabBar(with view: UITabBarController) {
         let homeVC = HomeWireframe.prepare(delegate: self)
-        let storeVC = StoreWireframe.prepare(delegate: self)
+        let storeVC = StoreWireframe.prepare()
         let safetyVC = SafetyWireframe.prepare()
         let profileVC = ProfileWireframe.prepare()
         
-        view.viewControllers = [homeVC, storeVC, safetyVC, profileVC]
+        let homeNavController = UINavigationController(rootViewController: homeVC)
+        let storeNavController = UINavigationController(rootViewController: storeVC)
+        let safetyNavController = UINavigationController(rootViewController: safetyVC)
+        let profileNavController = UINavigationController(rootViewController: profileVC)
+        
+        view.viewControllers = [homeNavController, storeNavController, safetyNavController, profileNavController]
         view.selectedIndex = 0
         
         view.viewControllers?.enumerated().forEach({ (index, viewController) in
@@ -85,21 +83,6 @@ extension CoTabBarWireframe: HomeVCDelegate {
             navigate(to: .profile)
         case .goToSafetyScore:
             navigate(to: .safety)
-        case .goToStore(let category):
-            navigate(to: .openStoreWith(category: category))
-        case .goToRecordWith(let id):
-            navigate(to: .openRecordWith(id: id))
-        }
-    }
-}
-
-
-// MARK: - StoreVC Delegation
-extension CoTabBarWireframe: StoreVCDelegate {
-    func action(_ event: StoreVC.UserEvent) {
-        switch event {
-        case .goToRecordWith(let id):
-            navigate(to: .openRecordWith(id: id))
         }
     }
 }

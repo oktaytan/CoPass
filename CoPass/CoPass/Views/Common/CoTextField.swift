@@ -10,7 +10,7 @@ import SnapKit
 
 final class CoTextField: UITextField {
     
-    let padding = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+    var padding = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
     
     override var placeholder: String? {
         didSet {
@@ -32,7 +32,18 @@ final class CoTextField: UITextField {
         }
     }
     
-    private var errorLabel: UILabel = {
+    @IBInspectable
+    var identifier: String = ""
+    
+    private lazy var secureIconBtn: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "showIcon"), for: .normal)
+        button.tintColor = .coTextGray
+        button.addTarget(self, action: #selector(showHideSecureTextEntry), for: .touchUpInside)
+        return button
+    }()
+    
+    private lazy var errorLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 12, weight: .medium)
         label.textColor = .coRed
@@ -53,6 +64,17 @@ final class CoTextField: UITextField {
         self.cornerRadius = AppConstants.appUIRadius
         self.frame.size.height = 52.0
         self.textColor = .coText
+        
+        self.insertSubview(secureIconBtn, at: 0)
+        secureIconBtn.snp.makeConstraints { make in
+            make.width.height.equalTo(44.0)
+            make.trailing.equalToSuperview().offset(-12)
+            make.centerY.equalToSuperview()
+        }
+        
+        secureIconBtn.isHidden = !isSecureTextEntry
+        secureIconBtn.isEnabled = isSecureTextEntry
+        padding.right = isSecureTextEntry ? 60.0 : 16.0
     }
     
     override func textRect(forBounds bounds: CGRect) -> CGRect {
@@ -90,7 +112,7 @@ extension CoTextField {
         }, completion: nil)
     }
     
-    func hideError() {
+    private func hideError() {
         guard let errorLabel = self.subviews.first(where: { $0.accessibilityIdentifier == "error" }) else { return }
         
         UIView.animate(withDuration: 0.15, delay: 0, options: .curveEaseOut) {
@@ -100,5 +122,11 @@ extension CoTextField {
             errorLabel.removeFromSuperview()
             self.clipsToBounds = true
         }
+    }
+    
+    @objc
+    private func showHideSecureTextEntry() {
+        isSecureTextEntry = !isSecureTextEntry
+        secureIconBtn.setImage(UIImage(named: isSecureTextEntry ? "showIcon" : "hideIcon"), for: .normal)
     }
 }

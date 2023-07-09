@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,6 +11,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecordVC" customModule="CoPass" customModuleProvider="target">
             <connections>
+                <outlet property="btnStackViewLeftConstraint" destination="o7i-J8-iPY" id="8Sv-Za-t4Q"/>
+                <outlet property="btnStackViewRightConstraint" destination="adD-Np-BC0" id="pY3-jY-nA7"/>
+                <outlet property="closeButton" destination="AQ6-gd-gWy" id="kxd-Nc-Vx0"/>
+                <outlet property="deleteButton" destination="fws-By-Yby" id="fhq-RS-XoU"/>
+                <outlet property="saveButton" destination="Xl1-sS-hsb" id="48s-aE-4u0"/>
+                <outlet property="tableView" destination="vZT-rI-xMy" id="ge9-XK-JJ5"/>
                 <outlet property="view" destination="iN0-l3-epB" id="lJV-Th-CcX"/>
             </connections>
         </placeholder>
@@ -18,23 +25,74 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIh-kW-7FV">
-                    <rect key="frame" x="147.33333333333334" y="411.66666666666669" width="98.333333333333343" height="29"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQ6-gd-gWy">
+                    <rect key="frame" x="347" y="79" width="30" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Fbl-Rj-QuZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                    <color key="tintColor" name="coRed"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal">
+                        <color key="titleColor" name="coRed"/>
+                    </state>
+                    <connections>
+                        <action selector="closeBtnTapped:" destination="-1" eventType="touchUpInside" id="e09-vh-nC0"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vZT-rI-xMy">
+                    <rect key="frame" x="0.0" y="123" width="393" height="599"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HdZ-c2-ZJ6">
+                    <rect key="frame" x="20" y="746" width="353" height="52"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xl1-sS-hsb" customClass="CoButton" customModule="CoPass" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="281" height="52"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="saveBtnTapped:" destination="-1" eventType="touchUpInside" id="JGx-KB-aQA"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fws-By-Yby">
+                            <rect key="frame" x="301" y="0.0" width="52" height="52"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="52" id="aue-6L-8n8"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="deleteBtnIcon"/>
+                            <connections>
+                                <action selector="deleteBtnTapped:" destination="-1" eventType="touchUpInside" id="zTA-In-cWc"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="WYv-2m-WNd"/>
+                    </constraints>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fIh-kW-7FV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="OFG-lx-0wD"/>
-                <constraint firstItem="fIh-kW-7FV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="R1Y-lr-wBn"/>
+                <constraint firstItem="vZT-rI-xMy" firstAttribute="top" secondItem="AQ6-gd-gWy" secondAttribute="bottom" id="37E-dO-OTF"/>
+                <constraint firstItem="vZT-rI-xMy" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="LTc-jQ-ztT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="AQ6-gd-gWy" secondAttribute="trailing" constant="16" id="OSv-7y-NLS"/>
+                <constraint firstItem="HdZ-c2-ZJ6" firstAttribute="top" secondItem="vZT-rI-xMy" secondAttribute="bottom" constant="24" id="QfG-es-Vb7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HdZ-c2-ZJ6" secondAttribute="trailing" constant="20" id="adD-Np-BC0"/>
+                <constraint firstItem="vZT-rI-xMy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="bvi-aB-RbB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="HdZ-c2-ZJ6" secondAttribute="bottom" constant="20" id="f0g-gF-aPg"/>
+                <constraint firstItem="HdZ-c2-ZJ6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="o7i-J8-iPY"/>
+                <constraint firstItem="AQ6-gd-gWy" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="vNn-ch-rhz"/>
             </constraints>
-            <point key="canvasLocation" x="6" y="21"/>
+            <point key="canvasLocation" x="5.343511450381679" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>
+        <image name="deleteBtnIcon" width="52" height="52"/>
+        <namedColor name="coRed">
+            <color red="1" green="0.47450980392156861" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

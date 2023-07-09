@@ -10,18 +10,19 @@
 "error_general" = "Birşeyler ters gitti!";
 "error_user_not_found" = "Kullanıcı bulunamadı!";
 "error_record_not_found" = "Kayıt bulunamadı!";
-"password_copied" = "Kopyalandı 👍";
-"no_record" = "Kayıt yok!";
-"record_deleted" = "Parola silindi 👍";
-"lets_add_record" = "Hadi ilk parolanı kaydet";
-"record_delete_confirm" = "Bu parolayı silmek istiyor musun?";
-"dialog_delete" = "Sil";
-"dialog_cancel" = "Vazgeç";
+"error_empty_field" = "Tüm alanlar doldurulmalıdır!";
 
 
 // MARK: - COMMON
 "%d password_count_singular" = "%d parola";
 "%d password_count_plural" = "%d parola";
+"password_copied" = "Kopyalandı 👍";
+"no_record" = "Kayıt yok!";
+"lets_add_record" = "Hadi ilk parolanı kaydet";
+"dialog_delete" = "Sil";
+"dialog_cancel" = "Vazgeç";
+"close" = "Kapat";
+"save" = "Kaydet";
 
 
 // MARK: - ONBOARDING
@@ -80,3 +81,24 @@
 
 // MARK: - STORE
 "store_search_place_holder" = "Arama";
+
+
+// MARK: - RECORD
+"record_select_category_title" = "Kategori";
+"record_form_title" = "Parola bilgileri";
+"record_prerview_title" = "Önizleme";
+"record_password_placeholder" = "Parola";
+
+"record_platform_app" = "Uygulama adı";
+"record_entry_app" = "Kullanıcı adı ya da email";
+
+"record_platform_login" = "Website adı";
+"record_entry_login" = "Kullanıcı adı ya da email";
+
+"record_platform_bank" = "Banka adı";
+"record_entry_bank" = "Kart adı";
+
+"record_save_successful" = "Parola kaydedildi 👍";
+"record_update_successful" = "Parola güncellendi 👍";
+"record_delete_successful" = "Parola silindi 👍";
+"record_delete_confirm" = "Bu parolayı silmek istiyor musun?";

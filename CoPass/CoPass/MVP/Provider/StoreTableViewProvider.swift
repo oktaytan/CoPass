@@ -178,7 +178,7 @@ extension StoreTableViewProviderImpl: UITableViewDataSource, UITableViewDelegate
             let rowType = rows[indexPath.row]
             switch rowType {
             case .record:
-                cell.setAnimation(index: indexPath.row)
+                cell.setFromAnimation(index: indexPath.row)
                 break
             default: break
             }

@@ -5,7 +5,8 @@
 //  Created by Oktay Tanrıkulu on 24.06.2023.
 //
 
-import Foundation
+import UIKit
+import CoreData
 
 protocol HomeWireframeProtocol: AnyObject {
     func navigate(to route: Router.Home)
@@ -24,10 +25,23 @@ final class HomeWireframe: BaseWireframe, HomeWireframeProtocol {
     }
     
     func navigate(to route: Router.Home) {
-        
+        switch route {
+        case .goToStoreWith(let category):
+            goToStore(with: category)
+        case .openRecordWith(let id):
+            openRecordWith(id: id)
+        }
     }
 }
 
 extension HomeWireframe {
+    private func goToStore(with category: CoCategory) {
+        let storeVC = StoreWireframe.prepare(category: category)
+        forward(storeVC, with: .push)
+    }
     
+    private func openRecordWith(id: NSManagedObjectID) {
+        let recordVC = RecordWireframe.prepare(id: id)
+        forward(recordVC, with: .modal(from: self.view))
+    }
 }

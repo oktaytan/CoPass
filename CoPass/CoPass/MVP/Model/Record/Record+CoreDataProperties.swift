@@ -26,7 +26,7 @@ extension Record {
     }
 
     @NSManaged public var platform: String
-    @NSManaged public var entry: String?
+    @NSManaged public var entry: String
     @NSManaged public var password: String
     @NSManaged public var category: String
     @NSManaged public var createdAt: Date

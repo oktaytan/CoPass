@@ -36,7 +36,7 @@ class RecordCell: UITableViewCell {
         iconImageView.applyCircle()
     }
     
-    func set(record: Record, delegate: RecordCellDelegate) {
+    func set(record: Record, delegate: RecordCellDelegate?) {
         self.record = record
         self.delegate = delegate
         platformLabel.text = record.platform
