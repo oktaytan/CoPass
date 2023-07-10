@@ -63,10 +63,6 @@ final class HomeVC: BaseViewController {
         }
     }
     
-    override func setupUI() {
-        super.setupUI()
-    }
-    
     func setupListView() {
         provider.setupTableView(tableView: self.tableView)
     }
@@ -89,18 +85,13 @@ extension HomeVC {
         case .selectedRecord(let id):
             presenter.goToRecord(id: id)
         case .deleteRecord(let id):
-            deleteRecordDialog(id: id)
+            deleteRecordDialog() { [weak self] status in
+                guard status else { return }
+                self?.presenter.deleteRecord(id: id)
+            }
         default:
             break
         }
-    }
-    
-    private func deleteRecordDialog(id: NSManagedObjectID) {
-        let deletedAction = UIAlertAction(title: "dialog_delete".localized, style: .destructive) { [weak self] _ in
-            self?.presenter.deleteRecord(id: id)
-        }
-        let cancelAction = UIAlertAction(title: "dialog_cancel".localized, style: .cancel)
-        showDialog(message: "record_delete_confirm".localized, actions: [deletedAction, cancelAction])
     }
 }
 
@@ -118,14 +109,6 @@ extension HomeVC: HomeUI {
     }
     
     func copyToPassword(password: String) {
-        self.showBottomPopup(message: Strings.copyPassword)
-        UIPasteboard.general.string = password
-    }
-}
-
-
-extension HomeVC {
-    struct Strings {
-        static let copyPassword =  "password_copied".localized
+        self.copyPassword(password: password)
     }
 }

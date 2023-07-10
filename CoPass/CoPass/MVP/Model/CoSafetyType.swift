@@ -15,7 +15,7 @@ enum CoSafetyType {
     case critic
     case outOfRange
     
-    static func getScoreType(_ score: Double) -> CoSafetyType {
+    static func getScoreType(_ score: Float) -> CoSafetyType {
         switch score {
         case 0...19: return .critic
         case 20...39: return .bad
@@ -43,6 +43,19 @@ enum CoSafetyType {
         case .normal: return .coOrange10
         case .bad, .critic: return .coRed10
         case .outOfRange: return .coTextGray
+        }
+    }
+}
+
+
+enum CoScoreGroup: CustomStringConvertible {
+    case strong, weak , reused
+    
+    var description: String {
+        switch self {
+        case .strong: return "safety_strong_score_title".localized
+        case .weak: return "safety_weak_score_title".localized
+        case .reused: return "safety_reused_score_title".localized
         }
     }
 }

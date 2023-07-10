@@ -8,5 +8,6 @@
 import Foundation
 
 protocol SafetyUI: BaseUI {
-    
+    func load(with data: [SafetyPresenter.SectionType])
+    func copyToPassword(password: String)
 }

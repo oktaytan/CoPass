@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData
 
 protocol SafetyWireframeProtocol: AnyObject {
     func navigate(to route: Router.Safety)
@@ -16,17 +17,24 @@ final class SafetyWireframe: BaseWireframe, SafetyWireframeProtocol {
     static func prepare() -> SafetyVC {
         let view = SafetyVC(nibName: SafetyVC.className, bundle: nil)
         let wireframe = SafetyWireframe()
-        let presenter = SafetyPresenter(ui: view, wireframe: wireframe)
-        view.presenter = presenter
+        let presenter = SafetyPresenter(ui: view, wireframe: wireframe, storage: CoStorage.shared)
+        let provider = SafetyTableViewProviderImpl()
+        view.inject(presenter: presenter, provider: provider)
         wireframe.view = view
         return view
     }
     
     func navigate(to route: Router.Safety) {
-        
+        switch route {
+        case .openRecordWith(let id):
+            openRecordWith(id: id)
+        }
     }
 }
 
 extension SafetyWireframe {
-    
+    private func openRecordWith(id: NSManagedObjectID) {
+        let recordVC = RecordWireframe.prepare(id: id)
+        forward(recordVC, with: .modal(from: self.view))
+    }
 }

@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,6 +18,14 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="199"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OgL-VG-ynO">
+                    <rect key="frame" x="0.0" y="119" width="393" height="80"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2sc-rg-2EY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="regular"/>
+                </visualEffectView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o36-B2-qd7">
                     <rect key="frame" x="0.0" y="119" width="393" height="80"/>
                     <subviews>
@@ -76,7 +83,7 @@
                             </constraints>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="tr5-3S-wjQ" firstAttribute="leading" secondItem="o36-B2-qd7" secondAttribute="leading" constant="20" id="0md-rZ-LOP"/>
                         <constraint firstAttribute="height" constant="80" id="CJz-G4-g5R"/>
@@ -102,11 +109,15 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="o36-B2-qd7" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="HZ3-zm-ug6"/>
+                <constraint firstItem="OgL-VG-ynO" firstAttribute="leading" secondItem="o36-B2-qd7" secondAttribute="leading" id="Ihx-wJ-me5"/>
                 <constraint firstItem="tr5-3S-wjQ" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="OCm-pS-Do4"/>
                 <constraint firstAttribute="bottom" secondItem="o36-B2-qd7" secondAttribute="bottom" id="UhC-yM-ohA"/>
                 <constraint firstItem="vQ5-N3-3Go" firstAttribute="centerX" secondItem="o36-B2-qd7" secondAttribute="centerX" id="YaY-tC-oFb"/>
                 <constraint firstItem="o36-B2-qd7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="eK2-lV-kOQ"/>
+                <constraint firstItem="OgL-VG-ynO" firstAttribute="bottom" secondItem="o36-B2-qd7" secondAttribute="bottom" id="kRk-EF-HUX"/>
                 <constraint firstItem="vQ5-N3-3Go" firstAttribute="centerY" secondItem="o36-B2-qd7" secondAttribute="top" id="lbc-gM-nOV"/>
+                <constraint firstItem="OgL-VG-ynO" firstAttribute="trailing" secondItem="o36-B2-qd7" secondAttribute="trailing" id="n7P-cZ-Qxf"/>
+                <constraint firstItem="OgL-VG-ynO" firstAttribute="top" secondItem="o36-B2-qd7" secondAttribute="top" id="zuh-c6-ewc"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="139.69465648854961" y="-242.60563380281693"/>
@@ -118,8 +129,5 @@
         <image name="tabbar-3" width="20" height="24"/>
         <image name="tabbar-4" width="20" height="25"/>
         <image name="tabbar-plus" width="45" height="45"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

@@ -15,14 +15,16 @@
 // MARK: - COMMON
 "%d password_count_singular" = "%d password";
 "%d password_count_plural" = "%d passwords";
+"%d record_count_singular" = "%d record";
+"%d record_count_plural" = "%d records";
 "password_copied" = "Copied 👍";
 "no_record" = "No record!";
-
 "lets_add_record" = "Let's save your first password";
 "dialog_delete" = "Delete";
 "dialog_cancel" = "Cancel";
 "close" = "Close";
 "save" = "Save";
+"safety_score_title" = "Safety Score";
 
 
 // MARK: - ONBOARDING
@@ -72,7 +74,6 @@
 
 // MARK: - HOME
 "home_welcome" = "Welcome";
-"home_safety_score_title" = "Safety Score";
 "home_category_title" = "Categories";
 "home_frequently_used_title" = "Frequently used";
 
@@ -83,7 +84,7 @@
 
 // MARK: - RECORD
 "record_select_category_title" = "Category";
-"record_form_title" = "Password infos";
+"record_form_title" = "Registration";
 "record_prerview_title" = "Preview";
 "record_password_placeholder" = "Password";
 
@@ -100,3 +101,9 @@
 "record_update_successful" = "Password updated 👍";
 "record_delete_successful" = "Password deleted 👍";
 "record_delete_confirm" = "Do you want to delete this password?";
+
+
+// MARK: SAFETY SCORE
+"safety_strong_score_title" = "Strong";
+"safety_weak_score_title" = "Weak";
+"safety_reused_score_title" = "Reused";

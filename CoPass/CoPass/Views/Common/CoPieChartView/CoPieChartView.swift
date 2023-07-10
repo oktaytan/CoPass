@@ -21,12 +21,13 @@ final class CoPieChartView: UIView {
         }
     }
     
-    func configure(width: CGFloat, color: UIColor, proportion: CGFloat, textFont: CGFloat) {
+    func configure(width: CGFloat, color: UIColor, proportion: Float, textFont: CGFloat, textWeight: UIFont.Weight, textColor: UIColor) {
         self.strokeWidth = width
         self.ringlayer.strokeColor = color.cgColor
-        self.proportion = proportion
-        self.pieLabel.text = "%\(Int(proportion * 100))"
-        self.pieLabel.font = .systemFont(ofSize: textFont, weight: .medium)
+        self.proportion = CGFloat(proportion / 100)
+        self.pieLabel.text = "%\(Int(proportion))"
+        self.pieLabel.font = .systemFont(ofSize: textFont, weight: textWeight)
+        self.pieLabel.textColor = textColor
     }
     
     private lazy var pieLabel: UILabel = {

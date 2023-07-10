@@ -16,6 +16,8 @@
 // MARK: - COMMON
 "%d password_count_singular" = "%d parola";
 "%d password_count_plural" = "%d parola";
+"%d record_count_singular" = "%d kayıt";
+"%d record_count_plural" = "%d kayıt";
 "password_copied" = "Kopyalandı 👍";
 "no_record" = "Kayıt yok!";
 "lets_add_record" = "Hadi ilk parolanı kaydet";
@@ -23,6 +25,7 @@
 "dialog_cancel" = "Vazgeç";
 "close" = "Kapat";
 "save" = "Kaydet";
+"safety_score_title" = "Güvenlik Skoru";
 
 
 // MARK: - ONBOARDING
@@ -72,7 +75,6 @@
 
 // MARK: - HOME
 "home_welcome" = "Hoş geldin";
-"home_safety_score_title" = "Güvenlik Skoru";
 "%d home_safety_password_count_singular" = "%d Parola";
 "%d home_safety_password_count_plural" = "%d Parola";
 "home_category_title" = "Kategoriler";
@@ -85,7 +87,7 @@
 
 // MARK: - RECORD
 "record_select_category_title" = "Kategori";
-"record_form_title" = "Parola bilgileri";
+"record_form_title" = "Kayıt";
 "record_prerview_title" = "Önizleme";
 "record_password_placeholder" = "Parola";
 
@@ -102,3 +104,9 @@
 "record_update_successful" = "Parola güncellendi 👍";
 "record_delete_successful" = "Parola silindi 👍";
 "record_delete_confirm" = "Bu parolayı silmek istiyor musun?";
+
+
+// MARK: SAFETY SCORE
+"safety_strong_score_title" = "Güçlü";
+"safety_weak_score_title" = "Zayıf";
+"safety_reused_score_title" = "Tekrarlı";

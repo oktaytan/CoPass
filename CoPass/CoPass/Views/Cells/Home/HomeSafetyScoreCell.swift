@@ -31,10 +31,10 @@ class HomeSafetyScoreCell: UITableViewCell {
         safetyScoreLabel.text = Strings.safetyScoreTitle
     }
     
-    func setScore(with value: Double, count: Int, type: CoSafetyType) {
+    func setScore(with value: Float, count: Int, type: CoSafetyType) {
         self.containerView.backgroundColor = type.bg
         safetyScoreLabel.textColor = type.color
-        chartView.configure(width: 10.0, color: type.color, proportion: value, textFont: 12)
+        chartView.configure(width: 10.0, color: type.color, proportion: value, textFont: 12, textWeight: .medium, textColor: .coText)
         let countText = count > 1 ? Strings.safetyPasswordCountPlural : Strings.safetyPasswordCountSingular
         passwordCountLabel.text = String(format: countText, count)
     }
@@ -43,7 +43,7 @@ class HomeSafetyScoreCell: UITableViewCell {
 
 extension HomeSafetyScoreCell {
     struct Strings {
-        static let safetyScoreTitle = "home_safety_score_title".localized
+        static let safetyScoreTitle = "safety_score_title".localized
         static let safetyPasswordCountSingular = "%d password_count_singular".localized
         static let safetyPasswordCountPlural = "%d password_count_plural".localized
     }

@@ -51,7 +51,7 @@ enum Router {
     }
     
     enum Safety {
-        
+        case openRecordWith(id: NSManagedObjectID)
     }
     
     enum Profile {

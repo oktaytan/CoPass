@@ -9,6 +9,7 @@ import UIKit
 import SPIndicator
 import SnapKit
 import NVActivityIndicatorView
+import CoreData
 
 class BaseViewController: UIViewController {
     
@@ -79,5 +80,30 @@ extension BaseViewController: BaseUI {
     
     func hideLoading() {
         loadingView.removeFromSuperview()
+    }
+    
+    func deleteRecordDialog(completion: @escaping (Bool) -> ()) {
+        let deletedAction = UIAlertAction(title: Strings.dialogDelete, style: .destructive) { _ in
+            completion(true)
+        }
+        let cancelAction = UIAlertAction(title: Strings.dialogCancel, style: .cancel) { _ in
+            completion(false)
+        }
+        showDialog(message: Strings.recordDeleteConfirm, actions: [deletedAction, cancelAction])
+    }
+    
+    func copyPassword(password: String) {
+        self.showBottomPopup(message: Strings.copyPassword)
+        UIPasteboard.general.string = password
+    }
+}
+
+
+extension BaseViewController {
+    struct Strings {
+        static let dialogDelete = "dialog_delete".localized
+        static let dialogCancel = "dialog_cancel".localized
+        static let recordDeleteConfirm = "record_delete_confirm".localized
+        static let copyPassword = "password_copied".localized
     }
 }

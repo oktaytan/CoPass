@@ -54,13 +54,8 @@ final class StorePresenter: StorePresenterProtocol {
     }
     
     func copyPassword(record: Record) {
-        do {
-            let decryptedPassword = try record.password.aesDecrypt(key: AppConstants.cyrptoKey, iv: AppConstants.cyrptoIv)
-            self.ui?.copyToPassword(password: decryptedPassword)
-            storage.updateRecord(at: record.objectID, with: record)
-        } catch {
-            self.ui?.showAlert(title: nil, message: CoError.unknownError.description, error: true)
-        }
+        self.ui?.copyToPassword(password: record.decryptedPassword)
+        storage.updateRecord(at: record.objectID, with: record)
     }
     
     func deleteRecord(id: NSManagedObjectID) {
