@@ -69,7 +69,7 @@
                                                         <constraint firstAttribute="height" constant="52" id="uz9-Y6-LO4"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                                 </textField>
                                                 <textField opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kex-CV-XTL" customClass="CoTextField" customModule="CoPass" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="167.99999999999997" width="329" height="52"/>
@@ -77,7 +77,7 @@
                                                         <constraint firstAttribute="height" constant="52" id="ZNZ-wj-uQt"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                                 </textField>
                                             </subviews>
                                         </stackView>

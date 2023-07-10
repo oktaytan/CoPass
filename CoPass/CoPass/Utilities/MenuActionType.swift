@@ -21,9 +21,9 @@ enum MenuActionType: CaseIterable {
     
     var icon: UIImage {
         switch self {
-        case .copy: return UIImage(named: "copyIcon")!.withRenderingMode(.alwaysOriginal)
-        case .edit: return UIImage(named: "editIcon")!.withRenderingMode(.alwaysOriginal)
-        case .delete: return UIImage(named: "deleteIcon")!.withRenderingMode(.alwaysOriginal)
+        case .copy: return UIImage(named: "copyMenuIcon")!.withRenderingMode(.alwaysOriginal)
+        case .edit: return UIImage(named: "editMenuIcon")!.withRenderingMode(.alwaysOriginal)
+        case .delete: return UIImage(named: "deleteMenuIcon")!.withRenderingMode(.alwaysOriginal)
         }
     }
 }

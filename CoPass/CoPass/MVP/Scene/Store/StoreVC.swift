@@ -57,8 +57,6 @@ final class StoreVC: BaseViewController {
     
     override func setupUI() {
         super.setupUI()
-        
-        coSearchField.placeholder = "Search"
         /// Search Field Listener
         self.coSearchField.stateClosure = { [weak self] type in
             switch type {
@@ -78,8 +76,7 @@ extension StoreVC: StoreUI {
     }
     
     func copyToPassword(password: String) {
-        self.showBottomPopup(message: Strings.copyPassword)
-        UIPasteboard.general.string = password
+        self.copyPassword(password: password)
     }
 }
 
@@ -92,7 +89,10 @@ extension StoreVC {
         case .selectedRecord(let id):
             presenter.goToRecord(id: id)
         case .deleteRecord(let id):
-            deleteRecordDialog(id: id)
+            deleteRecordDialog() { [weak self] status in
+                guard status else { return }
+                self?.presenter.deleteRecord(id: id)
+            }
         default:
             break
         }
@@ -107,21 +107,5 @@ extension StoreVC {
         default:
             break
         }
-    }
-    
-    private func deleteRecordDialog(id: NSManagedObjectID) {
-        let deletedAction = UIAlertAction(title: "dialog_delete".localized, style: .destructive) { [weak self] _ in
-            self?.presenter.deleteRecord(id: id)
-        }
-        let cancelAction = UIAlertAction(title: "dialog_cancel".localized, style: .cancel)
-        showDialog(message: "record_delete_confirm".localized, actions: [deletedAction, cancelAction])
-    }
-}
-
-
-extension StoreVC {
-    struct Strings {
-        static let searchPlaceHolder = "store_search_place_holder".localized
-        static let copyPassword =  "password_copied".localized
     }
 }

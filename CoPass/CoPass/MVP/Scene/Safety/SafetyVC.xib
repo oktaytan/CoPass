@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SafetyVC" customModule="CoPass" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="juT-C3-veQ" id="o9p-UJ-9wh"/>
                 <outlet property="view" destination="iN0-l3-epB" id="0gC-dY-RRg"/>
             </connections>
         </placeholder>
@@ -18,20 +19,20 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAFETY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdP-Oa-if8">
-                    <rect key="frame" x="151.33333333333334" y="411.66666666666669" width="90.666666666666657" height="29"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="juT-C3-veQ">
+                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="PdP-Oa-if8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hsC-D6-dtS"/>
-                <constraint firstItem="PdP-Oa-if8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="xDg-RX-E6f"/>
+                <constraint firstItem="juT-C3-veQ" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="0y4-kG-JIj"/>
+                <constraint firstItem="juT-C3-veQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="XRY-Mj-o6D"/>
+                <constraint firstAttribute="bottom" secondItem="juT-C3-veQ" secondAttribute="bottom" id="fju-xz-QUo"/>
+                <constraint firstItem="juT-C3-veQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="qPt-yr-BNd"/>
             </constraints>
-            <point key="canvasLocation" x="6" y="21"/>
+            <point key="canvasLocation" x="5.343511450381679" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>

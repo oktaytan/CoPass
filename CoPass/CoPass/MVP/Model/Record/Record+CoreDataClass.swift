@@ -12,4 +12,8 @@ import CoreData
 @objc(Record)
 public class Record: NSManagedObject {
 
+    var decryptedPassword: String {
+        return try! self.password.aesDecrypt(key: AppConstants.cyrptoKey, iv: AppConstants.cyrptoIv)
+    }
+    
 }

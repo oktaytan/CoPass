@@ -14,6 +14,7 @@ final class RecordVC: BaseViewController {
     typealias Provider = RecordTableViewProvider
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var actionBtnStackView: UIStackView!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var saveButton: CoButton!
     @IBOutlet weak var deleteButton: UIButton!
@@ -52,6 +53,7 @@ final class RecordVC: BaseViewController {
     
     override func setupUI() {
         super.setupUI()
+        actionBtnStackView.setFromAnimation(index: 4)
         closeButton.setTitle(Strings.close, for: .normal)
         saveButton.setTitle(Strings.save, for: .normal)
     }
@@ -65,7 +67,10 @@ final class RecordVC: BaseViewController {
     }
     
     @IBAction func deleteBtnTapped(_ sender: Any) {
-        deleteRecordDialog()
+        deleteRecordDialog() { [weak self] status in
+            guard status else { return }
+            self?.presenter.deleteRecord()
+        }
     }
 }
 
@@ -94,14 +99,6 @@ extension RecordVC {
         default:
             break
         }
-    }
-    
-    private func deleteRecordDialog() {
-        let deletedAction = UIAlertAction(title: "dialog_delete".localized, style: .destructive) { [weak self] _ in
-            self?.presenter.deleteRecord()
-        }
-        let cancelAction = UIAlertAction(title: "dialog_cancel".localized, style: .cancel)
-        showDialog(message: "record_delete_confirm".localized, actions: [deletedAction, cancelAction])
     }
 }
 

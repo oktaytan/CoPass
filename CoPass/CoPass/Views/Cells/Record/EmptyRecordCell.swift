@@ -11,7 +11,6 @@ class EmptyRecordCell: UITableViewCell {
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var addRecordLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
     
     override func awakeFromNib() {
@@ -23,7 +22,6 @@ class EmptyRecordCell: UITableViewCell {
         containerView.cornerRadius = AppConstants.appUIRadius
         iconImageView.cornerRadius = 10
         messageLabel.text = Strings.noRecord
-        addRecordLabel.text = Strings.lets_add_record
     }
 }
 
@@ -31,6 +29,5 @@ class EmptyRecordCell: UITableViewCell {
 extension EmptyRecordCell {
     struct Strings {
         static let noRecord = "no_record".localized
-        static let lets_add_record = "lets_add_record".localized
     }
 }

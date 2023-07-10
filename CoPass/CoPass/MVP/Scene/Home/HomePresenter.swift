@@ -68,13 +68,8 @@ final class HomePresenter: HomePresenterProtocol {
     }
     
     func copyPassword(record: Record) {
-        do {
-            let decryptedPassword = try record.password.aesDecrypt(key: AppConstants.cyrptoKey, iv: AppConstants.cyrptoIv)
-            self.ui?.copyToPassword(password: decryptedPassword)
-            storage.updateRecord(at: record.objectID, with: record)
-        } catch {
-            self.ui?.showAlert(title: nil, message: CoError.unknownError.description, error: true)
-        }
+        self.ui?.copyToPassword(password: record.decryptedPassword)
+        storage.updateRecord(at: record.objectID, with: record)
     }
     
     func deleteRecord(id: NSManagedObjectID) {
@@ -97,7 +92,10 @@ final class HomePresenter: HomePresenterProtocol {
 
 extension HomePresenter {
     enum SectionType {
-        case user(data: User), safetyScore(score: Double, count: Int, type: CoSafetyType), categories(data: [CoCategory : Int], title: String), frequentlyUsed(rows: [RowType], title: String)
+        case user(data: User),
+             safetyScore(score: Float, count: Int, type: CoSafetyType),
+             categories(data: [CoCategory : Int], title: String),
+             frequentlyUsed(rows: [RowType], title: String)
     }
     
     enum RowType {
@@ -127,65 +125,14 @@ extension HomePresenter {
             sections.append(SectionType.user(data: user))
         }
         
-        let score: Double = calculateSafetyScore()
+        let score: Float = self.records.score
         sections.append(SectionType.safetyScore(score: score, count: self.records.count, type: CoSafetyType.getScoreType(score)))
         
        
-        sections.append(SectionType.categories(data: setCategories(), title: Strings.categoryTitle))
+        sections.append(SectionType.categories(data: self.records.getCategories(), title: Strings.categoryTitle))
         sections.append(.frequentlyUsed(rows: getFrequentlyUsedRecords(), title: Strings.frequentlyUsedTitle))
         
         self.ui?.load(with: self.sections)
-    }
-    
-    private func calculateSafetyScore() -> Double {
-        let strongPasswordPoint: Double = 5.0
-        let duplicatePasswordPoint: Double = 5.0
-        
-        var startScore: Double = 0.0
-        
-        let crossReference = Dictionary(grouping: self.records, by: \.password)
-        let duplicatedPasswords = crossReference.filter { $1.count > 1 }
-        
-        self.records.forEach { record in
-            do {
-                let password = try record.password.aesDecrypt(key: AppConstants.cyrptoKey, iv: AppConstants.cyrptoIv)
-                if password.count > 4 {
-                    startScore += strongPasswordPoint
-                    if startScore > 100.0 {
-                        startScore = 100.0
-                    }
-                } else {
-                    if startScore == 0.0 { return }
-                    startScore -= strongPasswordPoint
-                }
-                
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
-        
-        if startScore > 0.0 {
-            startScore -= Double(Int(duplicatePasswordPoint) * duplicatedPasswords.count)
-        }
-        
-        let score = startScore / 100
-        return score
-    }
-    
-    private func setCategories() -> [CoCategory : Int] {
-        var categories: [CoCategory : Int] = [:]
-        
-        CoCategory.allCases.forEach { category in
-            categories[category] = 0
-        }
-        
-        self.records.forEach { record in
-            let category = record.category
-            guard let coCategory = CoCategory(rawValue: category) else { return }
-            categories[coCategory] = self.records.filter({ $0.category == category }).count
-        }
-        
-        return categories
     }
     
     private func getFrequentlyUsedRecords() -> [RowType] {

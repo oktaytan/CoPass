@@ -40,6 +40,7 @@ class CoSearchField: UITextField, CoSearchFieldProtocol {
         self.backgroundColor = .coBg
         self.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         self.textColor = .coText
+        self.placeholder = "store_search_place_holder".localized
         
         let placeholderAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.coTextGray,
