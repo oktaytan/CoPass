@@ -9,13 +9,14 @@ import Foundation
 import CoreData
 
 protocol CoStorageProtocol {
-    var masterPassword: String? { get }
     var hasFaceID: Bool { get }
     
     /// USER
     func register(with data: RegisterData) -> Result<Bool, CoError>
     func saveUser(data: RegisterData) -> Result<User, CoError>
     func fetchUser() -> Result<User, CoError>
+    func getMasterPassword() -> String?
+    func setMasterPassword(password: String)
     @discardableResult func updateUser(with object: User) -> Result<User, CoError>
     @discardableResult func deleteUser() -> Result<Bool, CoError>
     
@@ -37,10 +38,12 @@ final class CoStorage: CoStorageProtocol {
     
     private var keychain: KeychainManager
     private var bioAuth: BioAuthManager
+    private var masterPassword = ""
      
     private init() {
         self.keychain = KeychainManager.standard
         self.bioAuth = BioAuthManager.shared
+        self.masterPassword = self.getMasterPassword() ?? ""
     }
     
     lazy var persistentContainer: NSPersistentContainer = {
@@ -57,13 +60,17 @@ final class CoStorage: CoStorageProtocol {
 
 // MARK: - KEYCHAIN STACK
 extension CoStorage {
-    var masterPassword: String? {
+    var hasFaceID: Bool {
+        return bioAuth.biometricType == .faceID
+    }
+    
+    func getMasterPassword() -> String? {
         guard let data = keychain.read(type: RegisterData.self) else { return nil }
         return data.password
     }
     
-    var hasFaceID: Bool {
-        return bioAuth.biometricType == .faceID
+    func setMasterPassword(password: String) {
+        self.masterPassword = password
     }
     
     func register(with data: RegisterData) -> Result<Bool, CoError> {
@@ -74,6 +81,7 @@ extension CoStorage {
             let saveResult = saveUser(data: data)
             switch saveResult {
             case .success(_):
+                self.setMasterPassword(password: data.password)
                 return .success(true)
             case .failure(_):
                 return .failure(.failureRegister)
@@ -165,8 +173,16 @@ extension CoStorage {
             user.setValue(object.isLogin, forKey: #keyPath(User.isLogin))
             user.setValue(object.lastLogin, forKey: #keyPath(User.lastLogin))
             
-            try context.save()
-            return .success(user)
+            let registerData = RegisterData(username: user.username, password: self.masterPassword)
+            let result = self.keychain.save(registerData)
+            
+            switch result {
+            case .success(_):
+                try context.save()
+                return .success(user)
+            case .failure(_):
+                return .failure(.failureRegister)
+            }
         } catch {
             return .failure(.failureUserSave)
         }

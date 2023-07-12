@@ -68,7 +68,7 @@ extension ProfileVC {
     private func tableViewUserActivity(event: ProfileTableViewProviderImpl.UserInteractivity?) {
         switch event {
         case .editTapped:
-            print("edit tapped")
+            presenter.editUser()
         case .controlTapped(let type):
             presenter.handleControl(type: type)
         default:

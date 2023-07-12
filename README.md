@@ -51,7 +51,8 @@ In the application, auxiliary libraries such as SnapKit, ViewAnimator, SPIndicat
   <img src="/Screenshots/search.png" alt="Store" width="200"> 
   <img src="/Screenshots/record.png" alt="Games" width="200">  
   <img src="/Screenshots/safety.png" alt="Games Search" width="200">  
-  <img src="/Screenshots/profile.png" alt="Stores" width="200"> 
+  <img src="/Screenshots/profile.png" alt="Stores" width="200">
+  <img src="/Screenshots/user.png" alt="Stores" width="200">  
 </div>
 <br />
 

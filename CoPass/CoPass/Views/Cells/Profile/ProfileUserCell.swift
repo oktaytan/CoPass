@@ -30,7 +30,7 @@ class ProfileUserCell: UITableViewCell {
     func set(with user: User, delegate: ProfileUserCellDelegate) {
         self.delegate = delegate
         
-        if let imageData = user.image?.decodedData() {
+        if let imageData = user.image {
             avatarImageView.image = UIImage(data: imageData)
         } else {
             avatarImageView.image = UIImage(named: "avatar_placeholder")

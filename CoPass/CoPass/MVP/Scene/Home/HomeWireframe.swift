@@ -30,6 +30,8 @@ final class HomeWireframe: BaseWireframe, HomeWireframeProtocol {
             goToStore(with: category)
         case .openRecordWith(let id):
             openRecordWith(id: id)
+        case .goToNotifications:
+            goToNotifications()
         }
     }
 }
@@ -42,6 +44,11 @@ extension HomeWireframe {
     
     private func openRecordWith(id: NSManagedObjectID) {
         let recordVC = RecordWireframe.prepare(id: id)
-        forward(recordVC, with: .pageSheet(from: self.view))
+        forward(recordVC, with: .pageSheet(from: self.view, detent: .large))
+    }
+    
+    private func goToNotifications() {
+        let notificationsVC = NotificationsVC(nibName: NotificationsVC.className, bundle: nil)
+        forward(notificationsVC, with: .push)
     }
 }

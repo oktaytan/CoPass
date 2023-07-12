@@ -43,6 +43,16 @@ class BaseViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
     }
     
+    func showTabBar() {
+        guard let coTabBar = self.tabBarController as? CoTabBarVC else { return }
+        coTabBar.coTabBar.isHidden = true
+    }
+    
+    func hideTabBar() {
+        guard let coTabBar = self.tabBarController as? CoTabBarVC else { return }
+        coTabBar.coTabBar.isHidden = false
+    }
+    
     func showModalIndicator() {
         if showIndicator {
             self.view.addSubview(modalIndicator)
@@ -80,14 +90,14 @@ extension BaseViewController: BaseUI {
         view.endEditing(true)
     }
     
-    func deleteRecordDialog(completion: @escaping (Bool) -> ()) {
+    func deleteDialog(message: String, completion: @escaping (Bool) -> ()) {
         let deletedAction = UIAlertAction(title: Strings.dialogDelete, style: .destructive) { _ in
             completion(true)
         }
         let cancelAction = UIAlertAction(title: Strings.dialogCancel, style: .cancel) { _ in
             completion(false)
         }
-        showDialog(message: Strings.recordDeleteConfirm, actions: [deletedAction, cancelAction])
+        showDialog(message: message, actions: [deletedAction, cancelAction])
     }
     
     func copyPassword(password: String) {
@@ -101,7 +111,6 @@ extension BaseViewController {
     struct Strings {
         static let dialogDelete = "dialog_delete".localized
         static let dialogCancel = "dialog_cancel".localized
-        static let recordDeleteConfirm = "record_delete_confirm".localized
         static let copyPassword = "password_copied".localized
     }
 }

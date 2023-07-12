@@ -133,6 +133,11 @@
 		66D4818B2A48FE0500CE5B5A /* CoTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66D4818A2A48FE0500CE5B5A /* CoTabBar.xib */; };
 		66D4818D2A490A0800CE5B5A /* CoTabBarUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D4818C2A490A0800CE5B5A /* CoTabBarUI.swift */; };
 		66D4818F2A490A2000CE5B5A /* CoTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D4818E2A490A2000CE5B5A /* CoTabBarPresenter.swift */; };
+		66E8927B2A5F2C00001F6367 /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E8927A2A5F2C00001F6367 /* UserVC.swift */; };
+		66E8927D2A5F2C34001F6367 /* UserVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66E8927C2A5F2C34001F6367 /* UserVC.xib */; };
+		66E8927F2A5F2C4B001F6367 /* UserUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E8927E2A5F2C4B001F6367 /* UserUI.swift */; };
+		66E892812A5F2C61001F6367 /* UserWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E892802A5F2C61001F6367 /* UserWireframe.swift */; };
+		66E892832A5F2CD7001F6367 /* UserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E892822A5F2CD7001F6367 /* UserPresenter.swift */; };
 		66EAFD072A463F5D005B9DAB /* BioAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EAFD062A463F5D005B9DAB /* BioAuthManager.swift */; };
 		66EAFD092A46488D005B9DAB /* CoOneTimeCodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EAFD082A46488D005B9DAB /* CoOneTimeCodeTextField.swift */; };
 		66EAFD0C2A465293005B9DAB /* HomeUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EAFD0B2A465293005B9DAB /* HomeUI.swift */; };
@@ -292,6 +297,11 @@
 		66D4818A2A48FE0500CE5B5A /* CoTabBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoTabBar.xib; sourceTree = "<group>"; };
 		66D4818C2A490A0800CE5B5A /* CoTabBarUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoTabBarUI.swift; sourceTree = "<group>"; };
 		66D4818E2A490A2000CE5B5A /* CoTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoTabBarPresenter.swift; sourceTree = "<group>"; };
+		66E8927A2A5F2C00001F6367 /* UserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
+		66E8927C2A5F2C34001F6367 /* UserVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserVC.xib; sourceTree = "<group>"; };
+		66E8927E2A5F2C4B001F6367 /* UserUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUI.swift; sourceTree = "<group>"; };
+		66E892802A5F2C61001F6367 /* UserWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWireframe.swift; sourceTree = "<group>"; };
+		66E892822A5F2CD7001F6367 /* UserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPresenter.swift; sourceTree = "<group>"; };
 		66EAFD062A463F5D005B9DAB /* BioAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioAuthManager.swift; sourceTree = "<group>"; };
 		66EAFD082A46488D005B9DAB /* CoOneTimeCodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoOneTimeCodeTextField.swift; sourceTree = "<group>"; };
 		66EAFD0B2A465293005B9DAB /* HomeUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUI.swift; sourceTree = "<group>"; };
@@ -707,6 +717,7 @@
 				66F9AEBB2A1BEF3A00EAFD58 /* Login */,
 				66F9AEB02A1BE8F800EAFD58 /* Register */,
 				668CE2662A180EDF00D6E7DF /* Onboarding */,
+				66E892792A5F2BE3001F6367 /* User */,
 				6678547A2A5E1F1D0091E6F5 /* HelpVC */,
 				667854752A5E1EDB0091E6F5 /* FeedbackVC */,
 				667854702A5E1E940091E6F5 /* ExportVC */,
@@ -802,6 +813,18 @@
 				66D4818A2A48FE0500CE5B5A /* CoTabBar.xib */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		66E892792A5F2BE3001F6367 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				66E8927E2A5F2C4B001F6367 /* UserUI.swift */,
+				66E892822A5F2CD7001F6367 /* UserPresenter.swift */,
+				66E892802A5F2C61001F6367 /* UserWireframe.swift */,
+				66E8927A2A5F2C00001F6367 /* UserVC.swift */,
+				66E8927C2A5F2C34001F6367 /* UserVC.xib */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		66EAFD0A2A465289005B9DAB /* Home */ = {
@@ -945,6 +968,7 @@
 				667395DC2A534BA900F823F8 /* HomeCategoryCell.xib in Resources */,
 				667854742A5E1EA60091E6F5 /* ExportVC.xib in Resources */,
 				6678546A2A5E1DF30091E6F5 /* SyncCloudVC.xib in Resources */,
+				66E8927D2A5F2C34001F6367 /* UserVC.xib in Resources */,
 				667CB32D2A5E067300D25CF8 /* ProfileBrandCell.xib in Resources */,
 				6678546F2A5E1E3F0091E6F5 /* NotificationsVC.xib in Resources */,
 				66513C772A5AF10400C86EAE /* RecordPreviewCell.xib in Resources */,
@@ -996,6 +1020,7 @@
 				6608C6C02A4F66F40081603C /* ObservationType.swift in Sources */,
 				6678547D2A5E1F2C0091E6F5 /* HelpVC.swift in Sources */,
 				667395DB2A534BA900F823F8 /* HomeCategoryCell.swift in Sources */,
+				66E8927B2A5F2C00001F6367 /* UserVC.swift in Sources */,
 				66F9AEC52A1BEFA200EAFD58 /* LoginWireframe.swift in Sources */,
 				668CE2782A18394500D6E7DF /* CoButton.swift in Sources */,
 				66D481652A48ED1700CE5B5A /* RecordWireframe.swift in Sources */,
@@ -1078,9 +1103,12 @@
 				66D4817B2A48EED300CE5B5A /* ProfileWireframe.swift in Sources */,
 				668CE2762A181D3100D6E7DF /* UIColor+Ext.swift in Sources */,
 				667CB32C2A5E067300D25CF8 /* ProfileBrandCell.swift in Sources */,
+				66E892832A5F2CD7001F6367 /* UserPresenter.swift in Sources */,
 				667CB3162A5DDAAE00D25CF8 /* CoControlType.swift in Sources */,
 				66EAFD092A46488D005B9DAB /* CoOneTimeCodeTextField.swift in Sources */,
 				66B768D32A5216510055CECF /* Notification.swift in Sources */,
+				66E892812A5F2C61001F6367 /* UserWireframe.swift in Sources */,
+				66E8927F2A5F2C4B001F6367 /* UserUI.swift in Sources */,
 				66D481702A48EE1F00CE5B5A /* SafetyUI.swift in Sources */,
 				668CE26A2A180F2C00D6E7DF /* OnboardingPresenter.swift in Sources */,
 				668CE2702A18119C00D6E7DF /* NSObject+Ext.swift in Sources */,

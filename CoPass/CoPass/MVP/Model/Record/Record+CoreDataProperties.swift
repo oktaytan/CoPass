@@ -84,6 +84,7 @@ extension [Record] {
     }
     
     var score: Float {
-        return Float(((getStrongPasswords().count) * 100) / count)
+        let strongPasswordsCount = getStrongPasswords().count
+        return strongPasswordsCount == 0 ? 0 : Float((strongPasswordsCount * 100) / count)
     }
 }

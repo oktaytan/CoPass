@@ -38,8 +38,9 @@ enum Router {
     }
     
     enum Home {
-        case goToStoreWith(category: CoCategory)
-        case openRecordWith(id: NSManagedObjectID)
+        case goToStoreWith(category: CoCategory),
+        openRecordWith(id: NSManagedObjectID),
+        goToNotifications
     }
     
     enum Store {
@@ -55,6 +56,10 @@ enum Router {
     }
     
     enum Profile {
-        case goToSettings, goToSync, goToNotifications, openShare, openExportImport, openSendFeedback, goToHelp, goToLogin
+        case goToUser, goToSettings, goToSync, goToNotifications, openShare, openExportImport, openSendFeedback, goToHelp, goToLogin
+    }
+    
+    enum User {
+        case goToOnboarding
     }
 }

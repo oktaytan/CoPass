@@ -89,7 +89,7 @@ extension StoreVC {
         case .selectedRecord(let id):
             presenter.goToRecord(id: id)
         case .deleteRecord(let id):
-            deleteRecordDialog() { [weak self] status in
+            deleteDialog(message: Strings.recordDeleteConfirm) { [weak self] status in
                 guard status else { return }
                 self?.presenter.deleteRecord(id: id)
             }
@@ -107,5 +107,12 @@ extension StoreVC {
         default:
             break
         }
+    }
+}
+
+
+extension StoreVC {
+    struct Strings {
+        static let recordDeleteConfirm = "record_delete_confirm".localized
     }
 }
