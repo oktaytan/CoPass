@@ -54,7 +54,7 @@ final class LoginPresenter: LoginPresenterProtocol {
     }
     
     func authenticate(with password: String) {
-        if let masterPassword = storage.masterPassword, masterPassword == password {
+        if let masterPassword = storage.getMasterPassword(), masterPassword == password {
             let userResult = storage.fetchUser()
             switch userResult {
             case .success(let user):

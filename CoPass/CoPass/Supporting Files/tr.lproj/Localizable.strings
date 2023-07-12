@@ -120,3 +120,7 @@
 "profile_control_feedback" = "Geribildirim yolla";
 "profile_control_help" = "Yardım";
 "profile_control_logout" = "Çıkış yap";
+"profile_user_update_success" = "Güncelleme başarılı";
+"profile_user_update_failure" = "Güncelleme başarısız.\nDaha sonra tekrar deneyin!";
+"profile_user_edit_title" = "Kullanıcı Düzenle";
+"profile_delete_user_confirm" = "Bu kullanıcıyı silmek istiyor musun?";

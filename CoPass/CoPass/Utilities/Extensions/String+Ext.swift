@@ -35,11 +35,6 @@ extension String {
         return data
     }
     
-    func decodedData() -> Data? {
-        guard let decodedData = Data(base64Encoded: self, options: .ignoreUnknownCharacters) else { return nil }
-        return decodedData
-    }
-    
     func toDate (dateFormatter: DateFormatter) -> Date? {
         return dateFormatter.date(from: self)
     }

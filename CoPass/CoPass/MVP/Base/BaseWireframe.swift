@@ -22,12 +22,12 @@ class BaseWireframe {
         case .modal(let from):
             vc.modalPresentationStyle = .automatic
             from.present(vc, animated: animated)
-        case .pageSheet(let from):
+        case .pageSheet(let from, let detent):
             vc.modalPresentationStyle = .pageSheet
             if let sheet = vc.sheetPresentationController {
                 sheet.detents = [.medium(), .large()]
                 sheet.prefersScrollingExpandsWhenScrolledToEdge = true
-                sheet.selectedDetentIdentifier = .large
+                sheet.selectedDetentIdentifier = detent
                 sheet.largestUndimmedDetentIdentifier = .medium
             }
             from.present(vc, animated: animated)

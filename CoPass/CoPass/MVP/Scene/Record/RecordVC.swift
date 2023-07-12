@@ -65,7 +65,7 @@ final class RecordVC: BaseViewController {
     }
     
     @IBAction func deleteBtnTapped(_ sender: Any) {
-        deleteRecordDialog() { [weak self] status in
+        deleteDialog(message: Strings.recordDeleteConfirm) { [weak self] status in
             guard status else { return }
             self?.presenter.deleteRecord()
         }
@@ -104,5 +104,8 @@ extension RecordVC {
 extension RecordVC {
     struct Strings {
         static let save =  "save".localized
+        static let recordDeleteConfirm = "record_delete_confirm".localized
     }
 }
+
+

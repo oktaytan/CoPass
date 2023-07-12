@@ -11,7 +11,7 @@
     </entity>
     <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="Binary"/>
         <attribute name="isLogin" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="lastLogin" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="updatedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>

@@ -74,12 +74,19 @@ extension SafetyVC {
         case .selectedRecord(let id):
             presenter.goToRecord(id: id)
         case .deleteRecord(let id):
-            deleteRecordDialog() { [weak self] status in
+            deleteDialog(message: Strings.recordDeleteConfirm) { [weak self] status in
                 guard status else { return }
                 self?.presenter.deleteRecord(id: id)
             }
         default:
             break
         }
+    }
+}
+
+
+extension SafetyVC {
+    struct Strings {
+        static let recordDeleteConfirm = "record_delete_confirm".localized
     }
 }

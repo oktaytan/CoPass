@@ -9,6 +9,7 @@ import Foundation
 
 protocol ProfilePresenterProtocol: Presenter {
     func handleControl(type: CoControlType)
+    func editUser()
 }
 
 final class ProfilePresenter: ProfilePresenterProtocol {
@@ -49,6 +50,10 @@ final class ProfilePresenter: ProfilePresenterProtocol {
         case .logout:
             logout()
         }
+    }
+    
+    func editUser() {
+        wireframe.navigate(to: .goToUser)
     }
 }
 

@@ -11,6 +11,7 @@ import CoreData
 protocol HomePresenterProtocol: Presenter {
     func goToStoreWith(category: CoCategory)
     func goToRecord(id: NSManagedObjectID)
+    func goToNotificaitons()
     func copyPassword(record: Record)
     func deleteRecord(id: NSManagedObjectID)
 }
@@ -65,6 +66,10 @@ final class HomePresenter: HomePresenterProtocol {
     
     func goToRecord(id: NSManagedObjectID) {
         wireframe.navigate(to: .openRecordWith(id: id))
+    }
+    
+    func goToNotificaitons() {
+        wireframe.navigate(to: .goToNotifications)
     }
     
     func copyPassword(record: Record) {

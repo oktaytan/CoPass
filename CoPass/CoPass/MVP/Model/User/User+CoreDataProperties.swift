@@ -18,7 +18,7 @@ extension User {
     }
 
     @NSManaged public var username: String
-    @NSManaged public var image: String?
+    @NSManaged public var image: Data?
     @NSManaged public var createdAt: Date
     @NSManaged public var updatedAt: Date?
     @NSManaged public var isLogin: Bool

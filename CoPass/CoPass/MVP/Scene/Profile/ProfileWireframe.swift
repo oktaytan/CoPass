@@ -25,6 +25,8 @@ final class ProfileWireframe: BaseWireframe, ProfileWireframeProtocol {
     
     func navigate(to route: Router.Profile) {
         switch route {
+        case .goToUser:
+            goToUser()
         case .goToSettings:
             goToSettings()
         case .goToSync:
@@ -46,6 +48,11 @@ final class ProfileWireframe: BaseWireframe, ProfileWireframeProtocol {
 }
 
 extension ProfileWireframe {
+    private func goToUser() {
+        let userVC = UserWireframe.prepare()
+        forward(userVC, with: .push)
+    }
+    
     private func goToSettings() {
         let settingsVC = SettingsVC(nibName: SettingsVC.className, bundle: nil)
         forward(settingsVC, with: .push)
@@ -83,12 +90,12 @@ extension ProfileWireframe {
     
     private func openExportImport() {
         let exportImportVC = ExportVC(nibName: ExportVC.className, bundle: nil)
-        forward(exportImportVC, with: .pageSheet(from: self.view))
+        forward(exportImportVC, with: .pageSheet(from: self.view, detent: .medium))
     }
     
     private func openSendFeedback() {
         let feedbackVC = FeedbackVC(nibName: FeedbackVC.className, bundle: nil)
-        forward(feedbackVC, with: .pageSheet(from: self.view))
+        forward(feedbackVC, with: .pageSheet(from: self.view, detent: .medium))
     }
     
     private func goToHelp() {

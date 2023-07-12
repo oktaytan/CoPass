@@ -40,6 +40,6 @@ extension OnboardingWireframe {
     
     private func showLogin() {
         let loginVC = LoginWireframe.prepare()
-        forward(loginVC, with: .push)
+        forward(loginVC, with: .pageSheet(from: self.view, detent: .large))
     }
 }
