@@ -53,6 +53,7 @@
                                             <constraint firstItem="lm2-jm-vK8" firstAttribute="top" secondItem="L1H-t3-EiA" secondAttribute="top" id="SBC-qj-bbp"/>
                                             <constraint firstItem="qoc-ft-WzG" firstAttribute="leading" secondItem="L1H-t3-EiA" secondAttribute="leading" id="Sz0-g7-Xyy"/>
                                             <constraint firstAttribute="trailing" secondItem="lm2-jm-vK8" secondAttribute="trailing" id="iDT-gN-0rX"/>
+                                            <constraint firstAttribute="width" secondItem="L1H-t3-EiA" secondAttribute="height" multiplier="1:1" id="iGe-5b-ecf"/>
                                             <constraint firstAttribute="width" constant="44" id="ni0-Az-KF9"/>
                                             <constraint firstAttribute="trailing" secondItem="qoc-ft-WzG" secondAttribute="trailing" id="tMp-Fg-whO"/>
                                         </constraints>

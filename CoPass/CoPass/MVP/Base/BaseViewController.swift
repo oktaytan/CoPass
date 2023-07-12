@@ -13,19 +13,17 @@ import CoreData
 
 class BaseViewController: UIViewController {
     
-    lazy var loadingView: UIView = {
-        let loaderView = UIView(frame: self.view.bounds)
-        loaderView.backgroundColor = .white.withAlphaComponent(0.95)
-        let size: CGFloat = 44.0
-        let xSnap = (loaderView.frame.size.width / 2) - (size / 2)
-        let ySnap = (loaderView.frame.size.height / 2) - (size / 2)
-        let indicatorView = NVActivityIndicatorView(frame: CGRect(x: xSnap, y: ySnap, width: size, height: size),
-                                           type: .ballTrianglePath,
-                                           color: .coPurple,
-                                           padding: nil)
-        indicatorView.startAnimating()
-        loaderView.addSubview(indicatorView)
-        return loaderView
+    var showIndicator: Bool = false {
+        didSet {
+            showModalIndicator()
+        }
+    }
+    
+    lazy var modalIndicator: UIView = {
+        let view = UIView()
+        view.backgroundColor = .coBg
+        view.cornerRadius = 2
+        return view
     }()
     
     override func viewDidLoad() {
@@ -37,16 +35,24 @@ class BaseViewController: UIViewController {
         // Override
     }
     
-    func deleteUser() {
-        CoStorage.shared.deleteUser()
-    }
-    
     func showNavBar() {
         self.navigationController?.isNavigationBarHidden = false
     }
     
     func hideNavBar() {
         self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    func showModalIndicator() {
+        if showIndicator {
+            self.view.addSubview(modalIndicator)
+            modalIndicator.snp.makeConstraints { make in
+                make.top.equalTo(self.view).offset(10)
+                make.width.equalTo(44)
+                make.height.equalTo(4)
+                make.centerX.equalTo(self.view)
+            }
+        }
     }
 }
 
@@ -72,14 +78,6 @@ extension BaseViewController: BaseUI {
     
     @objc func hideKeyboard() {
         view.endEditing(true)
-    }
-    
-    func showLoading() {
-        self.view.addSubview(loadingView)
-    }
-    
-    func hideLoading() {
-        loadingView.removeFromSuperview()
     }
     
     func deleteRecordDialog(completion: @escaping (Bool) -> ()) {

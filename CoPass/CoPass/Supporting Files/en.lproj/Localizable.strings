@@ -13,10 +13,10 @@
 "error_empty_field" = "Tüm alanlar doldurulmalıdır!";
 
 // MARK: - COMMON
-"%d password_count_singular" = "%d password";
-"%d password_count_plural" = "%d passwords";
-"%d record_count_singular" = "%d record";
-"%d record_count_plural" = "%d records";
+"password_count_singular" = "%d password";
+"password_count_plural" = "%d passwords";
+"record_count_singular" = "%d record";
+"record_count_plural" = "%d records";
 "password_copied" = "Copied 👍";
 "no_record" = "No record!";
 "lets_add_record" = "Let's save your first password";
@@ -107,3 +107,15 @@
 "safety_strong_score_title" = "Strong";
 "safety_weak_score_title" = "Weak";
 "safety_reused_score_title" = "Reused";
+
+
+// MARK: - PROFILE
+"profile_last_login_date" = "Last login: %@";
+"profile_control_settings" = "Settings";
+"profile_control_sync" = "Sync with iCloud";
+"profile_control_notifications" = "Notifications";
+"profile_control_share" = "Share";
+"profile_control_export_import" = "Export & Import";
+"profile_control_feedback" = "Send Feedback";
+"profile_control_help" = "Help";
+"profile_control_logout" = "Logout";

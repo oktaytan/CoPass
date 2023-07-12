@@ -35,6 +35,6 @@ final class StoreWireframe: BaseWireframe, StoreWireframeProtocol {
 extension StoreWireframe {
     private func openRecordWith(id: NSManagedObjectID) {
         let recordVC = RecordWireframe.prepare(id: id)
-        forward(recordVC, with: .modal(from: self.view))
+        forward(recordVC, with: .pageSheet(from: self.view))
     }
 }

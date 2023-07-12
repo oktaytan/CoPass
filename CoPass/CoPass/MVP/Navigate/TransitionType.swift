@@ -8,5 +8,5 @@
 import UIKit
 
 enum TransitionType {
-    case push, present(from: UIViewController), modal(from: UIViewController), root(window: UIWindow)
+    case push, present(from: UIViewController), modal(from: UIViewController), pageSheet(from: UIViewController), root(window: UIWindow)
 }

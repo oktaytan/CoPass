@@ -55,6 +55,6 @@ enum Router {
     }
     
     enum Profile {
-        
+        case goToSettings, goToSync, goToNotifications, openShare, openExportImport, openSendFeedback, goToHelp, goToLogin
     }
 }

@@ -53,7 +53,7 @@ final class CoTabBar: BaseView {
         addRecordButton.backgroundColor = .white
         addRecordButton.setImage(UIImage(named: "tabbar-plus")!, for: .normal)
         addRecordButton.setImage(UIImage(named: "tabbar-plus")!, for: .highlighted)
-        addRecordButton.configureShadow(shadowColor: .black, offset: CGSize(width: 0, height: 4), shadowRadius: 8, shadowOpacity: 0.18, cornerRadius: AppConstants.appUIRadius)
+        addRecordButton.configureShadow(shadowColor: .coText, offset: CGSize(width: 0, height: 0), shadowRadius: 8, shadowOpacity: 0.25, cornerRadius: AppConstants.appUIRadius + 4)
     }
     
     
