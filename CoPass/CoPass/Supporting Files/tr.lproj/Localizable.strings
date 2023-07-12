@@ -14,10 +14,10 @@
 
 
 // MARK: - COMMON
-"%d password_count_singular" = "%d parola";
-"%d password_count_plural" = "%d parola";
-"%d record_count_singular" = "%d kayıt";
-"%d record_count_plural" = "%d kayıt";
+"password_count_singular" = "%d parola";
+"password_count_plural" = "%d parola";
+"record_count_singular" = "%d kayıt";
+"record_count_plural" = "%d kayıt";
 "password_copied" = "Kopyalandı 👍";
 "no_record" = "Kayıt yok!";
 "lets_add_record" = "Hadi ilk parolanı kaydet";
@@ -75,8 +75,6 @@
 
 // MARK: - HOME
 "home_welcome" = "Hoş geldin";
-"%d home_safety_password_count_singular" = "%d Parola";
-"%d home_safety_password_count_plural" = "%d Parola";
 "home_category_title" = "Kategoriler";
 "home_frequently_used_title" = "Sık kullanılanlar";
 
@@ -106,7 +104,19 @@
 "record_delete_confirm" = "Bu parolayı silmek istiyor musun?";
 
 
-// MARK: SAFETY SCORE
+// MARK: - SAFETY SCORE
 "safety_strong_score_title" = "Güçlü";
 "safety_weak_score_title" = "Zayıf";
 "safety_reused_score_title" = "Tekrarlı";
+
+
+// MARK: - PROFILE
+"profile_last_login_date" = "Son giriş: %@";
+"profile_control_settings" = "Ayarlar";
+"profile_control_sync" = "iCloud ile eşleşme";
+"profile_control_notifications" = "Bildirimler";
+"profile_control_share" = "Paylaş";
+"profile_control_export_import" = "Dışarı aktar & İçeri aktar";
+"profile_control_feedback" = "Geribildirim yolla";
+"profile_control_help" = "Yardım";
+"profile_control_logout" = "Çıkış yap";

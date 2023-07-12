@@ -56,6 +56,7 @@ extension CoTabBarWireframe {
         
         let homeNavController = UINavigationController(rootViewController: homeVC)
         let storeNavController = UINavigationController(rootViewController: storeVC)
+        storeNavController.isNavigationBarHidden = true
         let safetyNavController = UINavigationController(rootViewController: safetyVC)
         let profileNavController = UINavigationController(rootViewController: profileVC)
         

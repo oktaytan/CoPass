@@ -16,7 +16,7 @@ protocol CoStorageProtocol {
     func register(with data: RegisterData) -> Result<Bool, CoError>
     func saveUser(data: RegisterData) -> Result<User, CoError>
     func fetchUser() -> Result<User, CoError>
-    func updateUser(with object: User) -> Result<User, CoError>
+    @discardableResult func updateUser(with object: User) -> Result<User, CoError>
     @discardableResult func deleteUser() -> Result<Bool, CoError>
     
     /// FACEID
@@ -87,9 +87,17 @@ extension CoStorage {
         bioAuth.authenticate { result in
             switch result {
             case .success(let success):
-                completion(success)
+                let userResult = self.fetchUser()
+                switch userResult {
+                case .success(let user):
+                    user.lastLogin = .now
+                    self.updateUser(with: user)
+                    completion(success)
+                case .failure(_):
+                    completion(false)
+                }
             case .failure(_):
-                break
+                completion(false)
             }
         }
     }
@@ -119,6 +127,7 @@ extension CoStorage {
         user.setValue(nil, forKey: #keyPath(User.image))
         user.setValue(Date.now, forKey: #keyPath(User.createdAt))
         user.setValue(false, forKey: #keyPath(User.isLogin))
+        user.setValue(nil, forKey: #keyPath(User.lastLogin))
         
         do {
             try context.save()
@@ -141,6 +150,7 @@ extension CoStorage {
         }
     }
     
+    @discardableResult
     func updateUser(with object: User) -> Result<User, CoError> {
         let context = persistentContainer.viewContext
         
@@ -153,6 +163,7 @@ extension CoStorage {
             user.setValue(object.image, forKey: #keyPath(User.image))
             user.setValue(Date.now, forKey: #keyPath(User.updatedAt))
             user.setValue(object.isLogin, forKey: #keyPath(User.isLogin))
+            user.setValue(object.lastLogin, forKey: #keyPath(User.lastLogin))
             
             try context.save()
             return .success(user)

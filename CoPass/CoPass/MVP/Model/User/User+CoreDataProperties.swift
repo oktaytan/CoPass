@@ -22,6 +22,7 @@ extension User {
     @NSManaged public var createdAt: Date
     @NSManaged public var updatedAt: Date?
     @NSManaged public var isLogin: Bool
+    @NSManaged public var lastLogin: Date?
 
 }
 

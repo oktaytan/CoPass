@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ProfileUI: BaseUI {
-    
+    func load(with data: [ProfilePresenter.SectionType])
 }

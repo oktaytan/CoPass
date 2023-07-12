@@ -89,8 +89,8 @@ class SafetyBoardCell: UITableViewCell {
 
 extension SafetyBoardCell {
     struct Strings {
-        static let totalRecordSingular = "%d record_count_singular".localized
-        static let totalRecordPlural = "%d record_count_plural".localized
+        static let totalRecordSingular = "record_count_singular".localized
+        static let totalRecordPlural = "record_count_plural".localized
         static let safetyScoreTitle = "safety_score_title".localized
         static let strongScoreTitle = "safety_strong_score_title".localized
         static let weakScoreTitle = "safety_weak_score_title".localized

@@ -15,7 +15,6 @@ final class RecordVC: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var actionBtnStackView: UIStackView!
-    @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var saveButton: CoButton!
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var btnStackViewLeftConstraint: NSLayoutConstraint!
@@ -54,7 +53,6 @@ final class RecordVC: BaseViewController {
     override func setupUI() {
         super.setupUI()
         actionBtnStackView.setFromAnimation(index: 4)
-        closeButton.setTitle(Strings.close, for: .normal)
         saveButton.setTitle(Strings.save, for: .normal)
     }
     
@@ -105,7 +103,6 @@ extension RecordVC {
 
 extension RecordVC {
     struct Strings {
-        static let close = "close".localized
         static let save =  "save".localized
     }
 }

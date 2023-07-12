@@ -44,8 +44,8 @@ class HomeSafetyScoreCell: UITableViewCell {
 extension HomeSafetyScoreCell {
     struct Strings {
         static let safetyScoreTitle = "safety_score_title".localized
-        static let safetyPasswordCountSingular = "%d password_count_singular".localized
-        static let safetyPasswordCountPlural = "%d password_count_plural".localized
+        static let safetyPasswordCountSingular = "password_count_singular".localized
+        static let safetyPasswordCountPlural = "password_count_plural".localized
     }
     
     enum UserActionEvent {

@@ -50,6 +50,28 @@
 		667395E72A5384C500F823F8 /* CoSectionTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667395E62A5384C500F823F8 /* CoSectionTitleView.swift */; };
 		667395EB2A53894900F823F8 /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667395E92A53894900F823F8 /* RecordCell.swift */; };
 		667395EC2A53894900F823F8 /* RecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 667395EA2A53894900F823F8 /* RecordCell.xib */; };
+		667854642A5E1CD90091E6F5 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667854622A5E1CD90091E6F5 /* SettingsVC.swift */; };
+		667854652A5E1CD90091E6F5 /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 667854632A5E1CD90091E6F5 /* SettingsVC.xib */; };
+		667854692A5E1DF30091E6F5 /* SyncCloudVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667854672A5E1DF30091E6F5 /* SyncCloudVC.swift */; };
+		6678546A2A5E1DF30091E6F5 /* SyncCloudVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 667854682A5E1DF30091E6F5 /* SyncCloudVC.xib */; };
+		6678546E2A5E1E3F0091E6F5 /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6678546C2A5E1E3F0091E6F5 /* NotificationsVC.swift */; };
+		6678546F2A5E1E3F0091E6F5 /* NotificationsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6678546D2A5E1E3F0091E6F5 /* NotificationsVC.xib */; };
+		667854732A5E1EA60091E6F5 /* ExportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667854712A5E1EA60091E6F5 /* ExportVC.swift */; };
+		667854742A5E1EA60091E6F5 /* ExportVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 667854722A5E1EA60091E6F5 /* ExportVC.xib */; };
+		667854782A5E1EEA0091E6F5 /* FeedbackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667854762A5E1EEA0091E6F5 /* FeedbackVC.swift */; };
+		667854792A5E1EEA0091E6F5 /* FeedbackVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 667854772A5E1EEA0091E6F5 /* FeedbackVC.xib */; };
+		6678547D2A5E1F2C0091E6F5 /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6678547B2A5E1F2C0091E6F5 /* HelpVC.swift */; };
+		6678547E2A5E1F2C0091E6F5 /* HelpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6678547C2A5E1F2C0091E6F5 /* HelpVC.xib */; };
+		667CB3162A5DDAAE00D25CF8 /* CoControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667CB3152A5DDAAE00D25CF8 /* CoControlType.swift */; };
+		667CB31C2A5DF5B600D25CF8 /* ProfileUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667CB31A2A5DF5B600D25CF8 /* ProfileUserCell.swift */; };
+		667CB31D2A5DF5B600D25CF8 /* ProfileUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 667CB31B2A5DF5B600D25CF8 /* ProfileUserCell.xib */; };
+		667CB31F2A5DF8AF00D25CF8 /* ProfileTableViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667CB31E2A5DF8AF00D25CF8 /* ProfileTableViewProvider.swift */; };
+		667CB3222A5DFB8F00D25CF8 /* ProfileControlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667CB3202A5DFB8F00D25CF8 /* ProfileControlCell.swift */; };
+		667CB3232A5DFB8F00D25CF8 /* ProfileControlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 667CB3212A5DFB8F00D25CF8 /* ProfileControlCell.xib */; };
+		667CB3272A5E011200D25CF8 /* DateFormatter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667CB3262A5E011200D25CF8 /* DateFormatter+Ext.swift */; };
+		667CB3292A5E013800D25CF8 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667CB3282A5E013800D25CF8 /* Date+Ext.swift */; };
+		667CB32C2A5E067300D25CF8 /* ProfileBrandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667CB32A2A5E067300D25CF8 /* ProfileBrandCell.swift */; };
+		667CB32D2A5E067300D25CF8 /* ProfileBrandCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 667CB32B2A5E067300D25CF8 /* ProfileBrandCell.xib */; };
 		668CE22E2A1800CC00D6E7DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE22D2A1800CC00D6E7DF /* AppDelegate.swift */; };
 		668CE2302A1800CC00D6E7DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CE22F2A1800CC00D6E7DF /* SceneDelegate.swift */; };
 		668CE2382A1800CC00D6E7DF /* CoPass.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 668CE2362A1800CC00D6E7DF /* CoPass.xcdatamodeld */; };
@@ -186,6 +208,28 @@
 		667395E62A5384C500F823F8 /* CoSectionTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoSectionTitleView.swift; sourceTree = "<group>"; };
 		667395E92A53894900F823F8 /* RecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
 		667395EA2A53894900F823F8 /* RecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordCell.xib; sourceTree = "<group>"; };
+		667854622A5E1CD90091E6F5 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		667854632A5E1CD90091E6F5 /* SettingsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
+		667854672A5E1DF30091E6F5 /* SyncCloudVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncCloudVC.swift; sourceTree = "<group>"; };
+		667854682A5E1DF30091E6F5 /* SyncCloudVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SyncCloudVC.xib; sourceTree = "<group>"; };
+		6678546C2A5E1E3F0091E6F5 /* NotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsVC.swift; sourceTree = "<group>"; };
+		6678546D2A5E1E3F0091E6F5 /* NotificationsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationsVC.xib; sourceTree = "<group>"; };
+		667854712A5E1EA60091E6F5 /* ExportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportVC.swift; sourceTree = "<group>"; };
+		667854722A5E1EA60091E6F5 /* ExportVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExportVC.xib; sourceTree = "<group>"; };
+		667854762A5E1EEA0091E6F5 /* FeedbackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackVC.swift; sourceTree = "<group>"; };
+		667854772A5E1EEA0091E6F5 /* FeedbackVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackVC.xib; sourceTree = "<group>"; };
+		6678547B2A5E1F2C0091E6F5 /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
+		6678547C2A5E1F2C0091E6F5 /* HelpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpVC.xib; sourceTree = "<group>"; };
+		667CB3152A5DDAAE00D25CF8 /* CoControlType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoControlType.swift; sourceTree = "<group>"; };
+		667CB31A2A5DF5B600D25CF8 /* ProfileUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserCell.swift; sourceTree = "<group>"; };
+		667CB31B2A5DF5B600D25CF8 /* ProfileUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileUserCell.xib; sourceTree = "<group>"; };
+		667CB31E2A5DF8AF00D25CF8 /* ProfileTableViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewProvider.swift; sourceTree = "<group>"; };
+		667CB3202A5DFB8F00D25CF8 /* ProfileControlCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileControlCell.swift; sourceTree = "<group>"; };
+		667CB3212A5DFB8F00D25CF8 /* ProfileControlCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileControlCell.xib; sourceTree = "<group>"; };
+		667CB3262A5E011200D25CF8 /* DateFormatter+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Ext.swift"; sourceTree = "<group>"; };
+		667CB3282A5E013800D25CF8 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		667CB32A2A5E067300D25CF8 /* ProfileBrandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBrandCell.swift; sourceTree = "<group>"; };
+		667CB32B2A5E067300D25CF8 /* ProfileBrandCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileBrandCell.xib; sourceTree = "<group>"; };
 		668CE22A2A1800CC00D6E7DF /* CoPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		668CE22D2A1800CC00D6E7DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		668CE22F2A1800CC00D6E7DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -326,6 +370,7 @@
 				66C8E1582A56102A0058FF89 /* StoreTableViewProvider.swift */,
 				661D3BE52A58B67B0033AFA1 /* RecordTableViewProvider.swift */,
 				66513C782A5B50AC00C86EAE /* SafetyTableViewProvider.swift */,
+				667CB31E2A5DF8AF00D25CF8 /* ProfileTableViewProvider.swift */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -333,6 +378,7 @@
 		6608C6CC2A4F6A260081603C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				667CB3172A5DF59700D25CF8 /* Profile */,
 				66513C7D2A5B540200C86EAE /* Safety */,
 				667395E82A53893200F823F8 /* Record */,
 				6608C6CD2A4F6A2C0081603C /* Home */,
@@ -415,6 +461,73 @@
 				66D4157C2A5A07E20023DC1A /* RecordFieldCell.xib */,
 			);
 			path = Record;
+			sourceTree = "<group>";
+		};
+		667854612A5E1CB40091E6F5 /* SettingsVC */ = {
+			isa = PBXGroup;
+			children = (
+				667854622A5E1CD90091E6F5 /* SettingsVC.swift */,
+				667854632A5E1CD90091E6F5 /* SettingsVC.xib */,
+			);
+			path = SettingsVC;
+			sourceTree = "<group>";
+		};
+		667854662A5E1DD80091E6F5 /* SyncCloudVC */ = {
+			isa = PBXGroup;
+			children = (
+				667854672A5E1DF30091E6F5 /* SyncCloudVC.swift */,
+				667854682A5E1DF30091E6F5 /* SyncCloudVC.xib */,
+			);
+			path = SyncCloudVC;
+			sourceTree = "<group>";
+		};
+		6678546B2A5E1E2F0091E6F5 /* NotificationsVC */ = {
+			isa = PBXGroup;
+			children = (
+				6678546C2A5E1E3F0091E6F5 /* NotificationsVC.swift */,
+				6678546D2A5E1E3F0091E6F5 /* NotificationsVC.xib */,
+			);
+			path = NotificationsVC;
+			sourceTree = "<group>";
+		};
+		667854702A5E1E940091E6F5 /* ExportVC */ = {
+			isa = PBXGroup;
+			children = (
+				667854712A5E1EA60091E6F5 /* ExportVC.swift */,
+				667854722A5E1EA60091E6F5 /* ExportVC.xib */,
+			);
+			path = ExportVC;
+			sourceTree = "<group>";
+		};
+		667854752A5E1EDB0091E6F5 /* FeedbackVC */ = {
+			isa = PBXGroup;
+			children = (
+				667854762A5E1EEA0091E6F5 /* FeedbackVC.swift */,
+				667854772A5E1EEA0091E6F5 /* FeedbackVC.xib */,
+			);
+			path = FeedbackVC;
+			sourceTree = "<group>";
+		};
+		6678547A2A5E1F1D0091E6F5 /* HelpVC */ = {
+			isa = PBXGroup;
+			children = (
+				6678547B2A5E1F2C0091E6F5 /* HelpVC.swift */,
+				6678547C2A5E1F2C0091E6F5 /* HelpVC.xib */,
+			);
+			path = HelpVC;
+			sourceTree = "<group>";
+		};
+		667CB3172A5DF59700D25CF8 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				667CB31A2A5DF5B600D25CF8 /* ProfileUserCell.swift */,
+				667CB31B2A5DF5B600D25CF8 /* ProfileUserCell.xib */,
+				667CB3202A5DFB8F00D25CF8 /* ProfileControlCell.swift */,
+				667CB3212A5DFB8F00D25CF8 /* ProfileControlCell.xib */,
+				667CB32A2A5E067300D25CF8 /* ProfileBrandCell.swift */,
+				667CB32B2A5E067300D25CF8 /* ProfileBrandCell.xib */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		668CE2212A1800CC00D6E7DF = {
@@ -554,6 +667,7 @@
 				66A972362A4CB666009791E2 /* CoCategory.swift */,
 				667395D72A53333300F823F8 /* CoSafetyType.swift */,
 				66513C702A5AD94A00C86EAE /* CoRecordFieldType.swift */,
+				667CB3152A5DDAAE00D25CF8 /* CoControlType.swift */,
 				66513C7A2A5B518700C86EAE /* SafetScore */,
 				66A9722C2A4CAEF8009791E2 /* Record */,
 				660838B12A477FBC00E72F31 /* User */,
@@ -575,6 +689,8 @@
 				66EF16962A4E292900CFF0B2 /* Data+Ext.swift */,
 				6608C6C82A4F69750081603C /* UITableView+Ext.swift */,
 				6608C6CA2A4F69960081603C /* UICollectionView+Ext.swift */,
+				667CB3262A5E011200D25CF8 /* DateFormatter+Ext.swift */,
+				667CB3282A5E013800D25CF8 /* Date+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -591,6 +707,12 @@
 				66F9AEBB2A1BEF3A00EAFD58 /* Login */,
 				66F9AEB02A1BE8F800EAFD58 /* Register */,
 				668CE2662A180EDF00D6E7DF /* Onboarding */,
+				6678547A2A5E1F1D0091E6F5 /* HelpVC */,
+				667854752A5E1EDB0091E6F5 /* FeedbackVC */,
+				667854702A5E1E940091E6F5 /* ExportVC */,
+				6678546B2A5E1E2F0091E6F5 /* NotificationsVC */,
+				667854662A5E1DD80091E6F5 /* SyncCloudVC */,
+				667854612A5E1CB40091E6F5 /* SettingsVC */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -815,15 +937,24 @@
 				668CE2722A18121D00D6E7DF /* OnboardingVC.xib in Resources */,
 				66EB5B3C2A54D42A0072B01D /* EmptyRecordCell.xib in Resources */,
 				661D3BEE2A58D02D0033AFA1 /* RecordCategoryItemCell.xib in Resources */,
+				667CB3232A5DFB8F00D25CF8 /* ProfileControlCell.xib in Resources */,
 				668CE23A2A1800CD00D6E7DF /* Assets.xcassets in Resources */,
 				6608C6D62A4F7D7E0081603C /* CoBadgeView.xib in Resources */,
 				66B768D72A5223580055CECF /* HomeSafetyScoreCell.xib in Resources */,
 				66EAFD102A4652D9005B9DAB /* HomeVC.xib in Resources */,
 				667395DC2A534BA900F823F8 /* HomeCategoryCell.xib in Resources */,
+				667854742A5E1EA60091E6F5 /* ExportVC.xib in Resources */,
+				6678546A2A5E1DF30091E6F5 /* SyncCloudVC.xib in Resources */,
+				667CB32D2A5E067300D25CF8 /* ProfileBrandCell.xib in Resources */,
+				6678546F2A5E1E3F0091E6F5 /* NotificationsVC.xib in Resources */,
 				66513C772A5AF10400C86EAE /* RecordPreviewCell.xib in Resources */,
 				66D4817F2A48EEDF00CE5B5A /* ProfileVC.xib in Resources */,
 				6608C6D12A4F6A5E0081603C /* HomeUserCell.xib in Resources */,
+				667854652A5E1CD90091E6F5 /* SettingsVC.xib in Resources */,
+				6678547E2A5E1F2C0091E6F5 /* HelpVC.xib in Resources */,
+				667854792A5E1EEA0091E6F5 /* FeedbackVC.xib in Resources */,
 				66D4818B2A48FE0500CE5B5A /* CoTabBar.xib in Resources */,
+				667CB31D2A5DF5B600D25CF8 /* ProfileUserCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -851,6 +982,7 @@
 				6608C6C52A4F67790081603C /* BaseTableViewProvider.swift in Sources */,
 				6608C6D02A4F6A5E0081603C /* HomeUserCell.swift in Sources */,
 				66EF169A2A4E33A000CFF0B2 /* User+CoreDataClass.swift in Sources */,
+				667CB3292A5E013800D25CF8 /* Date+Ext.swift in Sources */,
 				6608C6C92A4F69750081603C /* UITableView+Ext.swift in Sources */,
 				668CE2572A1807A000D6E7DF /* BaseUI.swift in Sources */,
 				660838BF2A47A89A00E72F31 /* CoTabBarWireframe.swift in Sources */,
@@ -862,6 +994,7 @@
 				66EAFD072A463F5D005B9DAB /* BioAuthManager.swift in Sources */,
 				66EAFD0C2A465293005B9DAB /* HomeUI.swift in Sources */,
 				6608C6C02A4F66F40081603C /* ObservationType.swift in Sources */,
+				6678547D2A5E1F2C0091E6F5 /* HelpVC.swift in Sources */,
 				667395DB2A534BA900F823F8 /* HomeCategoryCell.swift in Sources */,
 				66F9AEC52A1BEFA200EAFD58 /* LoginWireframe.swift in Sources */,
 				668CE2782A18394500D6E7DF /* CoButton.swift in Sources */,
@@ -869,22 +1002,27 @@
 				66513C762A5AF10400C86EAE /* RecordPreviewCell.swift in Sources */,
 				66B768D62A5223580055CECF /* HomeSafetyScoreCell.swift in Sources */,
 				66D481612A48ECFD00CE5B5A /* RecordUI.swift in Sources */,
+				667CB31F2A5DF8AF00D25CF8 /* ProfileTableViewProvider.swift in Sources */,
 				66513C832A5B637A00C86EAE /* Int+Ext.swift in Sources */,
 				668CE2382A1800CC00D6E7DF /* CoPass.xcdatamodeld in Sources */,
+				667854692A5E1DF30091E6F5 /* SyncCloudVC.swift in Sources */,
 				66EF16952A4E290400CFF0B2 /* String+Ext.swift in Sources */,
 				664F14EC2A5C8DE300AC0A80 /* Array+Ext.swift in Sources */,
 				661D3BE92A58CE160033AFA1 /* RecordCategoryCell.swift in Sources */,
 				66EF16972A4E292900CFF0B2 /* Data+Ext.swift in Sources */,
 				668CE24C2A18032500D6E7DF /* TransitionType.swift in Sources */,
+				667854782A5E1EEA0091E6F5 /* FeedbackVC.swift in Sources */,
 				668CE2592A1807E500D6E7DF /* LoadingUI.swift in Sources */,
 				66D4817D2A48EED800CE5B5A /* ProfileVC.swift in Sources */,
 				667395EB2A53894900F823F8 /* RecordCell.swift in Sources */,
 				66A972372A4CB666009791E2 /* CoCategory.swift in Sources */,
 				66475B802A44C29200E76D71 /* KeychainManager.swift in Sources */,
 				66D481772A48EEBF00CE5B5A /* ProfileUI.swift in Sources */,
+				667CB31C2A5DF5B600D25CF8 /* ProfileUserCell.swift in Sources */,
 				6608C6D42A4F7D720081603C /* CoBadgeView.swift in Sources */,
 				668CE25B2A18084400D6E7DF /* BaseViewController.swift in Sources */,
 				660838B72A478BE600E72F31 /* CoStorage.swift in Sources */,
+				6678546E2A5E1E3F0091E6F5 /* NotificationsVC.swift in Sources */,
 				668CE26C2A180FA500D6E7DF /* OnboardingWireframe.swift in Sources */,
 				668CE24A2A1802C200D6E7DF /* BaseWireframe.swift in Sources */,
 				66F9AED22A1BFB2E00EAFD58 /* AppConstants.swift in Sources */,
@@ -908,9 +1046,11 @@
 				6608C6C72A4F67E50081603C /* BaseCollectionViewProvider.swift in Sources */,
 				6608C6CB2A4F69960081603C /* UICollectionView+Ext.swift in Sources */,
 				66A972392A4CB6FF009791E2 /* RecordEntity.swift in Sources */,
+				667854732A5E1EA60091E6F5 /* ExportVC.swift in Sources */,
 				66513C792A5B50AC00C86EAE /* SafetyTableViewProvider.swift in Sources */,
 				66F9AEB82A1BEA8800EAFD58 /* RegisterVC.swift in Sources */,
 				6608C6C32A4F675C0081603C /* HomeTableViewProvider.swift in Sources */,
+				667CB3272A5E011200D25CF8 /* DateFormatter+Ext.swift in Sources */,
 				66D4815C2A48ECAE00CE5B5A /* StoreVC.swift in Sources */,
 				66C8E1552A55EF450058FF89 /* Record+CoreDataProperties.swift in Sources */,
 				66513C712A5AD94A00C86EAE /* CoRecordFieldType.swift in Sources */,
@@ -921,9 +1061,11 @@
 				667395E72A5384C500F823F8 /* CoSectionTitleView.swift in Sources */,
 				668CE2302A1800CC00D6E7DF /* SceneDelegate.swift in Sources */,
 				661D3BE62A58B67B0033AFA1 /* RecordTableViewProvider.swift in Sources */,
+				667CB3222A5DFB8F00D25CF8 /* ProfileControlCell.swift in Sources */,
 				66C8E1592A56102A0058FF89 /* StoreTableViewProvider.swift in Sources */,
 				66EF169B2A4E33A000CFF0B2 /* User+CoreDataProperties.swift in Sources */,
 				66F9AEB42A1BE92200EAFD58 /* RegisterPresenter.swift in Sources */,
+				667854642A5E1CD90091E6F5 /* SettingsVC.swift in Sources */,
 				66F9AED02A1BFB0300EAFD58 /* Language.swift in Sources */,
 				668CE25D2A180B3900D6E7DF /* Presenter.swift in Sources */,
 				66F9AEC12A1BEF7F00EAFD58 /* LoginUI.swift in Sources */,
@@ -935,6 +1077,8 @@
 				66EAFD142A4653B0005B9DAB /* HomePresenter.swift in Sources */,
 				66D4817B2A48EED300CE5B5A /* ProfileWireframe.swift in Sources */,
 				668CE2762A181D3100D6E7DF /* UIColor+Ext.swift in Sources */,
+				667CB32C2A5E067300D25CF8 /* ProfileBrandCell.swift in Sources */,
+				667CB3162A5DDAAE00D25CF8 /* CoControlType.swift in Sources */,
 				66EAFD092A46488D005B9DAB /* CoOneTimeCodeTextField.swift in Sources */,
 				66B768D32A5216510055CECF /* Notification.swift in Sources */,
 				66D481702A48EE1F00CE5B5A /* SafetyUI.swift in Sources */,

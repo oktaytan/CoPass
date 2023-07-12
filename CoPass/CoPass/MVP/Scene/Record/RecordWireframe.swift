@@ -21,6 +21,7 @@ final class RecordWireframe: BaseWireframe, RecordWireframeProtocol {
         let presenter = RecordPresenter(ui: view, wireframe: wireframe, id: id, status: status, storage: CoStorage.shared)
         let provider = RecordTableViewProviderImpl()
         view.inject(presenter: presenter, provider: provider)
+        view.showIndicator = true
         wireframe.view = view
         return view
     }
