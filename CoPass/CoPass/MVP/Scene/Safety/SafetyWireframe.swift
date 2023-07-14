@@ -14,12 +14,12 @@ protocol SafetyWireframeProtocol: AnyObject {
 
 final class SafetyWireframe: BaseWireframe, SafetyWireframeProtocol {
     
-    static func prepare() -> SafetyVC {
+    static func prepare(group: CoScoreGroup, from: CoRouteType) -> SafetyVC {
         let view = SafetyVC(nibName: SafetyVC.className, bundle: nil)
         let wireframe = SafetyWireframe()
-        let presenter = SafetyPresenter(ui: view, wireframe: wireframe, storage: CoStorage.shared)
+        let presenter = SafetyPresenter(ui: view, wireframe: wireframe, selectedGroup: group, storage: CoStorage.shared)
         let provider = SafetyTableViewProviderImpl()
-        view.inject(presenter: presenter, provider: provider)
+        view.inject(presenter: presenter, provider: provider, from: from)
         wireframe.view = view
         return view
     }

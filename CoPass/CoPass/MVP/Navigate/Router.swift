@@ -62,4 +62,8 @@ enum Router {
     enum User {
         case goToOnboarding
     }
+    
+    enum Notifications {
+        case goToSafety(group: CoScoreGroup)
+    }
 }

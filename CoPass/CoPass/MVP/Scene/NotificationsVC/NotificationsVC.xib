@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationsVC" customModule="CoPass" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="ZgA-op-xm7" id="rjP-fh-QH9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,20 +19,20 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOTIFICATIONS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuq-qP-eJa">
-                    <rect key="frame" x="106.33333333333333" y="411.66666666666669" width="180.33333333333337" height="29"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZgA-op-xm7">
+                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="cuq-qP-eJa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="84b-hd-Wk5"/>
-                <constraint firstItem="cuq-qP-eJa" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="jfb-fX-39j"/>
+                <constraint firstItem="ZgA-op-xm7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="EVj-XO-zy5"/>
+                <constraint firstItem="ZgA-op-xm7" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="HnS-Ga-qhd"/>
+                <constraint firstItem="ZgA-op-xm7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Jlt-wy-54m"/>
+                <constraint firstAttribute="bottom" secondItem="ZgA-op-xm7" secondAttribute="bottom" id="mwP-lv-U2t"/>
             </constraints>
-            <point key="canvasLocation" x="140" y="21"/>
+            <point key="canvasLocation" x="139.69465648854961" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>
