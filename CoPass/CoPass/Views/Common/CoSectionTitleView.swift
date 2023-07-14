@@ -38,7 +38,8 @@ final class CoSectionTitleView: UIView {
         }
     }
     
-    func configure(title: String) {
+    func configure(title: String, font: UIFont = .systemFont(ofSize: 16, weight: .bold)) {
         titleLabel.text = title
+        titleLabel.font = font
     }
 }

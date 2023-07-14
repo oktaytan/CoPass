@@ -13,8 +13,9 @@ final class SafetyVC: BaseViewController {
     typealias Presenter = SafetyPresenterProtocol
     typealias Provider = SafetyTableViewProvider
     
-    var presenter: Presenter!
-    var provider: Provider!
+    private var presenter: Presenter!
+    private var provider: Provider!
+    private var fromCall: CoRouteType = .fromTabBar
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -28,12 +29,18 @@ final class SafetyVC: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter.viewWillAppear()
-        hideNavBar()
+        
+        if fromCall == .fromTabBar {
+            hideNavBar()
+        } else {
+            showNavBar()
+        }
     }
     
-    func inject(presenter: Presenter, provider: Provider) {
+    func inject(presenter: Presenter, provider: Provider, from: CoRouteType) {
         self.presenter = presenter
         self.provider = provider
+        self.fromCall = from
     }
     
     func addObservationListener() {

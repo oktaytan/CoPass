@@ -22,9 +22,9 @@ final class CoTabBarWireframe: BaseWireframe, CoTabBarWireframeProtocol {
     static func prepare() -> CoTabBarVC {
         let view = CoTabBarVC()
         let wireframe = CoTabBarWireframe()
-        let presenter = CoTabBarPresenter(ui: view, wireframe: wireframe)
-        view.presenter = presenter
+        let presenter = CoTabBarPresenter(ui: view, wireframe: wireframe, storage: CoStorage.shared)
         wireframe.view = view
+        view.presenter = presenter
         wireframe.setTabBar(with: view)
         return view
     }
@@ -51,7 +51,7 @@ extension CoTabBarWireframe {
     private func setTabBar(with view: UITabBarController) {
         let homeVC = HomeWireframe.prepare(delegate: self)
         let storeVC = StoreWireframe.prepare()
-        let safetyVC = SafetyWireframe.prepare()
+        let safetyVC = SafetyWireframe.prepare(group: .strong, from: .fromTabBar)
         let profileVC = ProfileWireframe.prepare()
         
         let homeNavController = UINavigationController(rootViewController: homeVC)

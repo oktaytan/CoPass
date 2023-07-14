@@ -33,6 +33,16 @@
 		66475B802A44C29200E76D71 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66475B7F2A44C29200E76D71 /* KeychainManager.swift */; };
 		66475B832A44CAFB00E76D71 /* RegisterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66475B822A44CAFB00E76D71 /* RegisterData.swift */; };
 		66475B882A44D52B00E76D71 /* SPIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = 66475B872A44D52B00E76D71 /* SPIndicator */; };
+		6649B60E2A61DEBB004AB5E3 /* NotificationsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6649B60D2A61DEBB004AB5E3 /* NotificationsUI.swift */; };
+		6649B6102A61DEE1004AB5E3 /* NotificationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6649B60F2A61DEE1004AB5E3 /* NotificationsPresenter.swift */; };
+		6649B6122A61DF86004AB5E3 /* NotificationsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6649B6112A61DF86004AB5E3 /* NotificationsWireframe.swift */; };
+		6649B6142A61E1A8004AB5E3 /* CoNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6649B6132A61E1A8004AB5E3 /* CoNotification.swift */; };
+		6649B6182A61F393004AB5E3 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6649B6162A61F393004AB5E3 /* NotificationCell.swift */; };
+		6649B6192A61F393004AB5E3 /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6649B6172A61F393004AB5E3 /* NotificationCell.xib */; };
+		6649B61B2A61F73F004AB5E3 /* NotificationsTableViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6649B61A2A61F73F004AB5E3 /* NotificationsTableViewProvider.swift */; };
+		6649B61E2A61FB4C004AB5E3 /* EmptyNotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6649B61C2A61FB4C004AB5E3 /* EmptyNotificationCell.swift */; };
+		6649B61F2A61FB4C004AB5E3 /* EmptyNotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6649B61D2A61FB4C004AB5E3 /* EmptyNotificationCell.xib */; };
+		6649B6212A6208DE004AB5E3 /* CoRouteType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6649B6202A6208DE004AB5E3 /* CoRouteType.swift */; };
 		664F14EC2A5C8DE300AC0A80 /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F14EB2A5C8DE300AC0A80 /* Array+Ext.swift */; };
 		66513C712A5AD94A00C86EAE /* CoRecordFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66513C702A5AD94A00C86EAE /* CoRecordFieldType.swift */; };
 		66513C762A5AF10400C86EAE /* RecordPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66513C742A5AF10400C86EAE /* RecordPreviewCell.swift */; };
@@ -196,6 +206,16 @@
 		661D3BEC2A58D02D0033AFA1 /* RecordCategoryItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordCategoryItemCell.xib; sourceTree = "<group>"; };
 		66475B7F2A44C29200E76D71 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		66475B822A44CAFB00E76D71 /* RegisterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterData.swift; sourceTree = "<group>"; };
+		6649B60D2A61DEBB004AB5E3 /* NotificationsUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsUI.swift; sourceTree = "<group>"; };
+		6649B60F2A61DEE1004AB5E3 /* NotificationsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsPresenter.swift; sourceTree = "<group>"; };
+		6649B6112A61DF86004AB5E3 /* NotificationsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsWireframe.swift; sourceTree = "<group>"; };
+		6649B6132A61E1A8004AB5E3 /* CoNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoNotification.swift; sourceTree = "<group>"; };
+		6649B6162A61F393004AB5E3 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		6649B6172A61F393004AB5E3 /* NotificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
+		6649B61A2A61F73F004AB5E3 /* NotificationsTableViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewProvider.swift; sourceTree = "<group>"; };
+		6649B61C2A61FB4C004AB5E3 /* EmptyNotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyNotificationCell.swift; sourceTree = "<group>"; };
+		6649B61D2A61FB4C004AB5E3 /* EmptyNotificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyNotificationCell.xib; sourceTree = "<group>"; };
+		6649B6202A6208DE004AB5E3 /* CoRouteType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoRouteType.swift; sourceTree = "<group>"; };
 		664F14EB2A5C8DE300AC0A80 /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
 		66513C702A5AD94A00C86EAE /* CoRecordFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoRecordFieldType.swift; sourceTree = "<group>"; };
 		66513C742A5AF10400C86EAE /* RecordPreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordPreviewCell.swift; sourceTree = "<group>"; };
@@ -381,6 +401,7 @@
 				661D3BE52A58B67B0033AFA1 /* RecordTableViewProvider.swift */,
 				66513C782A5B50AC00C86EAE /* SafetyTableViewProvider.swift */,
 				667CB31E2A5DF8AF00D25CF8 /* ProfileTableViewProvider.swift */,
+				6649B61A2A61F73F004AB5E3 /* NotificationsTableViewProvider.swift */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -388,6 +409,7 @@
 		6608C6CC2A4F6A260081603C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				6649B6152A61F37A004AB5E3 /* Notifications */,
 				667CB3172A5DF59700D25CF8 /* Profile */,
 				66513C7D2A5B540200C86EAE /* Safety */,
 				667395E82A53893200F823F8 /* Record */,
@@ -435,6 +457,17 @@
 				66475B822A44CAFB00E76D71 /* RegisterData.swift */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		6649B6152A61F37A004AB5E3 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				6649B6162A61F393004AB5E3 /* NotificationCell.swift */,
+				6649B6172A61F393004AB5E3 /* NotificationCell.xib */,
+				6649B61C2A61FB4C004AB5E3 /* EmptyNotificationCell.swift */,
+				6649B61D2A61FB4C004AB5E3 /* EmptyNotificationCell.xib */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 		66513C7A2A5B518700C86EAE /* SafetScore */ = {
@@ -494,6 +527,9 @@
 		6678546B2A5E1E2F0091E6F5 /* NotificationsVC */ = {
 			isa = PBXGroup;
 			children = (
+				6649B60D2A61DEBB004AB5E3 /* NotificationsUI.swift */,
+				6649B60F2A61DEE1004AB5E3 /* NotificationsPresenter.swift */,
+				6649B6112A61DF86004AB5E3 /* NotificationsWireframe.swift */,
 				6678546C2A5E1E3F0091E6F5 /* NotificationsVC.swift */,
 				6678546D2A5E1E3F0091E6F5 /* NotificationsVC.xib */,
 			);
@@ -674,10 +710,12 @@
 			isa = PBXGroup;
 			children = (
 				660838B82A47968800E72F31 /* CoError.swift */,
+				6649B6202A6208DE004AB5E3 /* CoRouteType.swift */,
 				66A972362A4CB666009791E2 /* CoCategory.swift */,
 				667395D72A53333300F823F8 /* CoSafetyType.swift */,
 				66513C702A5AD94A00C86EAE /* CoRecordFieldType.swift */,
 				667CB3152A5DDAAE00D25CF8 /* CoControlType.swift */,
+				6649B6132A61E1A8004AB5E3 /* CoNotification.swift */,
 				66513C7A2A5B518700C86EAE /* SafetScore */,
 				66A9722C2A4CAEF8009791E2 /* Record */,
 				660838B12A477FBC00E72F31 /* User */,
@@ -966,8 +1004,10 @@
 				66B768D72A5223580055CECF /* HomeSafetyScoreCell.xib in Resources */,
 				66EAFD102A4652D9005B9DAB /* HomeVC.xib in Resources */,
 				667395DC2A534BA900F823F8 /* HomeCategoryCell.xib in Resources */,
+				6649B6192A61F393004AB5E3 /* NotificationCell.xib in Resources */,
 				667854742A5E1EA60091E6F5 /* ExportVC.xib in Resources */,
 				6678546A2A5E1DF30091E6F5 /* SyncCloudVC.xib in Resources */,
+				6649B61F2A61FB4C004AB5E3 /* EmptyNotificationCell.xib in Resources */,
 				66E8927D2A5F2C34001F6367 /* UserVC.xib in Resources */,
 				667CB32D2A5E067300D25CF8 /* ProfileBrandCell.xib in Resources */,
 				6678546F2A5E1E3F0091E6F5 /* NotificationsVC.xib in Resources */,
@@ -1010,6 +1050,7 @@
 				6608C6C92A4F69750081603C /* UITableView+Ext.swift in Sources */,
 				668CE2572A1807A000D6E7DF /* BaseUI.swift in Sources */,
 				660838BF2A47A89A00E72F31 /* CoTabBarWireframe.swift in Sources */,
+				6649B6122A61DF86004AB5E3 /* NotificationsWireframe.swift in Sources */,
 				66C8E1572A5600A40058FF89 /* CoSearchField.swift in Sources */,
 				66F9AEB62A1BE99400EAFD58 /* RegisterWireframe.swift in Sources */,
 				66EB525E2A43B4A500866CD8 /* UIViewController+Ext.swift in Sources */,
@@ -1017,6 +1058,7 @@
 				668CE2472A18027C00D6E7DF /* AppWireframe.swift in Sources */,
 				66EAFD072A463F5D005B9DAB /* BioAuthManager.swift in Sources */,
 				66EAFD0C2A465293005B9DAB /* HomeUI.swift in Sources */,
+				6649B6102A61DEE1004AB5E3 /* NotificationsPresenter.swift in Sources */,
 				6608C6C02A4F66F40081603C /* ObservationType.swift in Sources */,
 				6678547D2A5E1F2C0091E6F5 /* HelpVC.swift in Sources */,
 				667395DB2A534BA900F823F8 /* HomeCategoryCell.swift in Sources */,
@@ -1031,6 +1073,7 @@
 				66513C832A5B637A00C86EAE /* Int+Ext.swift in Sources */,
 				668CE2382A1800CC00D6E7DF /* CoPass.xcdatamodeld in Sources */,
 				667854692A5E1DF30091E6F5 /* SyncCloudVC.swift in Sources */,
+				6649B6142A61E1A8004AB5E3 /* CoNotification.swift in Sources */,
 				66EF16952A4E290400CFF0B2 /* String+Ext.swift in Sources */,
 				664F14EC2A5C8DE300AC0A80 /* Array+Ext.swift in Sources */,
 				661D3BE92A58CE160033AFA1 /* RecordCategoryCell.swift in Sources */,
@@ -1038,6 +1081,7 @@
 				668CE24C2A18032500D6E7DF /* TransitionType.swift in Sources */,
 				667854782A5E1EEA0091E6F5 /* FeedbackVC.swift in Sources */,
 				668CE2592A1807E500D6E7DF /* LoadingUI.swift in Sources */,
+				6649B61E2A61FB4C004AB5E3 /* EmptyNotificationCell.swift in Sources */,
 				66D4817D2A48EED800CE5B5A /* ProfileVC.swift in Sources */,
 				667395EB2A53894900F823F8 /* RecordCell.swift in Sources */,
 				66A972372A4CB666009791E2 /* CoCategory.swift in Sources */,
@@ -1067,6 +1111,7 @@
 				66F9AEB22A1BE90700EAFD58 /* RegisterUI.swift in Sources */,
 				668CE2642A180C2A00D6E7DF /* UIView+Ext.swift in Sources */,
 				66EB5B3B2A54D42A0072B01D /* EmptyRecordCell.swift in Sources */,
+				6649B61B2A61F73F004AB5E3 /* NotificationsTableViewProvider.swift in Sources */,
 				66513C802A5B544B00C86EAE /* SafetyBoardCell.swift in Sources */,
 				6608C6C72A4F67E50081603C /* BaseCollectionViewProvider.swift in Sources */,
 				6608C6CB2A4F69960081603C /* UICollectionView+Ext.swift in Sources */,
@@ -1074,9 +1119,11 @@
 				667854732A5E1EA60091E6F5 /* ExportVC.swift in Sources */,
 				66513C792A5B50AC00C86EAE /* SafetyTableViewProvider.swift in Sources */,
 				66F9AEB82A1BEA8800EAFD58 /* RegisterVC.swift in Sources */,
+				6649B6182A61F393004AB5E3 /* NotificationCell.swift in Sources */,
 				6608C6C32A4F675C0081603C /* HomeTableViewProvider.swift in Sources */,
 				667CB3272A5E011200D25CF8 /* DateFormatter+Ext.swift in Sources */,
 				66D4815C2A48ECAE00CE5B5A /* StoreVC.swift in Sources */,
+				6649B60E2A61DEBB004AB5E3 /* NotificationsUI.swift in Sources */,
 				66C8E1552A55EF450058FF89 /* Record+CoreDataProperties.swift in Sources */,
 				66513C712A5AD94A00C86EAE /* CoRecordFieldType.swift in Sources */,
 				66F9AEC32A1BEF9800EAFD58 /* LoginPresenter.swift in Sources */,
@@ -1091,6 +1138,7 @@
 				66EF169B2A4E33A000CFF0B2 /* User+CoreDataProperties.swift in Sources */,
 				66F9AEB42A1BE92200EAFD58 /* RegisterPresenter.swift in Sources */,
 				667854642A5E1CD90091E6F5 /* SettingsVC.swift in Sources */,
+				6649B6212A6208DE004AB5E3 /* CoRouteType.swift in Sources */,
 				66F9AED02A1BFB0300EAFD58 /* Language.swift in Sources */,
 				668CE25D2A180B3900D6E7DF /* Presenter.swift in Sources */,
 				66F9AEC12A1BEF7F00EAFD58 /* LoginUI.swift in Sources */,

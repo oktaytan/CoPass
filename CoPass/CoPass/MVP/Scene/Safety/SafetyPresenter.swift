@@ -25,9 +25,10 @@ final class SafetyPresenter: SafetyPresenterProtocol {
     private var records: [Record] = []
     private var selectedGroup: CoScoreGroup = .strong
     
-    init(ui: SafetyUI, wireframe: SafetyWireframeProtocol, storage: CoStorageProtocol) {
+    init(ui: SafetyUI, wireframe: SafetyWireframeProtocol, selectedGroup: CoScoreGroup, storage: CoStorageProtocol) {
         self.ui = ui
         self.wireframe = wireframe
+        self.selectedGroup = selectedGroup
         self.storage = storage
     }
     

@@ -33,6 +33,11 @@ final class CoTabBarVC: UITabBarController, UITabBarControllerDelegate {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presenter.viewDidAppear()
+    }
+    
     func changeTabBar(with index: Int) {
         selectedIndex = index
         coTabBar.selectedIndex = index

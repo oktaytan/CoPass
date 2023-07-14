@@ -48,7 +48,7 @@ extension HomeWireframe {
     }
     
     private func goToNotifications() {
-        let notificationsVC = NotificationsVC(nibName: NotificationsVC.className, bundle: nil)
+        let notificationsVC = NotificationsWireframe.prepare()
         forward(notificationsVC, with: .push)
     }
 }

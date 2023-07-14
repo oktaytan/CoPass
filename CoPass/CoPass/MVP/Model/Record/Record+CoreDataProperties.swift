@@ -11,7 +11,7 @@ import CoreData
 
 
 extension Record {
-
+    
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Record> {
         let request = NSFetchRequest<Record>(entityName: "Record")
         let sortDescriptor = NSSortDescriptor(key: "createdAt", ascending: false)
@@ -24,7 +24,7 @@ extension Record {
         request.predicate = NSPredicate(format: "category = %@", category.rawValue)
         return request
     }
-
+    
     @NSManaged public var platform: String
     @NSManaged public var entry: String
     @NSManaged public var password: String
@@ -32,7 +32,7 @@ extension Record {
     @NSManaged public var createdAt: Date
     @NSManaged public var updatedAt: Date?
     @NSManaged public var usageCount: Int16
-
+    
 }
 
 extension Record : Identifiable {
@@ -43,6 +43,7 @@ extension [Record] {
     func getStrongPasswords() -> Self {
         let passRegEx = "\\A(?=[^a-z]*[a-z])(?=[^0-9]*[0-9])[a-zA-Z0-9!@#$%^&*]{8,}\\z"
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", passRegEx)
+        
         return self.filter { passwordTest.evaluate(with: $0.decryptedPassword) == true }
     }
     

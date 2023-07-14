@@ -124,3 +124,14 @@
 "profile_user_update_failure" = "Güncelleme başarısız.\nDaha sonra tekrar deneyin!";
 "profile_user_edit_title" = "Kullanıcı Düzenle";
 "profile_delete_user_confirm" = "Bu kullanıcıyı silmek istiyor musun?";
+
+
+// MARK: - NOTIFICATIONS
+"notify_screen_title" = "Bildirimler";
+"notify_success_title" = "Tebrikler";
+"notify_warning_title" = "Uyarı";
+"notify_danger_title" = "Güvenlik açığı";
+"notify_detected_weak_passwords" = "%d zayıf parola tespit ettik";
+"notify_have_strong_passwords" = "%d güçlü parolaya sahipsin";
+"notify_detected_reused_passwords" = "%d tekrar kullanılmış parola tespit ettik";
+"notify_empty_message" = "Bildirim yok";

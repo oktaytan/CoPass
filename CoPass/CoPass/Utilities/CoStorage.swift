@@ -11,6 +11,10 @@ import CoreData
 protocol CoStorageProtocol {
     var hasFaceID: Bool { get }
     
+    /// NOTIFICATIONS
+    var notifications: [CoNotification] { get set }
+    func removeNotificaiton(id: UUID)
+    
     /// USER
     func register(with data: RegisterData) -> Result<Bool, CoError>
     func saveUser(data: RegisterData) -> Result<User, CoError>
@@ -55,6 +59,12 @@ final class CoStorage: CoStorageProtocol {
         })
         return container
     }()
+    
+    var notifications: [CoNotification] = [] {
+        didSet {
+            Notification.setNotificationCount(notifications.count)
+        }
+    }
 }
 
 
@@ -307,5 +317,14 @@ extension CoStorage {
         } catch {
             return .failure(.recordDeleteFailure)
         }
+    }
+}
+
+
+// MARK: - NOTIFICATION
+extension CoStorage {
+    func removeNotificaiton(id: UUID) {
+        guard let index = self.notifications.firstIndex(where: { $0.id == id }) else { return }
+        self.notifications.remove(at: index)
     }
 }
