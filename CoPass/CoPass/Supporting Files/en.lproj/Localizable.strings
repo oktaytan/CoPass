@@ -135,3 +135,11 @@
 "notify_have_strong_passwords" = "You have %d strong passwords";
 "notify_detected_reused_passwords" = "We detected %d password reuses";
 "notify_empty_message" = "No notification";
+
+
+// MARK: - FEEDBACK
+"feedback_send_button_title" = "Send";
+"feedback_title" = "Send feedback";
+"feedback_message" = "You can send us your thoughts about our app and suggestions that we would like to realize for you in the future";
+"feedback_textView_placeholder" = "Write your message";
+"feedback_send_successful" = "Feedback has been sent";

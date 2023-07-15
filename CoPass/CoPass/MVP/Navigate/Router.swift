@@ -66,4 +66,8 @@ enum Router {
     enum Notifications {
         case goToSafety(group: CoScoreGroup)
     }
+    
+    enum Feedback {
+        case dismiss(completion: (() -> Void)?)
+    }
 }

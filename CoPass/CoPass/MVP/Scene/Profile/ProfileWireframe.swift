@@ -94,8 +94,8 @@ extension ProfileWireframe {
     }
     
     private func openSendFeedback() {
-        let feedbackVC = FeedbackVC(nibName: FeedbackVC.className, bundle: nil)
-        forward(feedbackVC, with: .pageSheet(from: self.view, detent: .medium))
+        let feedbackVC = FeedbackWireframe.prepare()
+        forward(feedbackVC, with: .pageSheet(from: self.view, detent: .large))
     }
     
     private func goToHelp() {

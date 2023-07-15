@@ -60,4 +60,8 @@ extension UIColor {
     static var coTextGray: UIColor {
         return UIColor(named: "coTextGray")!
     }
+    
+    static var coYellow: UIColor {
+        return UIColor(named: "coYellow")!
+    }
 }
