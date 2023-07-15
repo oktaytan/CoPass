@@ -53,7 +53,7 @@ class BaseViewController: UIViewController {
         coTabBar.coTabBar.isHidden = false
     }
     
-    func showModalIndicator() {
+    private func showModalIndicator() {
         if showIndicator {
             self.view.addSubview(modalIndicator)
             modalIndicator.snp.makeConstraints { make in

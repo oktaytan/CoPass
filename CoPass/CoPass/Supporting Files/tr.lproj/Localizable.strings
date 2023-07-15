@@ -135,3 +135,11 @@
 "notify_have_strong_passwords" = "%d güçlü parolaya sahipsin";
 "notify_detected_reused_passwords" = "%d tekrar kullanılmış parola tespit ettik";
 "notify_empty_message" = "Bildirim yok";
+
+
+// MARK: - FEEDBACK
+"feedback_send_button_title" = "Gönder";
+"feedback_title" = "Geri bildirim gönder";
+"feedback_message" = "Uygulamamız hakkındaki düşüncelerinizi ve ileride sizin için hayata geçirmek istediğimiz önerilerinizi bize iletebilirsiniz";
+"feedback_textView_placeholder" = "Mesajınızı yazınız";
+"feedback_send_successful" = "Geri bildirim gönderildi";
