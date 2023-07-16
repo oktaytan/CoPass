@@ -35,10 +35,10 @@ final class ProfileWireframe: BaseWireframe, ProfileWireframeProtocol {
             goToNotifications()
         case .openShare:
             openShare()
-        case .openExportImport:
-            openExportImport()
         case .openSendFeedback:
             openSendFeedback()
+        case .exportImport:
+            openExportImport()
         case .goToHelp:
             goToHelp()
         case .goToLogin:
@@ -88,14 +88,14 @@ extension ProfileWireframe {
         forward(activityViewController, with: .present(from: self.view))
     }
     
-    private func openExportImport() {
-        let exportImportVC = ExportVC(nibName: ExportVC.className, bundle: nil)
-        forward(exportImportVC, with: .pageSheet(from: self.view, detent: .medium))
-    }
-    
     private func openSendFeedback() {
         let feedbackVC = FeedbackWireframe.prepare()
         forward(feedbackVC, with: .pageSheet(from: self.view, detent: .large))
+    }
+    
+    private func openExportImport() {
+        let exportImportVC = ExportImportWireframe.prepare()
+        forward(exportImportVC, with: .pageSheet(from: self.view, detent: .large))
     }
     
     private func goToHelp() {

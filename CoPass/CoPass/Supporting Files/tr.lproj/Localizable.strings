@@ -11,6 +11,8 @@
 "error_user_not_found" = "Kullanıcı bulunamadı!";
 "error_record_not_found" = "Kayıt bulunamadı!";
 "error_empty_field" = "Tüm alanlar doldurulmalıdır!";
+"error_export_records" = "Dışa aktarma başarısız!";
+"error_import_records" = "İçe aktarma başarısız!";
 
 
 // MARK: - COMMON
@@ -26,6 +28,8 @@
 "close" = "Kapat";
 "save" = "Kaydet";
 "safety_score_title" = "Güvenlik Skoru";
+"export_success" = "Dışa aktarma başarılı";
+"import_success" = "İçe aktarma başarılı";
 
 
 // MARK: - ONBOARDING
@@ -100,7 +104,7 @@
 
 "record_save_successful" = "Parola kaydedildi 👍";
 "record_update_successful" = "Parola güncellendi 👍";
-"record_delete_successful" = "Parola silindi 👍";
+"record_delete_successful" = "Parola silindi";
 "record_delete_confirm" = "Bu parolayı silmek istiyor musun?";
 
 
@@ -143,3 +147,10 @@
 "feedback_message" = "Uygulamamız hakkındaki düşüncelerinizi ve ileride sizin için hayata geçirmek istediğimiz önerilerinizi bize iletebilirsiniz";
 "feedback_textView_placeholder" = "Mesajınızı yazınız";
 "feedback_send_successful" = "Geri bildirim gönderildi";
+
+
+// MARK: - EXPORT & IMPORT
+"export_title" = "Dışa aktar";
+"export_message" = "Şifrelerinizi dışa aktarabilirsiniz";
+"import_title" = "İçe aktar";
+"import_message" = "Şifrelerinizi içe aktarabilirsiniz";

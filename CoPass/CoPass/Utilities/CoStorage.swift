@@ -34,6 +34,10 @@ protocol CoStorageProtocol {
     func fetchRecords(with category: CoCategory) -> Result<[Record], CoError>
     @discardableResult func updateRecord(at id: NSManagedObjectID, with entity: Record) -> Result<Record, CoError>
     func deleteRecord(with id: NSManagedObjectID) -> Result<Bool, CoError>
+    
+    /// EXPORT & IMPORT
+    func saveAndExport(url: URL?) -> Result<Bool, CoError>
+    func loadRecords(file: String, seperator: String) -> Result<Bool, CoError>
 }
 
 final class CoStorage: CoStorageProtocol {
@@ -42,11 +46,13 @@ final class CoStorage: CoStorageProtocol {
     
     private var keychain: KeychainManager
     private var bioAuth: BioAuthManager
+    private var fileManager: FileManager
     private var masterPassword = ""
-     
+    
     private init() {
         self.keychain = KeychainManager.standard
         self.bioAuth = BioAuthManager.shared
+        self.fileManager = FileManager.default
         self.masterPassword = self.getMasterPassword() ?? ""
     }
     
@@ -326,5 +332,83 @@ extension CoStorage {
     func removeNotificaiton(id: UUID) {
         guard let index = self.notifications.firstIndex(where: { $0.id == id }) else { return }
         self.notifications.remove(at: index)
+    }
+}
+
+
+// MARK: - EXPORT & IMPORT
+extension CoStorage {
+    private func exportString() -> String? {
+        let dateFormatter = DateFormatter(format: "dd/MM/YYYY HH:mm")
+        var export: String = NSLocalizedString("Platform, Entry, Password, Created, Updated, Usage Count, Category \n", comment: "")
+        
+        let result = self.fetchRecords()
+        switch result {
+        case .success(let records):
+            records.forEach { record in
+                export.append("\(record.platform),")
+                export.append("\(record.entry),")
+                export.append("\(record.decryptedPassword),")
+                export.append("\(record.createdAt.toString(dateFormatter: dateFormatter) ?? ""),")
+                export.append("\(record.updatedAt?.toString(dateFormatter: dateFormatter) ?? ""),")
+                export.append("\(record.usageCount),")
+                export.append("\(record.category)\n")
+            }
+            
+           return export
+        case .failure:
+            return nil
+        }
+    }
+    
+    func saveAndExport(url: URL?) -> Result<Bool, CoError> {
+        guard let exportString = exportString(), let exportFileURL = url?.appendingPathComponent("\(AppConstants.appName)").appendingPathExtension("csv") else {
+            return .failure(.exportFailure)
+        }
+        
+        let path = exportFileURL.path()
+        if fileManager.fileExists(atPath: path) {
+            do {
+                try fileManager.removeItem(atPath: path)
+            } catch {
+                return .failure(.exportFailure)
+            }
+        }
+        
+        do {
+            try exportString.write(to: exportFileURL, atomically: true, encoding: .utf8)
+            return .success(true)
+        } catch {
+            return .failure(.exportFailure)
+        }
+    }
+    
+    func loadRecords(file: String, seperator: String) -> Result<Bool, CoError> {
+        let fileExtension = file.fileExtension()
+        let fileName = file.fileName()
+        
+        do {
+            let fileURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            let inputFile = fileURL.appendingPathComponent(fileName).appendingPathExtension(fileExtension)
+            
+            let savedData = try String(contentsOf: inputFile)
+            var arrayData = savedData.components(separatedBy: seperator)
+            
+            arrayData.remove(at: 0)
+            let _ = arrayData.popLast()
+            
+            arrayData.forEach { recordString in
+                let recordEntity = recordString.components(separatedBy: ",")
+                let _ = self.saveRecord(with: RecordEntity(platform: recordEntity[0],
+                                                   entry: recordEntity[1],
+                                                   password: recordEntity[2],
+                                                   category: CoCategory(rawValue: recordEntity[6]) ?? .app))
+            }
+            
+            return .success(true)
+        } catch {
+            print(error.localizedDescription)
+            return .failure(.importFailure)
+        }
     }
 }

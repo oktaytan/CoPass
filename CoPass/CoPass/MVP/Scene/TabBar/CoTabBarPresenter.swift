@@ -27,6 +27,7 @@ final class CoTabBarPresenter: CoTabBarPresenterProtocol {
         let result = storage.fetchRecords()
         switch result {
         case .success(let records):
+            guard !records.isEmpty else { return }
             let strongPasswordNotify = CoNotification(message: String(format: "notify_have_strong_passwords".localized, records.getStrongPasswords().count), type: .success)
             let weakPasswordNotify = CoNotification(message: String(format: "notify_detected_weak_passwords".localized, records.getWeakPasswords().count), type: .danger)
             let reusedPasswordNotify = CoNotification(message: String(format: "notify_detected_reused_passwords".localized, records.getReusedPasswords().count), type: .warning)
