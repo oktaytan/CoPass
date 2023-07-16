@@ -56,7 +56,7 @@ enum Router {
     }
     
     enum Profile {
-        case goToUser, goToSettings, goToSync, goToNotifications, openShare, openExportImport, openSendFeedback, goToHelp, goToLogin
+        case goToUser, goToSettings, goToSync, goToNotifications, openShare, exportImport, openSendFeedback, goToHelp, goToLogin
     }
     
     enum User {
@@ -69,5 +69,9 @@ enum Router {
     
     enum Feedback {
         case dismiss(completion: (() -> Void)?)
+    }
+    
+    enum ExportImport {
+        case dismiss, export(path: URL?, completion: ((Bool) -> Void))
     }
 }

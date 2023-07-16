@@ -43,4 +43,12 @@ extension String {
         guard let date = toDate(dateFormatter: dateFormatter) else { return nil }
         return DateFormatter(format: outputFormat).string(from: date)
     }
+    
+    func fileName() -> Self {
+        return URL(filePath: self).deletingPathExtension().lastPathComponent
+    }
+    
+    func fileExtension() -> Self {
+        return URL(filePath: self).pathExtension
+    }
 }

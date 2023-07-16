@@ -25,12 +25,16 @@ enum CoError: Error, CustomStringConvertible {
          recordSaveFailure,
          recordGetFailure,
          recordUpdateFailure,
-         recordDeleteFailure
+         recordDeleteFailure,
+         exportFailure,
+         importFailure
     
     var description: String {
         switch self {
         case .notFoundUser: return "error_user_not_found".localized
         case .recordNotFound: return "error_record_not_found".localized
+        case .exportFailure: return "error_export_records".localized
+        case .importFailure: return "error_import_records".localized
         default: return "error_general".localized
         }
     }

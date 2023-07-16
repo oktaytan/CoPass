@@ -42,7 +42,7 @@ final class ProfilePresenter: ProfilePresenterProtocol {
         case .share:
             wireframe.navigate(to: .openShare)
         case .exportImport:
-            wireframe.navigate(to: .openExportImport)
+            wireframe.navigate(to: .exportImport)
         case .feedback:
             wireframe.navigate(to: .openSendFeedback)
         case .help:
@@ -124,6 +124,7 @@ extension ProfilePresenter {
 
 extension ProfilePresenter {
     struct Strings {
-        
+        static let exportSuccess = "export_success".localized
+        static let importSuccess = "import_success".localized
     }
 }

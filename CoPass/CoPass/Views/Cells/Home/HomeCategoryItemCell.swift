@@ -27,7 +27,7 @@ class HomeCategoryItemCell: UICollectionViewCell {
     func set(with category: CoCategory, count: Int) {
         iconImageView.image = category.icon
         categoryTitleLabel.text = category.description
-        let countText = count > 1 ? Strings.passwordCountPlural : Strings.passwordCountPlural
+        let countText = count > 1 ? Strings.passwordCountPlural : Strings.passwordCountSingular
         categoryPasswordCountlabel.text = String(format: countText, count)
     }
 }
@@ -35,7 +35,7 @@ class HomeCategoryItemCell: UICollectionViewCell {
 
 extension HomeCategoryItemCell {
     struct Strings {
-        static let passwordCountSingular = "%d password_count_singular".localized
-        static let passwordCountPlural = "%d password_count_plural".localized
+        static let passwordCountSingular = "password_count_singular".localized
+        static let passwordCountPlural = "password_count_plural".localized
     }
 }
