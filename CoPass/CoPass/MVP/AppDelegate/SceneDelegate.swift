@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreSpotlight
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -22,6 +23,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         case .failure(_):
             setOnboardingScreen(window)
         }
+        
+        SpotlightManager.shared.configureSearchableItems()
         
         self.window = window
     }
@@ -57,6 +60,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         storage.saveContext()
     }
 
+    func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+        if userActivity.activityType == CSSearchableItemActionType {
+            if let uid = userActivity.userInfo?[CSSearchableItemActivityIdentifier] as? String {
+                debugPrint("indexed spotlight item id: \(uid)")
+            }
+        }
+    }
 
 }
 
