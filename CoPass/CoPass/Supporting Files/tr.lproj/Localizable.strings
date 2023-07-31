@@ -30,6 +30,7 @@
 "safety_score_title" = "Güvenlik Skoru";
 "export_success" = "Dışa aktarma başarılı";
 "import_success" = "İçe aktarma başarılı";
+"spotlight_content" = "Şifrelerini Güvenle Yönet";
 
 
 // MARK: - ONBOARDING
