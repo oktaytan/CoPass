@@ -34,7 +34,7 @@ final class CoSectionTitleView: UIView {
             make.top.equalToSuperview()
             make.bottom.equalToSuperview()
             make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
         }
     }
     
