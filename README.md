@@ -2,7 +2,7 @@
 
 <!-- PROJECT LOGO -->
 <div align="center">
-  <h1 align="center">CoPass (with MVVP)</h1>
+  <h1 align="center">CoPass (with MVP)</h1>
   <p align="center">An application that you can securely save and quickly copy your passwords built with MVVP architecture.</p>
 </div>
 
